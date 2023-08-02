@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.habusu.habus.app-mergeDebugResources-11:/values-ur/values-ur.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Artorius\\.gradle\\caches\\transforms-3\\004589e8c0726d6ad414b3534b34ee13\\transformed\\browser-1.2.0\\res\\values-ur\\values-ur.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,156,257,368",
+                        "endColumns": "100,100,110,105",
+                        "endOffsets": "151,252,363,469"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Artorius\\.gradle\\caches\\transforms-3\\7e9df2ac2213a6bd3cef0f2f27870d79\\transformed\\core-1.6.0\\res\\values-ur\\values-ur.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "474",
+                        "endColumns": "100",
+                        "endOffsets": "570"
+                    }
+                }
+            ]
+        }
+    ]
+}
