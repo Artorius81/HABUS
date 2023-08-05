@@ -67,7 +67,7 @@ class _InDevelopPageWidgetState extends State<InDevelopPageWidget> {
               'vi54q3ey' /* ХАБУС */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Raleway',
+                  fontFamily: 'Open Sans',
                   fontSize: 36.0,
                   fontWeight: FontWeight.w900,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -101,91 +101,87 @@ class _InDevelopPageWidgetState extends State<InDevelopPageWidget> {
             ),
           ],
           centerTitle: true,
-          elevation: 1.0,
+          elevation: 0.0,
         ),
-        body: SafeArea(
-          top: true,
-          child: Stack(
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'b06wckw7' /* В разработке */,
-                      ),
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).warning,
-                            fontSize: 34.0,
-                            fontWeight: FontWeight.w800,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyMediumFamily),
-                          ),
+        body: Stack(
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'b06wckw7' /* В разработке */,
                     ),
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'x5wuwzdz' /* В данный момент это раздел нах... */,
-                      ),
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            fontSize: 16.0,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyMediumFamily),
-                          ),
-                    ),
-                  ],
+                    textAlign: TextAlign.start,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'PT Sans',
+                          color: FlutterFlowTheme.of(context).secondary,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w600,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                  ),
                 ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      context.safePop();
-                    },
-                    text: FFLocalizations.of(context).getText(
-                      'kigcq5m1' /* Назад */,
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'x5wuwzdz' /* В данный момент это раздел нах... */,
                     ),
-                    options: FFButtonOptions(
-                      width: 200.0,
-                      height: 40.0,
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .titleSmall
-                          .override(
-                            fontFamily: 'Raleway',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).titleSmallFamily),
-                          ),
-                      elevation: 4.0,
-                      borderSide: BorderSide(
-                        color: Color(0xFF3F8DFD),
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
+                    textAlign: TextAlign.start,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Open Sans',
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          fontSize: 12.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                        ),
+                  ),
+                ),
+              ],
+            ),
+            Align(
+              alignment: AlignmentDirectional(0.0, 1.0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    context.safePop();
+                  },
+                  text: FFLocalizations.of(context).getText(
+                    'kigcq5m1' /* Назад */,
+                  ),
+                  options: FFButtonOptions(
+                    width: 200.0,
+                    height: 40.0,
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          fontFamily: 'Open Sans',
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w500,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).titleSmallFamily),
+                        ),
+                    elevation: 0.0,
+                    borderSide: BorderSide(
+                      color: Color(0xFF3F8DFD),
+                      width: 1.0,
                     ),
+                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

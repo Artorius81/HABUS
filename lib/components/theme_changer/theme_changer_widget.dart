@@ -127,14 +127,34 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                                 FFLocalizations.of(context).getText(
                                   'sybzx9sh' /* Выберите тему */,
                                 ),
-                                style:
-                                    FlutterFlowTheme.of(context).headlineLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .headlineLargeFamily,
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLargeFamily),
+                                    ),
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
                                   '5gbmuwc6' /* Измените тему приложения, выбр... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).labelLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
+                                      fontSize: 14.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily),
+                                    ),
                               ),
                             ],
                           ),
@@ -206,12 +226,10 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLargeFamily,
+                                            fontFamily: 'PT Sans',
                                             color: FlutterFlowTheme.of(context)
                                                 .info,
-                                            fontSize: 14.0,
+                                            fontSize: 16.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -333,11 +351,9 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLargeFamily,
+                                            fontFamily: 'PT Sans',
                                             color: Color(0xFF1B1D27),
-                                            fontSize: 14.0,
+                                            fontSize: 16.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -442,9 +458,9 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),
@@ -474,9 +490,9 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),

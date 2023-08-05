@@ -176,6 +176,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'SettingsPage',
           path: '/settingsPage',
           builder: (context, params) => SettingsPageWidget(),
+        ),
+        FFRoute(
+          name: 'ConnectPAPage',
+          path: '/connectPAPage',
+          builder: (context, params) => ConnectPAPageWidget(),
+        ),
+        FFRoute(
+          name: 'UserProfilePage',
+          path: '/userProfilePage',
+          builder: (context, params) => UserProfilePageWidget(),
+        ),
+        FFRoute(
+          name: 'HABUSFormWebView',
+          path: '/hABUSFormWebView',
+          builder: (context, params) => HABUSFormWebViewWidget(),
+        ),
+        FFRoute(
+          name: 'FormWebViewPage',
+          path: '/formWebViewPage',
+          builder: (context, params) => FormWebViewPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -358,7 +378,7 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                   child: Image.asset(
                     'assets/images/habus_logo.png',
                     fit: BoxFit.contain,

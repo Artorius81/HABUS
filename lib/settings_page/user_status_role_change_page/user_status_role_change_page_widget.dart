@@ -91,7 +91,7 @@ class _UserStatusRoleChangePageWidgetState
                 'rf8yek63' /* ХАБУС */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Raleway',
+                    fontFamily: 'Open Sans',
                     fontSize: 36.0,
                     fontWeight: FontWeight.w900,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -126,316 +126,306 @@ class _UserStatusRoleChangePageWidgetState
             ),
           ],
           centerTitle: true,
-          elevation: 1.0,
+          elevation: 0.0,
         ),
-        body: SafeArea(
-          top: true,
-          child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                  child: Text(
-                    FFLocalizations.of(context).getText(
-                      'li8lvkea' /* Изменить статус и роль */,
-                    ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Raleway',
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.bold,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyMediumFamily),
-                        ),
-                  ),
-                ),
-                Text(
+        body: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                child: Text(
                   FFLocalizations.of(context).getText(
-                    'aubu6nea' /* Измените свой статус или роль.... */,
+                    'li8lvkea' /* Изменить статус и роль */,
                   ),
-                  textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily:
-                            FlutterFlowTheme.of(context).bodyMediumFamily,
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontFamily: 'PT Sans',
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w600,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 64.0, 0.0, 0.0),
-                  child: Form(
-                    key: _model.formKey,
-                    autovalidateMode: AutovalidateMode.disabled,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                5.0, 0.0, 0.0, 5.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'wq6qah20' /* Статус */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
-                                  ),
+              ),
+              Text(
+                FFLocalizations.of(context).getText(
+                  'aubu6nea' /* Измените свой статус или роль.... */,
+                ),
+                textAlign: TextAlign.start,
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'PT Sans',
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 12.0,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).bodyMediumFamily),
+                    ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 64.0, 0.0, 0.0),
+                child: Form(
+                  key: _model.formKey,
+                  autovalidateMode: AutovalidateMode.disabled,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              5.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'wq6qah20' /* Статус */,
                             ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 24.0),
-                          child: FutureBuilder<List<ProfileRow>>(
-                            future: ProfileTable().querySingleRow(
-                              queryFn: (q) => q,
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 24.0,
-                                    height: 24.0,
-                                    child: SpinKitCircle(
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                        child: FutureBuilder<List<ProfileRow>>(
+                          future: ProfileTable().querySingleRow(
+                            queryFn: (q) => q,
+                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 24.0,
+                                  height: 24.0,
+                                  child: SpinKitCircle(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 24.0,
+                                  ),
+                                ),
+                              );
+                            }
+                            List<ProfileRow> userStatusProfileRowList =
+                                snapshot.data!;
+                            final userStatusProfileRow =
+                                userStatusProfileRowList.isNotEmpty
+                                    ? userStatusProfileRowList.first
+                                    : null;
+                            return TextFormField(
+                              controller: _model.userStatusController ??=
+                                  TextEditingController(
+                                text: userStatusProfileRow?.status,
+                              ),
+                              onChanged: (_) => EasyDebounce.debounce(
+                                '_model.userStatusController',
+                                Duration(milliseconds: 2000),
+                                () => setState(() {}),
+                              ),
+                              textCapitalization: TextCapitalization.sentences,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelMediumFamily,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
-                                      size: 24.0,
+                                      fontSize: 14.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily),
                                     ),
+                                hintStyle:
+                                    FlutterFlowTheme.of(context).labelMedium,
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF3F8DFD),
+                                    width: 1.0,
                                   ),
-                                );
-                              }
-                              List<ProfileRow> userStatusProfileRowList =
-                                  snapshot.data!;
-                              final userStatusProfileRow =
-                                  userStatusProfileRowList.isNotEmpty
-                                      ? userStatusProfileRowList.first
-                                      : null;
-                              return TextFormField(
-                                controller: _model.userStatusController ??=
-                                    TextEditingController(
-                                  text: userStatusProfileRow?.status,
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                onChanged: (_) => EasyDebounce.debounce(
-                                  '_model.userStatusController',
-                                  Duration(milliseconds: 2000),
-                                  () => setState(() {}),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF3F8DFD),
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                textCapitalization:
-                                    TextCapitalization.sentences,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .labelMediumFamily,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontSize: 14.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily),
-                                      ),
-                                  hintStyle:
-                                      FlutterFlowTheme.of(context).labelMedium,
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xFF3F8DFD),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xFF3F8DFD),
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context).error,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context).error,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  suffixIcon: _model
-                                          .userStatusController!.text.isNotEmpty
-                                      ? InkWell(
-                                          onTap: () async {
-                                            _model.userStatusController
-                                                ?.clear();
-                                            setState(() {});
-                                          },
-                                          child: Icon(
-                                            Icons.clear,
-                                            color: Color(0xFF757575),
-                                            size: 24.0,
-                                          ),
-                                        )
-                                      : null,
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                                textAlign: TextAlign.start,
-                                maxLines: 5,
-                                cursorColor: Color(0xFF3F8DFD),
-                                validator: _model.userStatusControllerValidator
-                                    .asValidator(context),
-                              );
-                            },
-                          ),
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                5.0, 0.0, 0.0, 5.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                'vd7ef799' /* Роль */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
-                                  ),
-                            ),
-                          ),
-                        ),
-                        FlutterFlowDropDown<String>(
-                          controller: _model.roleChoiceValueController ??=
-                              FormFieldController<String>(null),
-                          options: [
-                            FFLocalizations.of(context).getText(
-                              '6yv7is4l' /* Абитуриент */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              '97rdttuo' /* Студент */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'z9c64lqb' /* Магистрант */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'ke5oxfm5' /* Аспирант */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              '0ps21qm1' /* Лаборант */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'hza00ov0' /* Докторант */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'gsotmjy4' /* Преподаватель */,
-                            )
-                          ],
-                          onChanged: (val) =>
-                              setState(() => _model.roleChoiceValue = val),
-                          width: double.infinity,
-                          height: 50.0,
-                          searchHintTextStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .labelMediumFamily,
-                                color: FlutterFlowTheme.of(context).accent1,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .labelMediumFamily),
-                              ),
-                          textStyle: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
-                          hintText: FFLocalizations.of(context).getText(
-                            'b57xtr98' /* Выберите роль */,
-                          ),
-                          searchHintText: FFLocalizations.of(context).getText(
-                            '151qmadc' /* Найти... */,
-                          ),
-                          searchCursorColor:
-                              FlutterFlowTheme.of(context).accent1,
-                          icon: Icon(
-                            Icons.keyboard_arrow_down_rounded,
-                            color: Color(0xFF757575),
-                            size: 24.0,
-                          ),
-                          fillColor:
-                              FlutterFlowTheme.of(context).primaryBackground,
-                          elevation: 2.0,
-                          borderColor: FlutterFlowTheme.of(context).accent1,
-                          borderWidth: 1.0,
-                          borderRadius: 8.0,
-                          margin: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 4.0, 16.0, 4.0),
-                          hidesUnderline: true,
-                          isSearchable: true,
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                5.0, 5.0, 0.0, 0.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '6qr19p6q' /* Ваша роль будет проверена */,
-                              ),
-                              textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily,
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
+                                    width: 1.0,
                                   ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                suffixIcon: _model
+                                        .userStatusController!.text.isNotEmpty
+                                    ? InkWell(
+                                        onTap: () async {
+                                          _model.userStatusController?.clear();
+                                          setState(() {});
+                                        },
+                                        child: Icon(
+                                          Icons.clear,
+                                          color: Color(0xFF757575),
+                                          size: 24.0,
+                                        ),
+                                      )
+                                    : null,
+                              ),
+                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              textAlign: TextAlign.start,
+                              maxLines: 5,
+                              cursorColor: Color(0xFF3F8DFD),
+                              validator: _model.userStatusControllerValidator
+                                  .asValidator(context),
+                            );
+                          },
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              5.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'vd7ef799' /* Роль */,
                             ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                      FlutterFlowDropDown<String>(
+                        controller: _model.roleChoiceValueController ??=
+                            FormFieldController<String>(null),
+                        options: [
+                          FFLocalizations.of(context).getText(
+                            '6yv7is4l' /* Абитуриент */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            '97rdttuo' /* Студент */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'z9c64lqb' /* Магистрант */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'ke5oxfm5' /* Аспирант */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            '0ps21qm1' /* Лаборант */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'hza00ov0' /* Докторант */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'gsotmjy4' /* Преподаватель */,
+                          )
+                        ],
+                        onChanged: (val) =>
+                            setState(() => _model.roleChoiceValue = val),
+                        width: double.infinity,
+                        height: 50.0,
+                        searchHintTextStyle:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
+                                  color: FlutterFlowTheme.of(context).accent1,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
+                                ),
+                        textStyle: FlutterFlowTheme.of(context)
+                            .bodyMedium
+                            .override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
+                        hintText: FFLocalizations.of(context).getText(
+                          'b57xtr98' /* Выберите роль */,
+                        ),
+                        searchHintText: FFLocalizations.of(context).getText(
+                          '151qmadc' /* Найти... */,
+                        ),
+                        searchCursorColor: FlutterFlowTheme.of(context).accent1,
+                        icon: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: Color(0xFF757575),
+                          size: 24.0,
+                        ),
+                        fillColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
+                        elevation: 2.0,
+                        borderColor: FlutterFlowTheme.of(context).accent1,
+                        borderWidth: 1.0,
+                        borderRadius: 8.0,
+                        margin:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 16.0, 4.0),
+                        hidesUnderline: true,
+                        isSearchable: true,
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              5.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '6qr19p6q' /* Верность выбранной Вами роли б... */,
+                            ),
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'PT Sans',
+                                  color: FlutterFlowTheme.of(context).error,
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -476,7 +466,7 @@ class _UserStatusRoleChangePageWidgetState
                       'j56t6vx4' /* Сохранить */,
                     ),
                     options: FFButtonOptions(
-                      width: double.infinity,
+                      width: 200.0,
                       height: 40.0,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -486,14 +476,14 @@ class _UserStatusRoleChangePageWidgetState
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
-                            fontFamily: 'Raleway',
+                            fontFamily: 'Open Sans',
                             color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
-                      elevation: 4.0,
+                      elevation: 0.0,
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).accent1,
                         width: 1.0,
@@ -502,8 +492,8 @@ class _UserStatusRoleChangePageWidgetState
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

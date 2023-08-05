@@ -80,14 +80,33 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                 FFLocalizations.of(context).getText(
                                   '5rofu6wc' /* Выберите фото */,
                                 ),
-                                style:
-                                    FlutterFlowTheme.of(context).headlineLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineLarge
+                                    .override(
+                                      fontFamily: 'Nunito',
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLargeFamily),
+                                    ),
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
                                   'wo2n7czk' /* Измените фото профиля, выбрав ... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).labelLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
+                                      fontSize: 14.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily),
+                                    ),
                               ),
                             ],
                           ),
@@ -118,8 +137,8 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: 120.0,
-                        height: 120.0,
+                        width: 110.0,
+                        height: 110.0,
                         clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
@@ -152,9 +171,9 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),
@@ -184,9 +203,9 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),

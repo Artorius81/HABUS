@@ -12,7 +12,7 @@ export '/authentication/forgot_pass_page/forgot_pass_page_widget.dart'
     show ForgotPassPageWidget;
 export '/authentication/forgot_pass_page_verification/forgot_pass_page_verification_widget.dart'
     show ForgotPassPageVerificationWidget;
-export '/screens/home_page/home_page_widget.dart' show HomePageWidget;
+export '/home_page/home_page/home_page_widget.dart' show HomePageWidget;
 export '/screens/ooops_page/ooops_page_widget.dart' show OoopsPageWidget;
 export '/screens/in_develop_page/in_develop_page_widget.dart'
     show InDevelopPageWidget;
@@ -30,3 +30,11 @@ export '/settings_page/suggest_improvement_page/suggest_improvement_page_widget.
     show SuggestImprovementPageWidget;
 export '/settings_page/settings_page/settings_page_widget.dart'
     show SettingsPageWidget;
+export '/screens/connect_p_a_page/connect_p_a_page_widget.dart'
+    show ConnectPAPageWidget;
+export '/profile_page/user_profile_page/user_profile_page_widget.dart'
+    show UserProfilePageWidget;
+export '/home_page/h_a_b_u_s_form_web_view/h_a_b_u_s_form_web_view_widget.dart'
+    show HABUSFormWebViewWidget;
+export '/home_page/form_web_view_page/form_web_view_page_widget.dart'
+    show FormWebViewPageWidget;

@@ -55,283 +55,254 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
         child: Scaffold(
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-          body: SafeArea(
-            top: true,
-            child: Stack(
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
-                      child: GradientText(
-                        FFLocalizations.of(context).getText(
-                          'cegy15sf' /* ХАБУС */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Raleway',
-                              fontSize: 64.0,
-                              fontWeight: FontWeight.w900,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily),
-                            ),
-                        colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
-                        gradientDirection: GradientDirection.ltr,
-                        gradientType: GradientType.linear,
+          body: Stack(
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: GradientText(
+                      FFLocalizations.of(context).getText(
+                        'cegy15sf' /* ХАБУС */,
                       ),
+                      style: FlutterFlowTheme.of(context).displayLarge,
+                      colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
+                      gradientDirection: GradientDirection.ltr,
+                      gradientType: GradientType.linear,
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 12.0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '7iwas8bc' /* Давайте знакомиться */,
-                              ),
-                              textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Raleway',
-                                    fontSize: 34.0,
-                                    fontWeight: FontWeight.w800,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
-                                  ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 6.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '7iwas8bc' /* Давайте знакомиться */,
                             ),
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context).displayMedium,
                           ),
-                          Form(
-                            key: _model.formKey,
-                            autovalidateMode: AutovalidateMode.disabled,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 12.0),
-                                  child: TextFormField(
-                                    controller: _model.firstUserNameController,
-                                    onChanged: (_) => EasyDebounce.debounce(
-                                      '_model.firstUserNameController',
-                                      Duration(milliseconds: 2000),
-                                      () => setState(() {}),
-                                    ),
-                                    textCapitalization:
-                                        TextCapitalization.sentences,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 14.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily),
-                                          ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        '660l5474' /* Введите имя */,
-                                      ),
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF3F8DFD),
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF3F8DFD),
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      suffixIcon: _model
-                                              .firstUserNameController!
-                                              .text
-                                              .isNotEmpty
-                                          ? InkWell(
-                                              onTap: () async {
-                                                _model.firstUserNameController
-                                                    ?.clear();
-                                                setState(() {});
-                                              },
-                                              child: Icon(
-                                                Icons.clear,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                size: 24.0,
-                                              ),
-                                            )
-                                          : null,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
-                                    cursorColor: Color(0xFF3F8DFD),
-                                    validator: _model
-                                        .firstUserNameControllerValidator
-                                        .asValidator(context),
+                        ),
+                        Form(
+                          key: _model.formKey,
+                          autovalidateMode: AutovalidateMode.disabled,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 12.0),
+                                child: TextFormField(
+                                  controller: _model.firstUserNameController,
+                                  onChanged: (_) => EasyDebounce.debounce(
+                                    '_model.firstUserNameController',
+                                    Duration(milliseconds: 2000),
+                                    () => setState(() {}),
                                   ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 5.0),
-                                  child: TextFormField(
-                                    controller: _model.lastUserNameController,
-                                    onChanged: (_) => EasyDebounce.debounce(
-                                      '_model.lastUserNameController',
-                                      Duration(milliseconds: 2000),
-                                      () => setState(() {}),
+                                  textCapitalization:
+                                      TextCapitalization.sentences,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      '660l5474' /* Введите имя */,
                                     ),
-                                    textCapitalization:
-                                        TextCapitalization.sentences,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 14.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily),
-                                          ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        '3v3udrid' /* Введите фамилию */,
-                                      ),
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF3F8DFD),
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0xFF3F8DFD),
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      suffixIcon: _model.lastUserNameController!
-                                              .text.isNotEmpty
-                                          ? InkWell(
-                                              onTap: () async {
-                                                _model.lastUserNameController
-                                                    ?.clear();
-                                                setState(() {});
-                                              },
-                                              child: Icon(
-                                                Icons.clear,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                size: 24.0,
-                                              ),
-                                            )
-                                          : null,
-                                    ),
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
-                                    cursorColor: Color(0xFF3F8DFD),
-                                    validator: _model
-                                        .lastUserNameControllerValidator
-                                        .asValidator(context),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 0.0, 0.0, 12.0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'drvnfmui' /* Указывайте своё настоящее имя ... */,
-                                    ),
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .displaySmall
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyMediumFamily,
+                                                  .displaySmallFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           fontSize: 14.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily),
+                                                      .displaySmallFamily),
                                         ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0xFF3F8DFD),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Color(0xFF3F8DFD),
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    errorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    focusedErrorBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    suffixIcon: _model.firstUserNameController!
+                                            .text.isNotEmpty
+                                        ? InkWell(
+                                            onTap: () async {
+                                              _model.firstUserNameController
+                                                  ?.clear();
+                                              setState(() {});
+                                            },
+                                            child: Icon(
+                                              Icons.clear,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 24.0,
+                                            ),
+                                          )
+                                        : null,
                                   ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .displaySmall
+                                      .override(
+                                        fontFamily: 'Open Sans',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 14.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .displaySmallFamily),
+                                      ),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  validator: _model
+                                      .firstUserNameControllerValidator
+                                      .asValidator(context),
                                 ),
-                                FutureBuilder<List<ProfileRow>>(
+                              ),
+                              TextFormField(
+                                controller: _model.lastUserNameController,
+                                onChanged: (_) => EasyDebounce.debounce(
+                                  '_model.lastUserNameController',
+                                  Duration(milliseconds: 2000),
+                                  () => setState(() {}),
+                                ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
+                                obscureText: false,
+                                decoration: InputDecoration(
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '3v3udrid' /* Введите фамилию */,
+                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .displaySmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .displaySmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        fontSize: 14.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .displaySmallFamily),
+                                      ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF3F8DFD),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF3F8DFD),
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: FlutterFlowTheme.of(context).error,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: FlutterFlowTheme.of(context).error,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  suffixIcon: _model.lastUserNameController!
+                                          .text.isNotEmpty
+                                      ? InkWell(
+                                          onTap: () async {
+                                            _model.lastUserNameController
+                                                ?.clear();
+                                            setState(() {});
+                                          },
+                                          child: Icon(
+                                            Icons.clear,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 24.0,
+                                          ),
+                                        )
+                                      : null,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .displaySmall
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .displaySmallFamily,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      fontSize: 14.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmallFamily),
+                                    ),
+                                cursorColor: Color(0xFF3F8DFD),
+                                validator: _model
+                                    .lastUserNameControllerValidator
+                                    .asValidator(context),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 3.0, 0.0, 0.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'drvnfmui' /* Указывайте своё настоящее имя ... */,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                  style:
+                                      FlutterFlowTheme.of(context).displaySmall,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 12.0, 0.0, 0.0),
+                                child: FutureBuilder<List<ProfileRow>>(
                                   future: ProfileTable().querySingleRow(
                                     queryFn: (q) => q,
                                   ),
@@ -359,7 +330,12 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                     return FlutterFlowDropDown<String>(
                                       controller:
                                           _model.roleChoiceValueController ??=
-                                              FormFieldController<String>(null),
+                                              FormFieldController<String>(
+                                        _model.roleChoiceValue ??=
+                                            FFLocalizations.of(context).getText(
+                                          '820pn8ar' /* Студент */,
+                                        ),
+                                      ),
                                       options: [
                                         FFLocalizations.of(context).getText(
                                           'nscpox4g' /* Абитуриент */,
@@ -389,35 +365,33 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                       height: 50.0,
                                       searchHintTextStyle: FlutterFlowTheme.of(
                                               context)
-                                          .labelMedium
+                                          .displaySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .accent1,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMediumFamily),
-                                          ),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
+                                                    .displaySmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryText,
+                                            fontSize: 14.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
+                                                        .displaySmallFamily),
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'kins1x33' /* Выберите роль */,
-                                      ),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .displaySmall
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .displaySmallFamily,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                            fontSize: 14.0,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .displaySmallFamily),
+                                          ),
                                       searchHintText:
                                           FFLocalizations.of(context).getText(
                                         'kup43co3' /* Поиск */,
@@ -427,7 +401,7 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                            .secondaryText,
                                         size: 24.0,
                                       ),
                                       fillColor: FlutterFlowTheme.of(context)
@@ -444,136 +418,118 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                     );
                                   },
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 5.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'nlidvsw7' /* Верность выбранной Вами роли б... */,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.normal,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
-                                          ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 5.0, 0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'nlidvsw7' /* Верность выбранной Вами роли б... */,
                                     ),
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .displaySmall
+                                        .override(
+                                          fontFamily: 'Open Sans',
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .displaySmallFamily),
+                                        ),
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    FutureBuilder<List<ProfileRow>>(
-                      future: ProfileTable().querySingleRow(
-                        queryFn: (q) => q,
-                      ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 24.0,
-                              height: 24.0,
-                              child: SpinKitCircle(
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 24.0,
-                              ),
+                  ),
+                  FutureBuilder<List<ProfileRow>>(
+                    future: ProfileTable().querySingleRow(
+                      queryFn: (q) => q,
+                    ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 24.0,
+                            height: 24.0,
+                            child: SpinKitCircle(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24.0,
                             ),
-                          );
-                        }
-                        List<ProfileRow> buttonProfileRowList = snapshot.data!;
-                        final buttonProfileRow = buttonProfileRowList.isNotEmpty
-                            ? buttonProfileRowList.first
-                            : null;
-                        return FFButtonWidget(
-                          onPressed: () async {
-                            if (_model.formKey.currentState == null ||
-                                !_model.formKey.currentState!.validate()) {
-                              return;
-                            }
-                            await ProfileTable().update(
-                              data: {
-                                'first_name':
-                                    _model.firstUserNameController.text,
-                                'last_name': _model.lastUserNameController.text,
-                                'role': _model.roleChoiceValue,
-                              },
-                              matchingRows: (rows) => rows.eq(
-                                'id',
-                                currentUserUid,
-                              ),
-                            );
-
-                            context.goNamed(
-                              'OnboardingPage',
-                              extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
-                                  hasTransition: true,
-                                  transitionType:
-                                      PageTransitionType.rightToLeft,
-                                ),
-                              },
-                            );
-
-                            setState(() {
-                              FFAppState().updateUserStruct(
-                                (e) => e..isRegistration = false,
-                              );
-                            });
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'qjb0p5xz' /* Продолжить */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 200.0,
-                            height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Raleway',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .titleSmallFamily),
-                                ),
-                            elevation: 4.0,
-                            borderSide: BorderSide(
-                              color: Color(0xFF3F8DFD),
-                              width: 1.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
                           ),
                         );
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                      }
+                      List<ProfileRow> buttonProfileRowList = snapshot.data!;
+                      final buttonProfileRow = buttonProfileRowList.isNotEmpty
+                          ? buttonProfileRowList.first
+                          : null;
+                      return FFButtonWidget(
+                        onPressed: () async {
+                          if (_model.formKey.currentState == null ||
+                              !_model.formKey.currentState!.validate()) {
+                            return;
+                          }
+                          await ProfileTable().update(
+                            data: {
+                              'first_name': _model.firstUserNameController.text,
+                              'last_name': _model.lastUserNameController.text,
+                              'role': _model.roleChoiceValue,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              currentUserUid,
+                            ),
+                          );
+
+                          context.goNamed(
+                            'OnboardingPage',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.rightToLeft,
+                              ),
+                            },
+                          );
+
+                          setState(() {
+                            FFAppState().updateUserStruct(
+                              (e) => e..isRegistration = false,
+                            );
+                          });
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'qjb0p5xz' /* Продолжить */,
+                        ),
+                        options: FFButtonOptions(
+                          width: 200.0,
+                          height: 40.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                          elevation: 0.0,
+                          borderSide: BorderSide(
+                            color: Color(0xFF3F8DFD),
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

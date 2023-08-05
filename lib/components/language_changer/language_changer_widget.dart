@@ -127,14 +127,33 @@ class _LanguageChangerWidgetState extends State<LanguageChangerWidget>
                                 FFLocalizations.of(context).getText(
                                   'vhviesuz' /* Выберите язык */,
                                 ),
-                                style:
-                                    FlutterFlowTheme.of(context).headlineLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineLarge
+                                    .override(
+                                      fontFamily: 'Nunito',
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineLargeFamily),
+                                    ),
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
                                   '64q48oej' /* Смените язык приложения, выбра... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).labelLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
+                                      fontSize: 14.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily),
+                                    ),
                               ),
                             ],
                           ),
@@ -164,178 +183,168 @@ class _LanguageChangerWidgetState extends State<LanguageChangerWidget>
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          setAppLanguage(context, 'ru');
-                        },
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF1B1D27),
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/Flag_of_Russia.svg.png',
-                              ).image,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4.0,
-                                color: Color(0x33000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              color: Colors.transparent,
-                            ),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 4.0, 0.0, 4.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'fan4jvnx' /* Русский */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLargeFamily,
-                                            color: Color(0xFF14181B),
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleLargeFamily),
-                                          ),
-                                    ),
-                                  ),
-                                  if (FFLocalizations.of(context)
-                                          .languageCode ==
-                                      'ru')
-                                    Align(
-                                      alignment:
-                                          AlignmentDirectional(1.0, -1.0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 5.0, 5.0, 0.0),
-                                        child: Icon(
-                                          Icons.check_circle_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent1,
-                                          size: 16.0,
-                                        ).animateOnPageLoad(animationsMap[
-                                            'iconOnPageLoadAnimation1']!),
-                                      ),
-                                    ),
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setAppLanguage(context, 'ru');
+                            },
+                            child: Container(
+                              width: 100.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF1B1D27),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: Image.asset(
+                                    'assets/images/Flag_of_Russia.svg.png',
+                                  ).image,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0.0, 2.0),
+                                  )
                                 ],
+                                borderRadius: BorderRadius.circular(8.0),
+                                border: Border.all(
+                                  color: Colors.transparent,
+                                ),
                               ),
+                            ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 4.0, 0.0, 4.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'is9iqx21' /* Русский */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLargeFamily),
+                                      ),
+                                ),
+                              ),
+                              if (FFLocalizations.of(context).languageCode ==
+                                  'ru')
+                                Align(
+                                  alignment: AlignmentDirectional(1.0, -1.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 5.0, 5.0, 0.0),
+                                    child: Icon(
+                                      Icons.check_circle_rounded,
+                                      color:
+                                          FlutterFlowTheme.of(context).accent1,
+                                      size: 16.0,
+                                    ).animateOnPageLoad(animationsMap[
+                                        'iconOnPageLoadAnimation1']!),
+                                  ),
+                                ),
                             ],
                           ),
-                        ),
+                        ],
                       ),
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          setAppLanguage(context, 'en');
-                        },
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).info,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/Flag_of_the_United_Kingdom_(3-5).svg.png',
-                              ).image,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 4.0,
-                                color: Color(0x33000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 4.0, 0.0, 4.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '9ngz6azr' /* English. */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleLargeFamily,
-                                            color: Color(0xFFF1F4F8),
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleLargeFamily),
-                                          ),
-                                    ),
-                                  ),
-                                  if (FFLocalizations.of(context)
-                                          .languageCode ==
-                                      'en')
-                                    Align(
-                                      alignment:
-                                          AlignmentDirectional(1.0, -1.0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 5.0, 5.0, 0.0),
-                                        child: Icon(
-                                          Icons.check_circle_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent1,
-                                          size: 16.0,
-                                        ).animateOnPageLoad(animationsMap[
-                                            'iconOnPageLoadAnimation2']!),
-                                      ),
-                                    ),
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setAppLanguage(context, 'en');
+                            },
+                            child: Container(
+                              width: 100.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).info,
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: Image.asset(
+                                    'assets/images/Flag_of_the_United_Kingdom_(3-5).svg.png',
+                                  ).image,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 4.0,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0.0, 2.0),
+                                  )
                                 ],
+                                borderRadius: BorderRadius.circular(8.0),
                               ),
+                            ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 4.0, 0.0, 4.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '4b7isyzi' /* English */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'PT Sans',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLargeFamily),
+                                      ),
+                                ),
+                              ),
+                              if (FFLocalizations.of(context).languageCode ==
+                                  'en')
+                                Align(
+                                  alignment: AlignmentDirectional(1.0, -1.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 5.0, 5.0, 0.0),
+                                    child: Icon(
+                                      Icons.check_circle_rounded,
+                                      color:
+                                          FlutterFlowTheme.of(context).accent1,
+                                      size: 16.0,
+                                    ).animateOnPageLoad(animationsMap[
+                                        'iconOnPageLoadAnimation2']!),
+                                  ),
+                                ),
                             ],
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
@@ -360,9 +369,9 @@ class _LanguageChangerWidgetState extends State<LanguageChangerWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),
@@ -392,9 +401,9 @@ class _LanguageChangerWidgetState extends State<LanguageChangerWidget>
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
-                                fontFamily: 'Raleway',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),

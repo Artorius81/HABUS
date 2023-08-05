@@ -205,107 +205,108 @@ class MobileTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Raleway';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.w900,
         fontSize: 64.0,
+        fontStyle: FontStyle.normal,
       );
-  String get displayMediumFamily => 'Raleway';
+  String get displayMediumFamily => 'PT Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Raleway',
+        'PT Sans',
         color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 44.0,
+        fontWeight: FontWeight.w600,
+        fontSize: 30.0,
       );
-  String get displaySmallFamily => 'Raleway';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Raleway',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
-      );
-  String get headlineLargeFamily => 'Raleway';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Raleway',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
-      );
-  String get headlineMediumFamily => 'Raleway';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Raleway',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 24.0,
-      );
-  String get headlineSmallFamily => 'Raleway';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Raleway',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 24.0,
-      );
-  String get titleLargeFamily => 'Raleway';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Raleway',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 22.0,
-      );
-  String get titleMediumFamily => 'Ubuntu';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'Ubuntu',
-        color: theme.info,
-        fontWeight: FontWeight.normal,
-        fontSize: 18.0,
-      );
-  String get titleSmallFamily => 'Ubuntu';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'Ubuntu',
-        color: theme.info,
-        fontWeight: FontWeight.w500,
-        fontSize: 16.0,
-      );
-  String get labelLargeFamily => 'Ubuntu';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Ubuntu',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
-  String get labelMediumFamily => 'Ubuntu';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'Ubuntu',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
-  String get labelSmallFamily => 'Ubuntu';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'Ubuntu';
+  String get headlineLargeFamily => 'Open Sans';
+  TextStyle get headlineLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
+      );
+  String get headlineMediumFamily => 'Open Sans';
+  TextStyle get headlineMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 24.0,
+      );
+  String get headlineSmallFamily => 'Open Sans';
+  TextStyle get headlineSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 24.0,
+      );
+  String get titleLargeFamily => 'Open Sans';
+  TextStyle get titleLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
+      );
+  String get titleMediumFamily => 'Open Sans';
+  TextStyle get titleMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.info,
+        fontWeight: FontWeight.normal,
+        fontSize: 18.0,
+      );
+  String get titleSmallFamily => 'Open Sans';
+  TextStyle get titleSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelLargeFamily => 'Open Sans';
+  TextStyle get labelLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
+      );
+  String get labelMediumFamily => 'Open Sans';
+  TextStyle get labelMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.0,
+      );
+  String get labelSmallFamily => 'Open Sans';
+  TextStyle get labelSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 12.0,
+      );
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Ubuntu';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Ubuntu';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
@@ -317,107 +318,107 @@ class TabletTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Raleway';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Raleway';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Raleway';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Raleway';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Raleway';
+  String get headlineMediumFamily => 'Open Sans';
   TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Raleway';
+  String get headlineSmallFamily => 'Open Sans';
   TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Raleway';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'Ubuntu';
+  String get titleMediumFamily => 'Open Sans';
   TextStyle get titleMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'Ubuntu';
+  String get titleSmallFamily => 'Open Sans';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Ubuntu';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'Ubuntu';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'Ubuntu';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'Ubuntu';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Ubuntu';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Ubuntu';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
@@ -429,107 +430,107 @@ class DesktopTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Raleway';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Raleway';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Raleway';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Raleway';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Raleway';
+  String get headlineMediumFamily => 'Open Sans';
   TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Raleway';
+  String get headlineSmallFamily => 'Open Sans';
   TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Raleway';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Raleway',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'Ubuntu';
+  String get titleMediumFamily => 'Open Sans';
   TextStyle get titleMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'Ubuntu';
+  String get titleSmallFamily => 'Open Sans';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Ubuntu';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'Ubuntu';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'Ubuntu';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'Ubuntu';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Ubuntu';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Ubuntu';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'Ubuntu',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
@@ -551,7 +552,7 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color primaryText = const Color(0xFFFFFFFF);
   late Color secondaryText = const Color(0xFF95A1AC);
   late Color primaryBackground = const Color(0xFF1D2428);
-  late Color secondaryBackground = const Color(0xFF090A0B);
+  late Color secondaryBackground = const Color(0xFF22292F);
   late Color accent1 = const Color(0xFF3F8DFD);
   late Color accent2 = const Color(0xFF0069B4);
   late Color accent3 = const Color(0xFF67BFFF);
