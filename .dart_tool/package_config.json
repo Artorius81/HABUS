@@ -104,6 +104,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -136,6 +142,12 @@
     {
       "name": "file",
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/file-6.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flip_card",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/flip_card-0.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -174,6 +186,12 @@
       "rootUri": "file:///C:/src/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_native_splash",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter_spinkit",
@@ -240,6 +258,12 @@
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/hive_flutter-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "http",
@@ -410,6 +434,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "pointer_interceptor",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/pointer_interceptor-0.9.3+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "pointycastle",
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.3",
       "packageUri": "lib/",
@@ -496,6 +526,12 @@
     {
       "name": "shared_preferences_windows",
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shimmer",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/shimmer-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -716,6 +752,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "webviewx_plus",
+      "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/webviewx_plus-0.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///C:/Users/Artorius/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.0.6",
       "packageUri": "lib/",
@@ -752,7 +794,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-02T05:54:36.311557Z",
+  "generated": "2023-08-05T15:45:27.128800Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }
