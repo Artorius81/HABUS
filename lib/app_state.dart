@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'flutter_flow/request_manager.dart';
 import '/backend/schema/structs/index.dart';
 import 'backend/supabase/supabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -53,6 +54,21 @@ class FFAppState extends ChangeNotifier {
     _lastName = _value;
     prefs.setString('ff_lastName', _value);
   }
+
+  final _userProfileInfoManager = FutureRequestManager<List<ProfileRow>>();
+  Future<List<ProfileRow>> userProfileInfo({
+    String? uniqueQueryKey,
+    bool? overrideCache,
+    required Future<List<ProfileRow>> Function() requestFn,
+  }) =>
+      _userProfileInfoManager.performRequest(
+        uniqueQueryKey: uniqueQueryKey,
+        overrideCache: overrideCache,
+        requestFn: requestFn,
+      );
+  void clearUserProfileInfoCache() => _userProfileInfoManager.clear();
+  void clearUserProfileInfoCacheKey(String? uniqueKey) =>
+      _userProfileInfoManager.clearRequest(uniqueKey);
 }
 
 LatLng? _latLngFromString(String? val) {

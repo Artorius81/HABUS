@@ -69,7 +69,7 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                       'rua4rzxc' /* ХАБУС */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Nunito',
+                          fontFamily: 'Open Sans',
                           fontSize: 64.0,
                           fontWeight: FontWeight.w900,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -93,9 +93,9 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                         ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Nunito',
+                              fontFamily: 'PT Sans',
                               fontSize: 30.0,
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w600,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -107,9 +107,9 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                         ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'PT Sans',
+                              fontFamily: 'Open Sans',
                               color: FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 14.0,
+                              fontSize: 12.0,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -135,10 +135,6 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                     TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'digx179s' /* Email */,
-                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -152,6 +148,9 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .labelMediumFamily),
                                       ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'ljee5b2d' /* Email */,
+                                  ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   enabledBorder: OutlineInputBorder(
@@ -198,7 +197,18 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                         )
                                       : null,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
+                                    ),
                                 cursorColor: Color(0xFF3F8DFD),
                                 validator: _model.emailControllerValidator
                                     .asValidator(context),
@@ -252,14 +262,14 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
+                          fontFamily: 'Open Sans',
                           color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
-                    elevation: 4.0,
+                    elevation: 0.0,
                     borderSide: BorderSide(
                       color: Color(0xFF3F8DFD),
                       width: 1.0,

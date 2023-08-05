@@ -186,6 +186,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'UserProfilePage',
           path: '/userProfilePage',
           builder: (context, params) => UserProfilePageWidget(),
+        ),
+        FFRoute(
+          name: 'HABUSFormWebView',
+          path: '/hABUSFormWebView',
+          builder: (context, params) => HABUSFormWebViewWidget(),
+        ),
+        FFRoute(
+          name: 'FormWebViewPage',
+          path: '/formWebViewPage',
+          builder: (context, params) => FormWebViewPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

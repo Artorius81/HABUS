@@ -235,7 +235,8 @@ class _LanguageChangerWidgetState extends State<LanguageChangerWidget>
                                       .titleLarge
                                       .override(
                                         fontFamily: 'PT Sans',
-                                        color: Color(0xFF14181B),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()

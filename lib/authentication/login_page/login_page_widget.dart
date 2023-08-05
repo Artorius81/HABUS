@@ -69,13 +69,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     FFLocalizations.of(context).getText(
                       'l2m497ef' /* ХАБУС */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Nunito',
-                          fontSize: 64.0,
-                          fontWeight: FontWeight.w900,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyMediumFamily),
-                        ),
+                    style: FlutterFlowTheme.of(context).displayLarge,
                     colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
                     gradientDirection: GradientDirection.ltr,
                     gradientType: GradientType.linear,
@@ -107,10 +101,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    '7ue39d6j' /* Email */,
-                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -124,6 +114,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .labelMediumFamily),
                                       ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    's04rjuen' /* Email */,
+                                  ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   enabledBorder: OutlineInputBorder(
@@ -170,7 +163,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         )
                                       : null,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style:
+                                    FlutterFlowTheme.of(context).displaySmall,
                                 cursorColor: Color(0xFF3F8DFD),
                                 validator: _model.emailControllerValidator
                                     .asValidator(context),
@@ -185,10 +179,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     TextCapitalization.sentences,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'ftjkdl9z' /* Пароль */,
-                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -201,6 +191,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .labelMediumFamily),
                                       ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'rfftsqwi' /* Пароль */,
+                                  ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   enabledBorder: OutlineInputBorder(
@@ -247,7 +240,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     ),
                                   ),
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style:
+                                    FlutterFlowTheme.of(context).displaySmall,
                                 cursorColor: Color(0xFF3F8DFD),
                                 validator: _model.passwordControllerValidator
                                     .asValidator(context),
@@ -290,18 +284,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primaryBackground,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: 'Nunito',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .titleSmallFamily),
-                              ),
-                          elevation: 4.0,
+                          textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                          elevation: 0.0,
                           borderSide: BorderSide(
                             color: Color(0xFF3F8DFD),
                             width: 1.0,

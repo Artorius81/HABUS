@@ -205,107 +205,108 @@ class MobileTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Nunito';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.w900,
         fontSize: 64.0,
+        fontStyle: FontStyle.normal,
       );
-  String get displayMediumFamily => 'Nunito';
+  String get displayMediumFamily => 'PT Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Nunito',
+        'PT Sans',
         color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 44.0,
+        fontWeight: FontWeight.w600,
+        fontSize: 30.0,
       );
-  String get displaySmallFamily => 'Nunito';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 36.0,
-      );
-  String get headlineLargeFamily => 'Nunito';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
-      );
-  String get headlineMediumFamily => 'Nunito';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 24.0,
-      );
-  String get headlineSmallFamily => 'Nunito';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 24.0,
-      );
-  String get titleLargeFamily => 'Nunito';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Nunito',
-        color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 22.0,
-      );
-  String get titleMediumFamily => 'PT Sans';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'PT Sans',
-        color: theme.info,
-        fontWeight: FontWeight.normal,
-        fontSize: 18.0,
-      );
-  String get titleSmallFamily => 'PT Sans';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'PT Sans',
-        color: theme.info,
-        fontWeight: FontWeight.w500,
-        fontSize: 16.0,
-      );
-  String get labelLargeFamily => 'PT Sans';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'PT Sans',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 16.0,
-      );
-  String get labelMediumFamily => 'PT Sans';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'PT Sans',
-        color: theme.secondaryText,
-        fontWeight: FontWeight.normal,
-        fontSize: 14.0,
-      );
-  String get labelSmallFamily => 'PT Sans';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'PT Sans';
+  String get headlineLargeFamily => 'Open Sans';
+  TextStyle get headlineLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
+      );
+  String get headlineMediumFamily => 'Open Sans';
+  TextStyle get headlineMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 24.0,
+      );
+  String get headlineSmallFamily => 'Open Sans';
+  TextStyle get headlineSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 24.0,
+      );
+  String get titleLargeFamily => 'Open Sans';
+  TextStyle get titleLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
+      );
+  String get titleMediumFamily => 'Open Sans';
+  TextStyle get titleMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.info,
+        fontWeight: FontWeight.normal,
+        fontSize: 18.0,
+      );
+  String get titleSmallFamily => 'Open Sans';
+  TextStyle get titleSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelLargeFamily => 'Open Sans';
+  TextStyle get labelLarge => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 16.0,
+      );
+  String get labelMediumFamily => 'Open Sans';
+  TextStyle get labelMedium => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.0,
+      );
+  String get labelSmallFamily => 'Open Sans';
+  TextStyle get labelSmall => GoogleFonts.getFont(
+        'Open Sans',
+        color: theme.secondaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 12.0,
+      );
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'PT Sans';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'PT Sans';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
@@ -317,107 +318,107 @@ class TabletTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Nunito';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Nunito';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Nunito';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Nunito';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Nunito';
+  String get headlineMediumFamily => 'Open Sans';
   TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Nunito';
+  String get headlineSmallFamily => 'Open Sans';
   TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Nunito';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'PT Sans';
+  String get titleMediumFamily => 'Open Sans';
   TextStyle get titleMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'PT Sans';
+  String get titleSmallFamily => 'Open Sans';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'PT Sans';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'PT Sans';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'PT Sans';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'PT Sans';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'PT Sans';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'PT Sans';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
@@ -429,107 +430,107 @@ class DesktopTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Nunito';
+  String get displayLargeFamily => 'Open Sans';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Nunito';
+  String get displayMediumFamily => 'Open Sans';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Nunito';
+  String get displaySmallFamily => 'Open Sans';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Nunito';
+  String get headlineLargeFamily => 'Open Sans';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Nunito';
+  String get headlineMediumFamily => 'Open Sans';
   TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Nunito';
+  String get headlineSmallFamily => 'Open Sans';
   TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Nunito';
+  String get titleLargeFamily => 'Open Sans';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Nunito',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'PT Sans';
+  String get titleMediumFamily => 'Open Sans';
   TextStyle get titleMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'PT Sans';
+  String get titleSmallFamily => 'Open Sans';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'PT Sans';
+  String get labelLargeFamily => 'Open Sans';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'PT Sans';
+  String get labelMediumFamily => 'Open Sans';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'PT Sans';
+  String get labelSmallFamily => 'Open Sans';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'PT Sans';
+  String get bodyLargeFamily => 'Open Sans';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'PT Sans';
+  String get bodyMediumFamily => 'Open Sans';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'PT Sans';
+  String get bodySmallFamily => 'Open Sans';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'PT Sans',
+        'Open Sans',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,

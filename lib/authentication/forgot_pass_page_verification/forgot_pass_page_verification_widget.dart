@@ -69,7 +69,7 @@ class _ForgotPassPageVerificationWidgetState
                         'gv9y6p5p' /* ХАБУС */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Open Sans',
                             fontSize: 64.0,
                             fontWeight: FontWeight.w900,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -98,9 +98,9 @@ class _ForgotPassPageVerificationWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Nunito',
+                                  fontFamily: 'PT Sans',
                                   fontSize: 30.0,
-                                  fontWeight: FontWeight.w800,
+                                  fontWeight: FontWeight.w600,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
@@ -118,7 +118,7 @@ class _ForgotPassPageVerificationWidgetState
                                       .bodyMediumFamily,
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  fontSize: 14.0,
+                                  fontSize: 12.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
@@ -154,14 +154,14 @@ class _ForgotPassPageVerificationWidgetState
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
-                            fontFamily: 'Nunito',
+                            fontFamily: 'Open Sans',
                             color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
+                            fontSize: 14.0,
                             fontWeight: FontWeight.w500,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
-                      elevation: 4.0,
+                      elevation: 0.0,
                       borderSide: BorderSide(
                         color: Color(0xFF3F8DFD),
                         width: 1.0,

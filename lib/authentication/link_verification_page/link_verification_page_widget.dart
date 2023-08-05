@@ -57,13 +57,7 @@ class _LinkVerificationPageWidgetState
                     FFLocalizations.of(context).getText(
                       'ysqs24q7' /* ХАБУС */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Nunito',
-                          fontSize: 64.0,
-                          fontWeight: FontWeight.w900,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyMediumFamily),
-                        ),
+                    style: FlutterFlowTheme.of(context).displayLarge,
                     colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
                     gradientDirection: GradientDirection.ltr,
                     gradientType: GradientType.linear,
@@ -80,34 +74,14 @@ class _LinkVerificationPageWidgetState
                             'dqmava4q' /* Осталось немного */,
                           ),
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'Nunito',
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.w800,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+                          style: FlutterFlowTheme.of(context).displayMedium,
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
                             'j0sw6cig' /* Мы отправили Вам ссылку-подтве... */,
                           ),
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 14.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+                          style: FlutterFlowTheme.of(context).displaySmall,
                         ),
                       ],
                     ),
@@ -135,17 +109,14 @@ class _LinkVerificationPageWidgetState
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primaryBackground,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .titleSmall
-                          .override(
-                            fontFamily: 'Nunito',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w500,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).titleSmallFamily),
-                          ),
-                      elevation: 4.0,
+                      textStyle:
+                          FlutterFlowTheme.of(context).headlineLarge.override(
+                                fontFamily: 'Open Sans',
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineLargeFamily),
+                              ),
+                      elevation: 0.0,
                       borderSide: BorderSide(
                         color: Color(0xFF3F8DFD),
                         width: 1.0,

@@ -88,7 +88,7 @@ class _GetHelpPageWidgetState extends State<GetHelpPageWidget> {
                 'dvxyy39m' /* ХАБУС */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Nunito',
+                    fontFamily: 'Open Sans',
                     fontSize: 36.0,
                     fontWeight: FontWeight.w900,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -139,9 +139,9 @@ class _GetHelpPageWidgetState extends State<GetHelpPageWidget> {
                     'n586r3qw' /* Связаться с техподдержкой */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
+                        fontFamily: 'PT Sans',
                         fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
@@ -155,7 +155,7 @@ class _GetHelpPageWidgetState extends State<GetHelpPageWidget> {
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                       color: FlutterFlowTheme.of(context).secondaryText,
-                      fontSize: 14.0,
+                      fontSize: 12.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).bodyMediumFamily),
                     ),
@@ -170,23 +170,19 @@ class _GetHelpPageWidgetState extends State<GetHelpPageWidget> {
                     children: [
                       Align(
                         alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              5.0, 0.0, 0.0, 0.0),
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'rq8titgd' /* Опишите проблему */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyMediumFamily),
-                                ),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'rq8titgd' /* Опишите проблему */,
                           ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'PT Sans',
+                                fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ),
                       TextFormField(
@@ -268,72 +264,79 @@ class _GetHelpPageWidgetState extends State<GetHelpPageWidget> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    if (_model.formKey.currentState == null ||
-                        !_model.formKey.currentState!.validate()) {
-                      return;
-                    }
-                    await launchUrl(Uri(
-                        scheme: 'mailto',
-                        path: 'habus.tech@yandex.ru',
-                        query: {
-                          'subject': 'Связь с техподдержкой',
-                          'body': _model.userProblemController.text,
-                        }
-                            .entries
-                            .map((MapEntry<String, String> e) =>
-                                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                            .join('&')));
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Сообщение отправлено!',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+                  child: FFButtonWidget(
+                    onPressed: () async {
+                      if (_model.formKey.currentState == null ||
+                          !_model.formKey.currentState!.validate()) {
+                        return;
+                      }
+                      await launchUrl(Uri(
+                          scheme: 'mailto',
+                          path: 'habus.tech@yandex.ru',
+                          query: {
+                            'subject': 'Связь с техподдержкой',
+                            'body': _model.userProblemController.text,
+                          }
+                              .entries
+                              .map((MapEntry<String, String> e) =>
+                                  '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                              .join('&')));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'Сообщение отправлено!',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
+                          ),
+                          duration: Duration(milliseconds: 2000),
+                          backgroundColor: Color(0xFF2FFF5F),
                         ),
-                        duration: Duration(milliseconds: 2000),
-                        backgroundColor: Color(0xFF2FFF5F),
-                      ),
-                    );
-                    context.safePop();
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'bwgfe8eh' /* Отправить */,
-                  ),
-                  options: FFButtonOptions(
-                    width: double.infinity,
-                    height: 40.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w500,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).titleSmallFamily),
-                        ),
-                    elevation: 4.0,
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).accent1,
-                      width: 1.0,
+                      );
+                      context.safePop();
+                    },
+                    text: FFLocalizations.of(context).getText(
+                      'bwgfe8eh' /* Отправить */,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    options: FFButtonOptions(
+                      width: 200.0,
+                      height: 40.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .titleSmall
+                          .override(
+                            fontFamily: 'Open Sans',
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).titleSmallFamily),
+                          ),
+                      elevation: 0.0,
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).accent1,
+                        width: 1.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
                   ),
                 ),
               ),

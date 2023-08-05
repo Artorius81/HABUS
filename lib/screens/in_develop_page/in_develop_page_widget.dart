@@ -67,7 +67,7 @@ class _InDevelopPageWidgetState extends State<InDevelopPageWidget> {
               'vi54q3ey' /* ХАБУС */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Nunito',
+                  fontFamily: 'Open Sans',
                   fontSize: 36.0,
                   fontWeight: FontWeight.w900,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -105,42 +105,45 @@ class _InDevelopPageWidgetState extends State<InDevelopPageWidget> {
         ),
         body: Stack(
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  child: Text(
                     FFLocalizations.of(context).getText(
                       'b06wckw7' /* В разработке */,
                     ),
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Nunito',
+                          fontFamily: 'PT Sans',
                           color: FlutterFlowTheme.of(context).secondary,
                           fontSize: 30.0,
-                          fontWeight: FontWeight.w800,
+                          fontWeight: FontWeight.w600,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
-                  Text(
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  child: Text(
                     FFLocalizations.of(context).getText(
                       'x5wuwzdz' /* В данный момент это раздел нах... */,
                     ),
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'PT Sans',
+                          fontFamily: 'Open Sans',
                           color: FlutterFlowTheme.of(context).secondaryText,
-                          fontSize: 14.0,
+                          fontSize: 12.0,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Align(
               alignment: AlignmentDirectional(0.0, 1.0),
@@ -161,14 +164,14 @@ class _InDevelopPageWidgetState extends State<InDevelopPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
+                          fontFamily: 'Open Sans',
                           color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
-                    elevation: 4.0,
+                    elevation: 0.0,
                     borderSide: BorderSide(
                       color: Color(0xFF3F8DFD),
                       width: 1.0,

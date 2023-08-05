@@ -119,9 +119,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Nunito',
+                                      fontFamily: 'PT Sans',
                                       fontSize: 16.0,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w600,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -163,7 +163,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'PT Sans',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
                                     fontSize: 12.0,
@@ -229,7 +229,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                               child: Icon(
                                 Icons.badge,
                                 color: FlutterFlowTheme.of(context).primaryText,
-                                size: 22.0,
+                                size: 20.0,
                               ),
                             ),
                             Padding(
@@ -237,12 +237,13 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  '05w78l02' /* Личный кабинет ВВГУ */,
+                                  'gmugfv7s' /* Личный кабинет ВВГУ */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Nunito',
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -269,7 +270,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                     }
 
                     context.pushNamed(
-                      'InDevelopPage',
+                      'UserProfilePage',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
@@ -299,7 +300,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.person,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -307,15 +308,15 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'ejcrm47x' /* Мой профиль */,
+                                'cxha4mwz' /* Мой профиль */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -358,7 +359,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.home_rounded,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -366,15 +367,15 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'vl4ofhz6' /* Главная */,
+                                't4tpi12q' /* Главная */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -428,7 +429,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.groups,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -436,20 +437,20 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'm3ty6n1l' /* Создать сообщество */,
+                                'g1x5fhqw' /* Создать сообщество */,
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
+                                  .displaySmall
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .displaySmallFamily,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyMediumFamily),
+                                                .displaySmallFamily),
                                   ),
                             ),
                           ),
@@ -498,7 +499,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.chat,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -506,15 +507,15 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'nqit97nl' /* Создать чат */,
+                                '4yajvw0t' /* Создать чат */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -567,7 +568,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.settings,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -575,15 +576,15 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'ksww1w36' /* Настройки */,
+                                'fa9c8wrt' /* Настройки */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -627,7 +628,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             child: Icon(
                               Icons.logout,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              size: 22.0,
+                              size: 20.0,
                             ),
                           ),
                           Padding(
@@ -635,14 +636,14 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'sh3q2duk' /* Выйти */,
+                                '2jxl5sa1' /* Выйти */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Nunito',
+                                    fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context).error,
-                                    fontSize: 14.0,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -668,16 +669,16 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         children: [
                           Text(
                             FFLocalizations.of(context).getText(
-                              '38ugfp9k' /* 1.0beta_build */,
+                              'vlqwp1jl' /* 1.0beta_build */,
                             ),
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'PT Sans',
+                                  fontFamily: 'Open Sans',
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  fontSize: 12.0,
+                                  fontSize: 10.0,
                                   fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -693,16 +694,16 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                       children: [
                         Text(
                           FFLocalizations.of(context).getText(
-                            'fhq479vv' /* habus.tech@yandex.ru */,
+                            'zkqjefdj' /* habus.tech@yandex.ru */,
                           ),
                           textAlign: TextAlign.start,
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: 'PT Sans',
+                                fontFamily: 'Open Sans',
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 12.0,
+                                fontSize: 10.0,
                                 fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -757,7 +758,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                 'ggk3m7ae' /* ХАБУС */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Nunito',
+                    fontFamily: 'Open Sans',
                     fontSize: 36.0,
                     fontWeight: FontWeight.w900,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -818,9 +819,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Nunito',
+                                      fontFamily: 'PT Sans',
                                       fontSize: 22.0,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w600,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -832,96 +833,94 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 16.0, 0.0),
-                            child: Material(
-                              color: Colors.transparent,
-                              elevation: 0.0,
-                              child: Container(
-                                width: double.infinity,
-                                height: 220.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
+                            child: FutureBuilder<List<ProfileRow>>(
+                              future: FFAppState().userProfileInfo(
+                                requestFn: () => ProfileTable().querySingleRow(
+                                  queryFn: (q) => q,
                                 ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Text(
-                                          FFLocalizations.of(context).getText(
-                                            'zgufdj5e' /* Информация о профиле */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Nunito',
-                                                fontSize: 16.0,
-                                                fontWeight: FontWeight.w600,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
-                                              ),
-                                        ),
-                                      ],
+                              ),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 24.0,
+                                      height: 24.0,
+                                      child: SpinKitCircle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        size: 24.0,
+                                      ),
                                     ),
-                                    Row(
+                                  );
+                                }
+                                List<ProfileRow> containerProfileRowList =
+                                    snapshot.data!;
+                                final containerProfileRow =
+                                    containerProfileRowList.isNotEmpty
+                                        ? containerProfileRowList.first
+                                        : null;
+                                return Material(
+                                  color: Colors.transparent,
+                                  elevation: 0.0,
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 220.0,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                    ),
+                                    child: Column(
                                       mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
                                       children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 12.0, 0.0),
-                                          child: Icon(
-                                            Icons.email,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 22.0,
-                                          ),
-                                        ),
-                                        Flexible(
-                                          child:
-                                              FutureBuilder<List<ProfileRow>>(
-                                            future:
-                                                ProfileTable().querySingleRow(
-                                              queryFn: (q) => q,
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'zgufdj5e' /* Информация о профиле */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'PT Sans',
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily),
+                                                      ),
                                             ),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 24.0,
-                                                    height: 24.0,
-                                                    child: SpinKitCircle(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                      size: 24.0,
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              List<ProfileRow>
-                                                  textProfileRowList =
-                                                  snapshot.data!;
-                                              final textProfileRow =
-                                                  textProfileRowList.isNotEmpty
-                                                      ? textProfileRowList.first
-                                                      : null;
-                                              return Text(
+                                          ],
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 12.0, 0.0),
+                                              child: Icon(
+                                                Icons.email,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 22.0,
+                                              ),
+                                            ),
+                                            Flexible(
+                                              child: Text(
                                                 valueOrDefault<String>(
-                                                  textProfileRow?.email,
+                                                  containerProfileRow?.email,
                                                   'Не указано',
-                                                ).maybeHandleOverflow(
-                                                  maxChars: 30,
-                                                  replacement: '…',
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -941,71 +940,36 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                           context)
                                                                       .bodyMediumFamily),
                                                         ),
-                                              );
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 12.0, 0.0),
-                                          child: Icon(
-                                            Icons.school_sharp,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 22.0,
-                                          ),
-                                        ),
-                                        Flexible(
-                                          child: Align(
-                                            alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            child:
-                                                FutureBuilder<List<ProfileRow>>(
-                                              future:
-                                                  ProfileTable().querySingleRow(
-                                                queryFn: (q) => q,
                                               ),
-                                              builder: (context, snapshot) {
-                                                // Customize what your widget looks like when it's loading.
-                                                if (!snapshot.hasData) {
-                                                  return Center(
-                                                    child: SizedBox(
-                                                      width: 24.0,
-                                                      height: 24.0,
-                                                      child: SpinKitCircle(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
-                                                        size: 24.0,
-                                                      ),
-                                                    ),
-                                                  );
-                                                }
-                                                List<ProfileRow>
-                                                    textProfileRowList =
-                                                    snapshot.data!;
-                                                final textProfileRow =
-                                                    textProfileRowList
-                                                            .isNotEmpty
-                                                        ? textProfileRowList
-                                                            .first
-                                                        : null;
-                                                return Text(
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 12.0, 0.0),
+                                              child: Icon(
+                                                Icons.school_sharp,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 22.0,
+                                              ),
+                                            ),
+                                            Flexible(
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                child: Text(
                                                   valueOrDefault<String>(
-                                                    textProfileRow?.department,
+                                                    containerProfileRow
+                                                        ?.department,
                                                     'Не указано',
-                                                  ).maybeHandleOverflow(
-                                                    maxChars: 28,
-                                                    replacement: '…',
                                                   ),
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
@@ -1026,61 +990,30 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                         context)
                                                                     .bodyMediumFamily),
                                                       ),
-                                                );
-                                              },
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 12.0, 0.0),
-                                          child: Icon(
-                                            Icons.view_carousel,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 22.0,
-                                          ),
-                                        ),
-                                        Flexible(
-                                          child:
-                                              FutureBuilder<List<ProfileRow>>(
-                                            future:
-                                                ProfileTable().querySingleRow(
-                                              queryFn: (q) => q,
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 12.0, 0.0),
+                                              child: Icon(
+                                                Icons.view_carousel,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 22.0,
+                                              ),
                                             ),
-                                            builder: (context, snapshot) {
-                                              // Customize what your widget looks like when it's loading.
-                                              if (!snapshot.hasData) {
-                                                return Center(
-                                                  child: SizedBox(
-                                                    width: 24.0,
-                                                    height: 24.0,
-                                                    child: SpinKitCircle(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                      size: 24.0,
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                              List<ProfileRow>
-                                                  textProfileRowList =
-                                                  snapshot.data!;
-                                              final textProfileRow =
-                                                  textProfileRowList.isNotEmpty
-                                                      ? textProfileRowList.first
-                                                      : null;
-                                              return Text(
+                                            Flexible(
+                                              child: Text(
                                                 valueOrDefault<String>(
-                                                  textProfileRow?.group,
+                                                  containerProfileRow?.group,
                                                   'Не указано',
                                                 ),
                                                 textAlign: TextAlign.start,
@@ -1102,67 +1035,73 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                           context)
                                                                       .bodyMediumFamily),
                                                         ),
-                                              );
-                                            },
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        FFButtonWidget(
+                                          onPressed: () async {
+                                            context.pushNamed(
+                                              'ChangProfileInfoPage',
+                                              extra: <String, dynamic>{
+                                                kTransitionInfoKey:
+                                                    TransitionInfo(
+                                                  hasTransition: true,
+                                                  transitionType:
+                                                      PageTransitionType
+                                                          .rightToLeft,
+                                                ),
+                                              },
+                                            );
+                                          },
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'pzghgx3i' /* Изменить */,
+                                          ),
+                                          options: FFButtonOptions(
+                                            width: 200.0,
+                                            height: 40.0,
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            iconPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBackground,
+                                            textStyle: FlutterFlowTheme.of(
+                                                    context)
+                                                .titleSmall
+                                                .override(
+                                                  fontFamily: 'Open Sans',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14.0,
+                                                  fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .titleSmallFamily),
+                                                ),
+                                            elevation: 0.0,
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .accent1,
+                                              width: 1.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
                                           ),
                                         ),
                                       ],
                                     ),
-                                    FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed(
-                                          'ChangProfileInfoPage',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType: PageTransitionType
-                                                  .rightToLeft,
-                                            ),
-                                          },
-                                        );
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'pzghgx3i' /* Изменить */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 200.0,
-                                        height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Nunito',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.w500,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmallFamily),
-                                            ),
-                                        elevation: 4.0,
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent1,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                           Padding(
@@ -1195,9 +1134,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Nunito',
+                                                  fontFamily: 'Open Sans',
                                                   fontSize: 16.0,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
                                                       .containsKey(
@@ -1292,11 +1231,13 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                     context)
                                                                 .bodyMedium
                                                                 .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
+                                                                  fontFamily:
+                                                                      'Open Sans',
                                                                   fontSize:
                                                                       14.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
                                                                   useGoogleFonts: GoogleFonts
                                                                           .asMap()
                                                                       .containsKey(
@@ -1820,9 +1761,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Nunito',
+                                                  fontFamily: 'Open Sans',
                                                   fontSize: 16.0,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
                                                       .containsKey(
@@ -1974,7 +1915,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Ubuntu',
+                                                                      'Open Sans',
                                                                   fontSize:
                                                                       14.0,
                                                                   fontWeight:
@@ -2245,9 +2186,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Nunito',
+                                                  fontFamily: 'Open Sans',
                                                   fontSize: 16.0,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   useGoogleFonts: GoogleFonts
                                                           .asMap()
                                                       .containsKey(
@@ -2392,16 +2333,17 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Nunito',
+                                      fontFamily: 'Open Sans',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
                                                   .titleSmallFamily),
                                     ),
-                                elevation: 4.0,
+                                elevation: 0.0,
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context).error,
                                   width: 1.0,
@@ -2412,7 +2354,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 5.0, 0.0, 0.0),
+                                0.0, 3.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'bksk4t6i' /* 1.0beta_build */,

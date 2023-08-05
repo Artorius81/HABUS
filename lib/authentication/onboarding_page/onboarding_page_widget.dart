@@ -338,21 +338,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
-                                            .displaySmall
-                                            .override(
-                                              fontFamily: 'Nunito',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 30.0,
-                                              fontWeight: FontWeight.w800,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .displaySmallFamily),
-                                            ),
+                                            .displayMedium,
                                       ).animateOnPageLoad(animationsMap[
                                           'textOnPageLoadAnimation1']!),
                                       Padding(
@@ -364,21 +350,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
-                                              .override(
-                                                fontFamily: 'PT Sans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.normal,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeFamily),
-                                              ),
+                                              .displaySmall,
                                         ).animateOnPageLoad(animationsMap[
                                             'textOnPageLoadAnimation2']!),
                                       ),
@@ -409,21 +381,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
-                                            .displaySmall
-                                            .override(
-                                              fontFamily: 'Nunito',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 30.0,
-                                              fontWeight: FontWeight.w800,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .displaySmallFamily),
-                                            ),
+                                            .displayMedium,
                                       ).animateOnPageLoad(animationsMap[
                                           'textOnPageLoadAnimation3']!),
                                       Padding(
@@ -435,21 +393,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
-                                              .override(
-                                                fontFamily: 'PT Sans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.normal,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeFamily),
-                                              ),
+                                              .displaySmall,
                                         ).animateOnPageLoad(animationsMap[
                                             'textOnPageLoadAnimation4']!),
                                       ),
@@ -480,20 +424,15 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
-                                            .displaySmall
+                                            .displayMedium
                                             .override(
-                                              fontFamily: 'Nunito',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 30.0,
-                                              fontWeight: FontWeight.w800,
+                                              fontFamily: 'PT Sans',
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
                                                   .containsKey(
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .displaySmallFamily),
+                                                          .displayMediumFamily),
                                             ),
                                       ).animateOnPageLoad(animationsMap[
                                           'textOnPageLoadAnimation5']!),
@@ -506,21 +445,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
-                                              .labelLarge
-                                              .override(
-                                                fontFamily: 'PT Sans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.normal,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .labelLargeFamily),
-                                              ),
+                                              .displaySmall,
                                         ).animateOnPageLoad(animationsMap[
                                             'textOnPageLoadAnimation6']!),
                                       ),
@@ -555,8 +480,8 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                   radius: 16.0,
                                   dotWidth: 8.0,
                                   dotHeight: 8.0,
-                                  dotColor:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                  dotColor: FlutterFlowTheme.of(context)
+                                      .secondaryText,
                                   activeDotColor: Color(0xFF3F8DFD),
                                   paintStyle: PaintingStyle.fill,
                                 ),
@@ -590,15 +515,8 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaryBackground,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w500,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).titleSmallFamily),
-                        ),
-                    elevation: 4.0,
+                    textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                    elevation: 0.0,
                     borderSide: BorderSide(
                       color: Color(0xFF3F8DFD),
                       width: 1.0,

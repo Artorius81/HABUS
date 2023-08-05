@@ -57,13 +57,7 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget> {
                       FFLocalizations.of(context).getText(
                         'i6s63i1o' /* ХАБУС */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
-                            fontSize: 64.0,
-                            fontWeight: FontWeight.w900,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyMediumFamily),
-                          ),
+                      style: FlutterFlowTheme.of(context).displayLarge,
                       colors: [
                         FlutterFlowTheme.of(context).accent2,
                         FlutterFlowTheme.of(context).accent3
@@ -84,33 +78,14 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget> {
                             '9841ez48' /* Место сосредоточения */,
                           ),
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'Nunito',
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.w800,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+                          style: FlutterFlowTheme.of(context).displayMedium,
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
                             '4ahqd287' /* Мессенджер, новости, сообществ... */,
                           ),
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'PT Sans',
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 14.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+                          style: FlutterFlowTheme.of(context).displaySmall,
                         ),
                       ],
                     ),
@@ -140,18 +115,8 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget> {
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle: FlutterFlowTheme.of(context)
-                            .titleSmall
-                            .override(
-                              fontFamily: 'Nunito',
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context)
-                                      .titleSmallFamily),
-                            ),
-                        elevation: 4.0,
+                        textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                        elevation: 0.0,
                         borderSide: BorderSide(
                           color: Color(0xFF3F8DFD),
                           width: 1.0,

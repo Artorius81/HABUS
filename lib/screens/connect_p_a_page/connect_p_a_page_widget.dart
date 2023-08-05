@@ -67,7 +67,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
               'gc49o3zd' /* ХАБУС */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  fontFamily: 'Nunito',
+                  fontFamily: 'Open Sans',
                   fontSize: 36.0,
                   fontWeight: FontWeight.w900,
                   useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -120,10 +120,10 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                       ),
                       textAlign: TextAlign.start,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
+                            fontFamily: 'PT Sans',
                             color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w800,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
@@ -138,7 +138,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.check,
                             color: FlutterFlowTheme.of(context).success,
-                            size: 22.0,
+                            size: 20.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -151,8 +151,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -175,7 +175,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.check,
                             color: FlutterFlowTheme.of(context).success,
-                            size: 22.0,
+                            size: 20.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -188,8 +188,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -212,7 +212,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.check,
                             color: FlutterFlowTheme.of(context).success,
-                            size: 22.0,
+                            size: 20.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -225,8 +225,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -241,7 +241,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(6.0, 5.0, 0.0, 5.0),
+                          EdgeInsetsDirectional.fromSTEB(6.0, 5.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -249,7 +249,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.check,
                             color: FlutterFlowTheme.of(context).success,
-                            size: 22.0,
+                            size: 20.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -262,8 +262,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -286,7 +286,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.check,
                             color: FlutterFlowTheme.of(context).success,
-                            size: 22.0,
+                            size: 20.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -299,8 +299,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -319,10 +319,10 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                       ),
                       textAlign: TextAlign.start,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
+                            fontFamily: 'PT Sans',
                             color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w800,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
@@ -337,7 +337,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.error,
                             color: FlutterFlowTheme.of(context).error,
-                            size: 24.0,
+                            size: 22.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -350,8 +350,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -374,7 +374,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                           Icon(
                             Icons.error,
                             color: FlutterFlowTheme.of(context).error,
-                            size: 24.0,
+                            size: 22.0,
                           ),
                           Flexible(
                             child: Padding(
@@ -387,8 +387,8 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
-                                      fontSize: 14.0,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -424,14 +424,14 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
+                          fontFamily: 'Open Sans',
                           color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
-                    elevation: 4.0,
+                    elevation: 0.0,
                     borderSide: BorderSide(
                       color: Color(0xFF3F8DFD),
                       width: 1.0,

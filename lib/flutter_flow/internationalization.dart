@@ -289,12 +289,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'HABUS',
     },
     '7ue39d6j': {
-      'ru': 'Email',
+      'ru': '',
       'en': 'Email',
     },
+    's04rjuen': {
+      'ru': 'Email',
+      'en': '',
+    },
     'ftjkdl9z': {
-      'ru': 'Пароль',
+      'ru': '',
       'en': 'Password',
+    },
+    'rfftsqwi': {
+      'ru': 'Пароль',
+      'en': '',
     },
     'trhp94my': {
       'ru': 'Это поле обязательно',
@@ -352,8 +360,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'We will send you a link to reset your password',
     },
     'digx179s': {
-      'ru': 'Email',
+      'ru': '',
       'en': 'Email',
+    },
+    'ljee5b2d': {
+      'ru': 'Email',
+      'en': '',
     },
     'l7lrfup9': {
       'ru': 'Это поле обязательно',
@@ -466,17 +478,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'New',
     },
     'fw7z82d6': {
-      'ru': '[заголовок]',
+      'ru': 'Студентка ВВГУ стала участницей Летней школы журналистики-2023',
       'en':
           'VVGU students became finalists of the All-Russian Championship \"Professionals\" in the \"Industrial Design\" competency',
     },
     'gqpm9gr1': {
-      'ru': '[дата]',
+      'ru': '4 августа 2023',
       'en': 'Fri, 28 Jul 2023 15:19:00 +1000',
     },
     'imae46rv': {
       'ru': 'Читать',
       'en': 'Read',
+    },
+    '1otryra8': {
+      'ru': 'Сожалеем, но это все записи :(',
+      'en': '',
     },
     'jblf7y87': {
       'ru': 'Сообщества',
@@ -509,6 +525,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'n04ntvn4': {
       'ru': '4',
       'en': '4',
+    },
+    '5rg71dka': {
+      'ru': 'Сожалеем, но это все записи :(',
+      'en': '',
     },
     'x5b0dz1u': {
       'ru': 'Новое в',
@@ -548,6 +568,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'n66ewj7h': {
       'ru': '4',
+      'en': '',
+    },
+    '77xehwm5': {
+      'ru': 'Сожалеем, но это все записи :(',
       'en': '',
     },
     'ysuwpepa': {
@@ -595,38 +619,45 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Создать опрос',
       'en': 'Create a survey',
     },
-    'xfdoslp6': {
-      'ru': 'Мнение современной молодежи о религии и нравственности',
+    'inrls6hp': {
+      'ru': 'Помоги мне развиваться дальше',
       'en': '',
     },
-    'ibtsgcb0': {
+    'mzd99u3h': {
       'ru':
-          'Ребят, кому не сложно, пройдите опрос для исследования. Он короткий и не займёт много времени. Заранее большое спасибо!',
+          'Чтобы развиваться дальше и становиться лучше для пользователей, мне важно знать Ваше мнение по некоторым вопросам :)\nЭто не займёт много времени.',
       'en': '',
     },
-    'dgtxnh5e': {
-      'ru':
-          'Гендерные стереотипы в сфере трудовой деятельности и особенности их восприятия',
+    'al1bbqdt': {
+      'ru': 'От ',
       'en': '',
     },
-    'o3hb3dq0': {
-      'ru': 'Пройдите опрос, пожалуйста.',
+    'hmn1dqr8': {
+      'ru': 'ХАБУС',
       'en': '',
     },
-    'm6j9wyqj': {
-      'ru': 'Отношение к получению высшего образования',
+    'f3mnkmpr': {
+      'ru': '0',
       'en': '',
     },
-    'l08g1kck': {
-      'ru': 'Ребят, очень нужно! Пройдите опросик :)',
+    'xqu4t7n5': {
+      'ru': '0',
       'en': '',
     },
-    '104f5z3b': {
-      'ru': 'Причины возникновения конфликтов в молодой семье',
+    '4ijtjvv2': {
+      'ru': 'От ',
       'en': '',
     },
-    'nchuknsu': {
-      'ru': 'Пройдите опрос, буквально 10 минут вашего времени)',
+    '9fs1llul': {
+      'ru': '0',
+      'en': '',
+    },
+    '3r2f636t': {
+      'ru': '0',
+      'en': '',
+    },
+    '5hncbuor': {
+      'ru': 'Сожалеем, но это все записи :(',
       'en': '',
     },
     'dyw7os9m': {
@@ -719,6 +750,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Please use your real first and last name to make it easier for other users to find you.',
     },
+    '820pn8ar': {
+      'ru': 'Студент',
+      'en': '',
+    },
     'nscpox4g': {
       'ru': 'Абитуриент',
       'en': 'Enrollee',
@@ -748,7 +783,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'laboratory assistant',
     },
     'kins1x33': {
-      'ru': 'Выберите роль',
+      'ru': '',
       'en': 'Choose a role',
     },
     'kup43co3': {
@@ -1600,39 +1635,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SettingsPage
   {
-    '05w78l02': {
+    'gmugfv7s': {
       'ru': 'Личный кабинет ВВГУ',
       'en': 'VVGU personal account',
     },
-    'ejcrm47x': {
+    'cxha4mwz': {
       'ru': 'Мой профиль',
       'en': 'My profile',
     },
-    'vl4ofhz6': {
+    't4tpi12q': {
       'ru': 'Главная',
       'en': 'home',
     },
-    'm3ty6n1l': {
+    'g1x5fhqw': {
       'ru': 'Создать сообщество',
       'en': 'Create a Community',
     },
-    'nqit97nl': {
+    '4yajvw0t': {
       'ru': 'Создать чат',
       'en': 'Create a chat',
     },
-    'ksww1w36': {
+    'fa9c8wrt': {
       'ru': 'Настройки',
       'en': 'Settings',
     },
-    'sh3q2duk': {
+    '2jxl5sa1': {
       'ru': 'Выйти',
       'en': 'Go out',
     },
-    '38ugfp9k': {
+    'vlqwp1jl': {
       'ru': '1.0beta_build',
       'en': 'Version 1.0beta_build',
     },
-    'fhq479vv': {
+    'zkqjefdj': {
       'ru': 'habus.tech@yandex.ru',
       'en': 'habus.tech@yandex.ru',
     },
@@ -1778,28 +1813,181 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Мой профиль',
       'en': 'Report a bug',
     },
-    'g9q1cucd': {
-      'ru': 'Посты',
+    'ibqwonm0': {
+      'ru': '0 друзей',
       'en': '',
     },
-    'panvsax2': {
-      'ru': 'Tab View 1',
+    'q1dxd720': {
+      'ru': '0 постов',
+      'en': '',
+    },
+    'da7qiecv': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    'g9q1cucd': {
+      'ru': 'Мои посты',
+      'en': '',
+    },
+    'if4mgc3q': {
+      'ru': 'Делись с нами своими мыслями',
+      'en': '',
+    },
+    'q6yw1dky': {
+      'ru': 'Делись с нами моментами и историями из своей студенческой жизни',
+      'en': '',
+    },
+    'w32l3ovl': {
+      'ru': 'Создать запись',
+      'en': 'Create a survey',
+    },
+    'bma0dpy3': {
+      'ru': '[имя пользователя]',
+      'en': '',
+    },
+    'pmldhdac': {
+      'ru': '2h',
+      'en': '',
+    },
+    '6s58576r': {
+      'ru': '[текст]',
+      'en': '',
+    },
+    'qyaanbuf': {
+      'ru': '4',
+      'en': '',
+    },
+    'r90wrevj': {
+      'ru': '4',
+      'en': '',
+    },
+    '9avud5zd': {
+      'ru': 'Сожалеем, но это все Ваши записи :(',
       'en': '',
     },
     'plc1i58r': {
-      'ru': 'Опросы',
+      'ru': 'Мои опросы',
       'en': '',
     },
-    '8i6kcur8': {
-      'ru': 'Tab View 2',
+    'b3sykfub': {
+      'ru': 'Здесь храняться Ваши опросы',
+      'en': '',
+    },
+    '3bd4wn4r': {
+      'ru':
+          'Создать опрос можно на главном экране в разделе \"Опросы\". После создания, все Ваши опросы будут отображаться здесь',
+      'en': '',
+    },
+    '9c1at12i': {
+      'ru': 'От ',
+      'en': '',
+    },
+    'p2abc5sm': {
+      'ru': '0',
+      'en': '',
+    },
+    '6gnrm7s4': {
+      'ru': '0',
+      'en': '',
+    },
+    'eqa6u60l': {
+      'ru': 'Сожалеем, но это все записи :(',
       'en': '',
     },
     'k77mfbgd': {
+      'ru': 'Статистика',
+      'en': '',
+    },
+    'gotctnen': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    'zf9zi86j': {
+      'ru': 'вы прошли за всё время',
+      'en': '',
+    },
+    '4nnz1xly': {
+      'ru': '0 лайков',
+      'en': '',
+    },
+    'xav71vl8': {
+      'ru': 'вы поставили за всё время',
+      'en': '',
+    },
+    '7g3bo4rp': {
+      'ru': '0 коммент.',
+      'en': '',
+    },
+    'turk31nc': {
+      'ru': 'вы оставили за всё время',
+      'en': '',
+    },
+    'yuerpguh': {
+      'ru': '0 записей',
+      'en': '',
+    },
+    'mrfd3y4l': {
+      'ru': 'вы создали за всё время',
+      'en': '',
+    },
+    'a13v2ds0': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    'tunopj80': {
+      'ru': 'вы создали за всё время',
+      'en': '',
+    },
+    'qrl4teic': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    '7toow67l': {
+      'ru': 'вы прошли за всё время',
+      'en': '',
+    },
+    'gxfyaoy7': {
       'ru': 'Достижения',
       'en': '',
     },
-    'px1trgwa': {
-      'ru': 'Tab View 3',
+    'ndrourgs': {
+      'ru': 'Архивариус',
+      'en': '',
+    },
+    '8mxsafyo': {
+      'ru': 'пройти 10 опросов',
+      'en': '',
+    },
+    'ctw2kl2y': {
+      'ru': 'Любитель',
+      'en': '',
+    },
+    'wf7v835z': {
+      'ru': 'оценить 50 записей',
+      'en': '',
+    },
+    'ptchk0dp': {
+      'ru': 'Комментатор',
+      'en': '',
+    },
+    'ccsvouzy': {
+      'ru': 'оставить 100 комментариев',
+      'en': '',
+    },
+    '0k9g6r6o': {
+      'ru': 'Великий',
+      'en': '',
+    },
+    '4gtaqr2k': {
+      'ru': 'закрыть сессию на 5',
+      'en': '',
+    },
+    'f4uyue9q': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'tzw1f450': {
+      'ru': 'достижение закрыто',
       'en': '',
     },
     'w8nutfuh': {
@@ -1811,24 +1999,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // ExitDialog
+  // HABUSFormWebView
   {
-    'nv82df4q': {
-      'ru': 'Подтверждение выхода',
-      'en': 'Exit Confirmation',
+    '9lg31bpq': {
+      'ru': 'ХАБУС',
+      'en': 'HABUS',
     },
-    '0xrsncn1': {
-      'ru':
-          'Вы уверены, что хотите выйти из приложения? Нам будет Вас не хватать :(',
-      'en': 'Are you sure you want to exit the app? We will miss you :(',
+    'ojcxzf5n': {
+      'ru': 'Home',
+      'en': '',
     },
-    'hfjkxgm6': {
-      'ru': 'Остаться',
-      'en': 'stay',
+  },
+  // FormWebViewPage
+  {
+    't0qwb7jj': {
+      'ru': 'ХАБУС',
+      'en': 'HABUS',
     },
-    '26sfwjc6': {
-      'ru': 'Выйти',
-      'en': 'Go out',
+    'oa8l1gsf': {
+      'ru': 'Home',
+      'en': '',
     },
   },
   // ThemeChanger
@@ -1905,26 +2095,271 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save',
     },
   },
-  // dropdown
+  // CreatePost
   {
-    'jxzwo165': {
-      'ru': 'Options',
+    '6jt0bgls': {
+      'ru': 'Создать запись',
       'en': '',
     },
-    '1a520b57': {
-      'ru': 'Главная',
+    'kl0fe62c': {
+      'ru': 'Поделитесь с нами своими мыслями',
       'en': '',
     },
-    '1pppumpf': {
-      'ru': 'Статистика',
+    'qjumqekm': {
+      'ru': 'Добавьте фото',
       'en': '',
     },
-    'wuzjy845': {
-      'ru': 'Copy Widget Code',
+    'e50avtrc': {
+      'ru': 'Добавьте сюда фото записи или оставьте пустым',
       'en': '',
     },
-    '9ruxap45': {
-      'ru': 'Save as Theme Style',
+    '1i4sntn3': {
+      'ru': 'Что у Вас нового?',
+      'en': '',
+    },
+    '16w62cqp': {
+      'ru': 'Создать',
+      'en': '',
+    },
+    'aeeth8sv': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'vopnjdfk': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    '4ma4i3i8': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'scifrg5e': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'mjjg6py9': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '9urve5ng': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'ole2goz4': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'o8wrolv7': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'dsyw04nd': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    '1jlhjlv3': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+  },
+  // CreateForm
+  {
+    'glcoyvnk': {
+      'ru': 'Создать ',
+      'en': '',
+    },
+    'whs7pe14': {
+      'ru': 'опрос',
+      'en': '',
+    },
+    'do3m14v7': {
+      'ru': 'Озаглавьте, опишите, вставьте ссылку - а люди будут проходить!',
+      'en': '',
+    },
+    'eo536b6w': {
+      'ru': 'Введите заголовок',
+      'en': '',
+    },
+    'frpazeqi': {
+      'ru': 'Введите описание',
+      'en': '',
+    },
+    'fv6tfosl': {
+      'ru': 'Вставьте ссылку на опрос',
+      'en': '',
+    },
+    'y2qmgkge': {
+      'ru': 'Создать',
+      'en': '',
+    },
+    '3kbrp9eq': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'qqlkxqm9': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    'z4r1p6w0': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'hgmdqi9r': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'n900f6i8': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'bepsfxgl': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'egwqx4cs': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'f1pd2qgp': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '15japa26': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'gs7ajaip': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+  },
+  // UpdateForm
+  {
+    'z4tslexu': {
+      'ru': 'Изменить ',
+      'en': '',
+    },
+    'l8tcx5vu': {
+      'ru': 'опрос',
+      'en': '',
+    },
+    'kz60s0n9': {
+      'ru': 'Измените свой уже созданный опрос',
+      'en': '',
+    },
+    '6vv2mh77': {
+      'ru': 'Введите заголовок',
+      'en': '',
+    },
+    'g1uy6vqg': {
+      'ru': 'Введите описание',
+      'en': '',
+    },
+    'fwhl1xgu': {
+      'ru': 'Вставьте ссылку на опрос',
+      'en': '',
+    },
+    'thfe6a39': {
+      'ru': 'Изменить',
+      'en': '',
+    },
+    'pw2mmgyu': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'osz70xn7': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    'fkd7ge5w': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '0y8qmixk': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'fp8st0jg': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'yh16u5ou': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'xqryf7v2': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'n95jj5sj': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '1uriyxgr': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'f25vuwqe': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+  },
+  // DeleteForm
+  {
+    '88onsgbs': {
+      'ru': 'Удалить ',
+      'en': '',
+    },
+    'po1buiw5': {
+      'ru': 'опрос',
+      'en': '',
+    },
+    'yc6bwj4i': {
+      'ru': 'Вы действительно хотите удалить опрос?',
+      'en': '',
+    },
+    'q1498me3': {
+      'ru': 'Удалить',
+      'en': '',
+    },
+    'rygt4uwz': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'kwetvr2l': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    'onb43aq0': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'novpzq6w': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'qnve749m': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'xjnje1wd': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'ugph96qp': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'uke8ikki': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'ych1nhx5': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'c6kdpgqo': {
+      'ru': 'Please choose an option from the dropdown',
       'en': '',
     },
   },

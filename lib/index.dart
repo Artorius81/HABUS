@@ -34,3 +34,7 @@ export '/screens/connect_p_a_page/connect_p_a_page_widget.dart'
     show ConnectPAPageWidget;
 export '/profile_page/user_profile_page/user_profile_page_widget.dart'
     show UserProfilePageWidget;
+export '/home_page/h_a_b_u_s_form_web_view/h_a_b_u_s_form_web_view_widget.dart'
+    show HABUSFormWebViewWidget;
+export '/home_page/form_web_view_page/form_web_view_page_widget.dart'
+    show FormWebViewPageWidget;

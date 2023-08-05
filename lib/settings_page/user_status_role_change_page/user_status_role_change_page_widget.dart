@@ -91,7 +91,7 @@ class _UserStatusRoleChangePageWidgetState
                 'rf8yek63' /* ХАБУС */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Nunito',
+                    fontFamily: 'Open Sans',
                     fontSize: 36.0,
                     fontWeight: FontWeight.w900,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -142,9 +142,9 @@ class _UserStatusRoleChangePageWidgetState
                     'li8lvkea' /* Изменить статус и роль */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
+                        fontFamily: 'PT Sans',
                         fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         useGoogleFonts: GoogleFonts.asMap().containsKey(
                             FlutterFlowTheme.of(context).bodyMediumFamily),
                       ),
@@ -158,7 +158,7 @@ class _UserStatusRoleChangePageWidgetState
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'PT Sans',
                       color: FlutterFlowTheme.of(context).secondaryText,
-                      fontSize: 14.0,
+                      fontSize: 12.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
                           FlutterFlowTheme.of(context).bodyMediumFamily),
                     ),
@@ -183,8 +183,8 @@ class _UserStatusRoleChangePageWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
@@ -313,8 +313,8 @@ class _UserStatusRoleChangePageWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodyMediumFamily),
@@ -422,67 +422,74 @@ class _UserStatusRoleChangePageWidgetState
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Сохранено!',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+                  child: FFButtonWidget(
+                    onPressed: () async {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'Сохранено!',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
+                          ),
+                          duration: Duration(milliseconds: 2000),
+                          backgroundColor: Color(0xFF2FFF5F),
                         ),
-                        duration: Duration(milliseconds: 2000),
-                        backgroundColor: Color(0xFF2FFF5F),
-                      ),
-                    );
-                    await ProfileTable().update(
-                      data: {
-                        'status': _model.userStatusController.text,
-                        'role': _model.roleChoiceValue,
-                      },
-                      matchingRows: (rows) => rows.eq(
-                        'id',
-                        currentUserUid,
-                      ),
-                    );
-                    context.safePop();
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'j56t6vx4' /* Сохранить */,
-                  ),
-                  options: FFButtonOptions(
-                    width: double.infinity,
-                    height: 40.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Nunito',
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w500,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).titleSmallFamily),
+                      );
+                      await ProfileTable().update(
+                        data: {
+                          'status': _model.userStatusController.text,
+                          'role': _model.roleChoiceValue,
+                        },
+                        matchingRows: (rows) => rows.eq(
+                          'id',
+                          currentUserUid,
                         ),
-                    elevation: 4.0,
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).accent1,
-                      width: 1.0,
+                      );
+                      context.safePop();
+                    },
+                    text: FFLocalizations.of(context).getText(
+                      'j56t6vx4' /* Сохранить */,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    options: FFButtonOptions(
+                      width: 200.0,
+                      height: 40.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      textStyle: FlutterFlowTheme.of(context)
+                          .titleSmall
+                          .override(
+                            fontFamily: 'Open Sans',
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).titleSmallFamily),
+                          ),
+                      elevation: 0.0,
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).accent1,
+                        width: 1.0,
+                      ),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
                   ),
                 ),
               ),
