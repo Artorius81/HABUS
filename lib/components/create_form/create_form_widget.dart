@@ -115,7 +115,12 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                     offset: Offset(0.0, 2.0),
                   )
                 ],
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
+                ),
                 border: Border.all(
                   width: 0.0,
                 ),
@@ -252,6 +257,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -282,8 +289,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -293,8 +300,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).success,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -304,7 +311,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -314,7 +321,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -331,7 +338,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -349,6 +357,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                                   .bodyLargeFamily),
                                     ),
                                 maxLines: 2,
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).success,
                                 validator: _model
                                     .descriptionController1Validator
                                     .asValidator(context),
@@ -364,6 +374,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -394,8 +406,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -405,8 +417,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).success,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -416,7 +428,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -426,7 +438,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -443,7 +455,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -461,6 +474,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                                   .bodyLargeFamily),
                                     ),
                                 maxLines: 5,
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).success,
                                 validator: _model
                                     .descriptionController2Validator
                                     .asValidator(context),
@@ -506,8 +521,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -517,8 +532,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).success,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -528,7 +543,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -538,7 +553,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -555,7 +570,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -572,6 +588,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                               FlutterFlowTheme.of(context)
                                                   .bodyLargeFamily),
                                     ),
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).success,
                                 validator: _model
                                     .descriptionController3Validator
                                     .asValidator(context),
@@ -589,6 +607,12 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                         0.0, 0.0, 4.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
+                                        if (_model.formKey.currentState ==
+                                                null ||
+                                            !_model.formKey.currentState!
+                                                .validate()) {
+                                          return;
+                                        }
                                         await FormsTable().insert({
                                           'title': _model
                                               .descriptionController1.text,
@@ -605,6 +629,25 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                           'comments': 0,
                                         });
                                         Navigator.pop(context);
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Опрос создан!',
+                                              style: GoogleFonts.getFont(
+                                                'PT Sans',
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 16.0,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 3000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .success,
+                                          ),
+                                        );
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'y2qmgkge' /* Создать */,
@@ -618,15 +661,13 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                            .success,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Open Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 14.0,
+                                              color: Colors.white,
+                                              fontSize: 16.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
                                                   .containsKey(
@@ -637,8 +678,8 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                         elevation: 0.0,
                                         borderSide: BorderSide(
                                           color: FlutterFlowTheme.of(context)
-                                              .success,
-                                          width: 1.0,
+                                              .primaryBackground,
+                                          width: 0.0,
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(8.0),

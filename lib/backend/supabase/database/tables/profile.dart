@@ -40,4 +40,7 @@ class ProfileRow extends SupabaseDataRow {
 
   String? get role => getField<String>('role');
   set role(String? value) => setField<String>('role', value);
+
+  String? get userImage => getField<String>('user_image');
+  set userImage(String? value) => setField<String>('user_image', value);
 }

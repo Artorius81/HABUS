@@ -1,4 +1,5 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -67,8 +68,11 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                         'cegy15sf' /* ХАБУС */,
                       ),
                       style: FlutterFlowTheme.of(context).displayLarge,
-                      colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
-                      gradientDirection: GradientDirection.ltr,
+                      colors: [
+                        FlutterFlowTheme.of(context).accent2,
+                        FlutterFlowTheme.of(context).accent1
+                      ],
+                      gradientDirection: GradientDirection.ttb,
                       gradientType: GradientType.linear,
                     ),
                   ),
@@ -129,29 +133,23 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .displaySmallFamily),
                                         ),
-                                    enabledBorder: OutlineInputBorder(
+                                    enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    focusedBorder: OutlineInputBorder(
+                                    focusedBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent1,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    focusedErrorBorder: OutlineInputBorder(
+                                    errorBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -159,6 +157,17 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
+                                    focusedErrorBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 0.0, 0.0),
                                     suffixIcon: _model.firstUserNameController!
                                             .text.isNotEmpty
                                         ? InkWell(
@@ -223,34 +232,39 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .displaySmallFamily),
                                       ),
-                                  enabledBorder: OutlineInputBorder(
+                                  enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0xFF3F8DFD),
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  focusedBorder: OutlineInputBorder(
+                                  focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0xFF3F8DFD),
+                                      color:
+                                          FlutterFlowTheme.of(context).accent1,
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context).error,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
+                                  errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
+                                  focusedErrorBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: FlutterFlowTheme.of(context).error,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  contentPadding:
+                                      EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 12.0, 0.0, 0.0),
                                   suffixIcon: _model.lastUserNameController!
                                           .text.isNotEmpty
                                       ? InkWell(
@@ -281,14 +295,15 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .displaySmallFamily),
                                     ),
-                                cursorColor: Color(0xFF3F8DFD),
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).accent1,
                                 validator: _model
                                     .lastUserNameControllerValidator
                                     .asValidator(context),
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 3.0, 0.0, 0.0),
+                                    0.0, 6.0, 0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     'drvnfmui' /* Указывайте своё настоящее имя ... */,
@@ -362,58 +377,34 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                           () => _model.roleChoiceValue = val),
                                       width: double.infinity,
                                       height: 50.0,
-                                      searchHintTextStyle: FlutterFlowTheme.of(
-                                              context)
-                                          .displaySmall
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .displaySmallFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 14.0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .displaySmallFamily),
-                                          ),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .displaySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .displaySmallFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
+                                            color: Colors.white,
                                             fontSize: 14.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
                                                         .displaySmallFamily),
                                           ),
-                                      searchHintText:
-                                          FFLocalizations.of(context).getText(
-                                        'kup43co3' /* Поиск */,
-                                      ),
-                                      searchCursorColor:
-                                          FlutterFlowTheme.of(context).accent1,
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
+                                        color: Colors.white,
                                         size: 24.0,
                                       ),
-                                      fillColor: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
-                                      elevation: 2.0,
-                                      borderColor:
+                                      fillColor:
                                           FlutterFlowTheme.of(context).accent1,
-                                      borderWidth: 1.0,
+                                      elevation: 2.0,
+                                      borderColor: Colors.transparent,
+                                      borderWidth: 0.0,
                                       borderRadius: 8.0,
                                       margin: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 4.0, 16.0, 4.0),
+                                          12.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
-                                      isSearchable: true,
+                                      isSearchable: false,
                                     );
                                   },
                                 ),
@@ -514,12 +505,23 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                          color: FlutterFlowTheme.of(context).accent1,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .headlineLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .headlineLargeFamily,
+                                color: Colors.white,
+                                fontSize: 16.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineLargeFamily),
+                              ),
                           elevation: 0.0,
                           borderSide: BorderSide(
-                            color: Color(0xFF3F8DFD),
-                            width: 1.0,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            width: 0.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),

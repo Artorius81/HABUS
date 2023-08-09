@@ -195,7 +195,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'FormWebViewPage',
           path: '/formWebViewPage',
-          builder: (context, params) => FormWebViewPageWidget(),
+          builder: (context, params) => FormWebViewPageWidget(
+            form: params.getParam<FormsRow>('form', ParamType.SupabaseRow),
+          ),
+        ),
+        FFRoute(
+          name: 'StrangerProfilePage',
+          path: '/strangerProfilePage',
+          builder: (context, params) => StrangerProfilePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -379,9 +386,13 @@ class FFRoute {
           final child = appStateNotifier.loading
               ? Container(
                   color: FlutterFlowTheme.of(context).primaryBackground,
-                  child: Image.asset(
-                    'assets/images/habus_logo.png',
-                    fit: BoxFit.contain,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/sunglasses_8101018.png',
+                      width: 300.0,
+                      height: 300.0,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 )
               : page;

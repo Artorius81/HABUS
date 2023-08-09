@@ -98,9 +98,9 @@ class _SuggestImprovementPageWidgetState
                   ),
               colors: [
                 FlutterFlowTheme.of(context).accent2,
-                FlutterFlowTheme.of(context).accent3
+                FlutterFlowTheme.of(context).accent1
               ],
-              gradientDirection: GradientDirection.ltr,
+              gradientDirection: GradientDirection.ttb,
               gradientType: GradientType.linear,
             ),
           ),
@@ -216,34 +216,36 @@ class _SuggestImprovementPageWidgetState
                             'aod06z1m' /* Написать... */,
                           ),
                           hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF3F8DFD),
+                              color: FlutterFlowTheme.of(context).secondaryText,
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF3F8DFD),
+                              color: FlutterFlowTheme.of(context).accent1,
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).error,
-                              width: 1.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
+                          errorBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          focusedErrorBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).error,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          contentPadding: EdgeInsetsDirectional.fromSTEB(
+                              12.0, 12.0, 0.0, 0.0),
                           suffixIcon:
                               _model.userErrorController!.text.isNotEmpty
                                   ? InkWell(
@@ -253,7 +255,8 @@ class _SuggestImprovementPageWidgetState
                                       },
                                       child: Icon(
                                         Icons.clear,
-                                        color: Color(0xFF757575),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         size: 24.0,
                                       ),
                                     )
@@ -262,7 +265,7 @@ class _SuggestImprovementPageWidgetState
                         style: FlutterFlowTheme.of(context).bodyMedium,
                         textAlign: TextAlign.start,
                         maxLines: 5,
-                        cursorColor: Color(0xFF3F8DFD),
+                        cursorColor: FlutterFlowTheme.of(context).accent1,
                         validator: _model.userErrorControllerValidator
                             .asValidator(context),
                       ),
@@ -325,21 +328,21 @@ class _SuggestImprovementPageWidgetState
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: FlutterFlowTheme.of(context).accent1,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
                             fontFamily: 'Open Sans',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 14.0,
+                            color: Colors.white,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w500,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
                       elevation: 0.0,
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).accent1,
-                        width: 1.0,
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        width: 0.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

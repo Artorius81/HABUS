@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -74,8 +75,11 @@ class _ForgotPassPageVerificationWidgetState
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
-                      colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
-                      gradientDirection: GradientDirection.ltr,
+                      colors: [
+                        FlutterFlowTheme.of(context).accent2,
+                        FlutterFlowTheme.of(context).accent1
+                      ],
+                      gradientDirection: GradientDirection.ttb,
                       gradientType: GradientType.linear,
                     ),
                   ),
@@ -149,21 +153,21 @@ class _ForgotPassPageVerificationWidgetState
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: FlutterFlowTheme.of(context).accent1,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
                             fontFamily: 'Open Sans',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 14.0,
+                            color: Colors.white,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w500,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
                       elevation: 0.0,
                       borderSide: BorderSide(
-                        color: Color(0xFF3F8DFD),
-                        width: 1.0,
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        width: 0.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

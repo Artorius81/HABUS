@@ -1,29 +1,49 @@
+import '/auth/supabase_auth/auth_util.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import '/flutter_flow/upload_data.dart';
+import '/flutter_flow/permissions_util.dart';
+import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 
 class CreatePostModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
+  String uploadedFileUrl = '';
+
+  Completer<List<UserPostsRow>>? requestCompleter;
   // State field(s) for description widget.
   TextEditingController? descriptionController;
   String? Function(BuildContext, String?)? descriptionControllerValidator;
+  String? _descriptionControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'b9wf3o7l' /* Это поле должно быть заполнено */,
+      );
+    }
+
+    return null;
+  }
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    descriptionControllerValidator = _descriptionControllerValidator;
+  }
 
   void dispose() {
     descriptionController?.dispose();
@@ -32,4 +52,19 @@ class CreatePostModel extends FlutterFlowModel {
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
+
+  Future waitForRequestCompleted({
+    double minWait = 0,
+    double maxWait = double.infinity,
+  }) async {
+    final stopwatch = Stopwatch()..start();
+    while (true) {
+      await Future.delayed(Duration(milliseconds: 50));
+      final timeElapsed = stopwatch.elapsedMilliseconds;
+      final requestComplete = requestCompleter?.isCompleted ?? false;
+      if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
+        break;
+      }
+    }
+  }
 }

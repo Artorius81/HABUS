@@ -7,7 +7,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -31,6 +33,15 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => SettingsPageModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setState(() {
+        FFAppState().clearUserProfileInfoCache();
+        _model.requestCompleted = false;
+      });
+      await _model.waitForRequestCompleted();
+    });
   }
 
   @override
@@ -71,17 +82,44 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          width: 50.0,
-                          height: 50.0,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
+                        FutureBuilder<List<ProfileRow>>(
+                          future: ProfileTable().querySingleRow(
+                            queryFn: (q) => q,
                           ),
-                          child: Image.asset(
-                            'assets/images/qNAJA8Kneoo.jpg',
-                            fit: BoxFit.cover,
-                          ),
+                          builder: (context, snapshot) {
+                            // Customize what your widget looks like when it's loading.
+                            if (!snapshot.hasData) {
+                              return Center(
+                                child: SizedBox(
+                                  width: 24.0,
+                                  height: 24.0,
+                                  child: SpinKitCircle(
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 24.0,
+                                  ),
+                                ),
+                              );
+                            }
+                            List<ProfileRow> circleImageProfileRowList =
+                                snapshot.data!;
+                            final circleImageProfileRow =
+                                circleImageProfileRowList.isNotEmpty
+                                    ? circleImageProfileRowList.first
+                                    : null;
+                            return Container(
+                              width: 50.0,
+                              height: 50.0,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                circleImageProfileRow!.userImage!,
+                                fit: BoxFit.cover,
+                              ),
+                            );
+                          },
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -175,7 +213,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                   ),
                               colors: [
                                 FlutterFlowTheme.of(context).accent2,
-                                FlutterFlowTheme.of(context).accent3
+                                FlutterFlowTheme.of(context).accent1
                               ],
                               gradientDirection: GradientDirection.ltr,
                               gradientType: GradientType.linear,
@@ -226,10 +264,20 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
-                              child: Icon(
-                                Icons.badge,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 20.0,
+                              child: FlutterFlowIconButton(
+                                borderColor:
+                                    FlutterFlowTheme.of(context).accent1,
+                                borderRadius: 8.0,
+                                borderWidth: 1.0,
+                                buttonSize: 30.0,
+                                icon: Icon(
+                                  Icons.badge,
+                                  color: FlutterFlowTheme.of(context).accent1,
+                                  size: 13.0,
+                                ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
                               ),
                             ),
                             Padding(
@@ -243,7 +291,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Open Sans',
-                                      fontSize: 12.0,
+                                      fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -296,11 +344,20 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.person,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                                16.0, 0.0, 1.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.person,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 15.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -316,7 +373,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 12.0,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -355,11 +412,20 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                18.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.home_rounded,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                                16.0, 0.0, 0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.home_sharp,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 15.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -375,7 +441,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 12.0,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -426,10 +492,19 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.groups,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.groups,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 15.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -437,7 +512,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'g1x5fhqw' /* Создать сообщество */,
+                                'g1x5fhqw' /* Сообщества */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
@@ -446,6 +521,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                         .displaySmallFamily,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -495,11 +571,20 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                16.0, 5.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.chat,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                                16.0, 0.0, 0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.chat,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 13.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -507,7 +592,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                '4yajvw0t' /* Создать чат */,
+                                '4yajvw0t' /* Чаты */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -515,7 +600,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 12.0,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -565,10 +650,19 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.settings,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.settings,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 13.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -584,7 +678,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 12.0,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -625,10 +719,19 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.logout,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
+                            child: FlutterFlowIconButton(
+                              borderColor: FlutterFlowTheme.of(context).accent1,
+                              borderRadius: 8.0,
+                              borderWidth: 1.0,
+                              buttonSize: 30.0,
+                              icon: Icon(
+                                Icons.logout,
+                                color: FlutterFlowTheme.of(context).accent1,
+                                size: 13.0,
+                              ),
+                              onPressed: () {
+                                print('IconButton pressed ...');
+                              },
                             ),
                           ),
                           Padding(
@@ -643,7 +746,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                   .override(
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context).error,
-                                    fontSize: 12.0,
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -766,9 +869,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                   ),
               colors: [
                 FlutterFlowTheme.of(context).accent2,
-                FlutterFlowTheme.of(context).accent3
+                FlutterFlowTheme.of(context).accent1
               ],
-              gradientDirection: GradientDirection.ltr,
+              gradientDirection: GradientDirection.ttb,
               gradientType: GradientType.linear,
             ),
           ),
@@ -776,11 +879,9 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
               child: FlutterFlowIconButton(
-                borderColor: FlutterFlowTheme.of(context).primaryBackground,
                 borderRadius: 0.0,
                 borderWidth: 0.0,
                 buttonSize: 40.0,
-                fillColor: FlutterFlowTheme.of(context).primaryBackground,
                 icon: Icon(
                   Icons.notifications,
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -834,11 +935,16 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 16.0, 0.0),
                             child: FutureBuilder<List<ProfileRow>>(
-                              future: FFAppState().userProfileInfo(
+                              future: FFAppState()
+                                  .userProfileInfo(
                                 requestFn: () => ProfileTable().querySingleRow(
                                   queryFn: (q) => q,
                                 ),
-                              ),
+                              )
+                                  .then((result) {
+                                _model.requestCompleted = true;
+                                return result;
+                              }),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {
@@ -908,12 +1014,24 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
-                                              child: Icon(
-                                                Icons.email,
-                                                color:
+                                              child: FlutterFlowIconButton(
+                                                borderColor:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 22.0,
+                                                        .accent1,
+                                                borderRadius: 8.0,
+                                                borderWidth: 1.0,
+                                                buttonSize: 30.0,
+                                                icon: Icon(
+                                                  Icons.email,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .accent1,
+                                                  size: 15.0,
+                                                ),
+                                                onPressed: () {
+                                                  print(
+                                                      'IconButton pressed ...');
+                                                },
                                               ),
                                             ),
                                             Flexible(
@@ -953,12 +1071,24 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
-                                              child: Icon(
-                                                Icons.school_sharp,
-                                                color:
+                                              child: FlutterFlowIconButton(
+                                                borderColor:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 22.0,
+                                                        .accent1,
+                                                borderRadius: 8.0,
+                                                borderWidth: 1.0,
+                                                buttonSize: 30.0,
+                                                icon: Icon(
+                                                  Icons.school_sharp,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .accent1,
+                                                  size: 15.0,
+                                                ),
+                                                onPressed: () {
+                                                  print(
+                                                      'IconButton pressed ...');
+                                                },
                                               ),
                                             ),
                                             Flexible(
@@ -1002,12 +1132,24 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 12.0, 0.0),
-                                              child: Icon(
-                                                Icons.view_carousel,
-                                                color:
+                                              child: FlutterFlowIconButton(
+                                                borderColor:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 22.0,
+                                                        .accent1,
+                                                borderRadius: 8.0,
+                                                borderWidth: 1.0,
+                                                buttonSize: 30.0,
+                                                icon: Icon(
+                                                  Icons.view_carousel,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .accent1,
+                                                  size: 15.0,
+                                                ),
+                                                onPressed: () {
+                                                  print(
+                                                      'IconButton pressed ...');
+                                                },
                                               ),
                                             ),
                                             Flexible(
@@ -1068,30 +1210,29 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .titleSmall
-                                                .override(
-                                                  fontFamily: 'Open Sans',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.w500,
-                                                  useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmallFamily),
-                                                ),
+                                                .accent1,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Open Sans',
+                                                      color: Colors.white,
+                                                      fontSize: 16.0,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                          .containsKey(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleSmallFamily),
+                                                    ),
                                             elevation: 0.0,
                                             borderSide: BorderSide(
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .accent1,
-                                              width: 1.0,
+                                                      .primaryBackground,
+                                              width: 0.0,
                                             ),
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -1208,12 +1349,26 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                     0.0,
                                                                     12.0,
                                                                     0.0),
-                                                        child: Icon(
-                                                          Icons.dark_mode,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          size: 22.0,
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .accent1,
+                                                          borderRadius: 8.0,
+                                                          borderWidth: 1.0,
+                                                          buttonSize: 30.0,
+                                                          icon: Icon(
+                                                            Icons.dark_mode,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .accent1,
+                                                            size: 15.0,
+                                                          ),
+                                                          onPressed: () {
+                                                            print(
+                                                                'IconButton pressed ...');
+                                                          },
                                                         ),
                                                       ),
                                                     if ((Theme.of(context)
@@ -1285,12 +1440,26 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                                     0.0,
                                                                     12.0,
                                                                     0.0),
-                                                        child: Icon(
-                                                          Icons.light_mode,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          size: 22.0,
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .accent1,
+                                                          borderRadius: 8.0,
+                                                          borderWidth: 1.0,
+                                                          buttonSize: 30.0,
+                                                          icon: Icon(
+                                                            Icons.light_mode,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .accent1,
+                                                            size: 15.0,
+                                                          ),
+                                                          onPressed: () {
+                                                            print(
+                                                                'IconButton pressed ...');
+                                                          },
                                                         ),
                                                       ),
                                                     if ((Theme.of(context)
@@ -1345,40 +1514,55 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Icon(
-                                                    Icons.notifications,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    size: 22.0,
-                                                  ),
                                                   Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
-                                                            .fromSTEB(12.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'xpcs6vtk' /* Уведомления */,
-                                                      ),
-                                                      style:
+                                                            .fromSTEB(0.0, 0.0,
+                                                                12.0, 0.0),
+                                                    child:
+                                                        FlutterFlowIconButton(
+                                                      borderColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMediumFamily,
-                                                                fontSize: 14.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .bodyMediumFamily),
-                                                              ),
+                                                              .accent1,
+                                                      borderRadius: 8.0,
+                                                      borderWidth: 1.0,
+                                                      buttonSize: 30.0,
+                                                      icon: Icon(
+                                                        Icons.notifications,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .accent1,
+                                                        size: 15.0,
+                                                      ),
+                                                      onPressed: () {
+                                                        print(
+                                                            'IconButton pressed ...');
+                                                      },
                                                     ),
+                                                  ),
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'xpcs6vtk' /* Уведомления */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
+                                                          fontSize: 14.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
+                                                        ),
                                                   ),
                                                 ],
                                               ),
@@ -1449,45 +1633,57 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.photo,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'uwedsw03' /* Изменить фото профиля */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons.photo,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'uwedsw03' /* Изменить фото профиля */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -1550,45 +1746,58 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.border_color,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'wphw62fv' /* Изменить статус или роль */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons
+                                                              .mode_edit_outline_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'wphw62fv' /* Изменить статус или роль */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -1662,45 +1871,58 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.language_sharp,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '05stdfdg' /* Сменить язык */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons
+                                                              .language_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '05stdfdg' /* Сменить язык */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -1794,40 +2016,55 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.start,
                                                 children: [
-                                                  Icon(
-                                                    Icons.password,
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    size: 22.0,
-                                                  ),
                                                   Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
-                                                            .fromSTEB(12.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'nnhoklz9' /* Сменить пароль */,
-                                                      ),
-                                                      style:
+                                                            .fromSTEB(0.0, 0.0,
+                                                                12.0, 0.0),
+                                                    child:
+                                                        FlutterFlowIconButton(
+                                                      borderColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMediumFamily,
-                                                                fontSize: 14.0,
-                                                                useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                    .containsKey(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .bodyMediumFamily),
-                                                              ),
+                                                              .accent1,
+                                                      borderRadius: 8.0,
+                                                      borderWidth: 1.0,
+                                                      buttonSize: 30.0,
+                                                      icon: Icon(
+                                                        Icons.password,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .accent1,
+                                                        size: 15.0,
+                                                      ),
+                                                      onPressed: () {
+                                                        print(
+                                                            'IconButton pressed ...');
+                                                      },
                                                     ),
+                                                  ),
+                                                  Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'nnhoklz9' /* Сменить пароль */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
+                                                          fontSize: 14.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
+                                                        ),
                                                   ),
                                                 ],
                                               ),
@@ -1887,47 +2124,59 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.help,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'zyn7cc4w' /* Связаться с поддержкой */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Open Sans',
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons.help,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'zyn7cc4w' /* Связаться с поддержкой */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Open Sans',
+                                                                fontSize: 14.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -1988,45 +2237,57 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.report,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '9fkhp7dz' /* Сообщить об ошибке */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons.report,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '9fkhp7dz' /* Сообщить об ошибке */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -2087,45 +2348,58 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
-                                                      Icons.settings_suggest,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          '8bv4pv4d' /* Предложить улучшение */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons
+                                                              .settings_suggest,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '8bv4pv4d' /* Предложить улучшение */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -2237,45 +2511,57 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.start,
                                                   children: [
-                                                    Icon(
-                                                      Icons.add,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 22.0,
-                                                    ),
                                                     Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
                                                                   12.0,
-                                                                  0.0,
-                                                                  0.0,
                                                                   0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'udm88aq9' /* Привязать ЛК ВВГУ */,
-                                                        ),
-                                                        style:
+                                                      child:
+                                                          FlutterFlowIconButton(
+                                                        borderColor:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily,
-                                                                  fontSize:
-                                                                      14.0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                          .asMap()
-                                                                      .containsKey(
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .bodyMediumFamily),
-                                                                ),
+                                                                .accent1,
+                                                        borderRadius: 8.0,
+                                                        borderWidth: 1.0,
+                                                        buttonSize: 30.0,
+                                                        icon: Icon(
+                                                          Icons.add,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 15.0,
+                                                        ),
+                                                        onPressed: () {
+                                                          print(
+                                                              'IconButton pressed ...');
+                                                        },
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'udm88aq9' /* Привязать ЛК ВВГУ */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily,
+                                                                fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily),
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
@@ -2328,15 +2614,13 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: FlutterFlowTheme.of(context).error,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      fontSize: 14.0,
+                                      color: Colors.white,
+                                      fontSize: 16.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -2345,8 +2629,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
-                                  color: FlutterFlowTheme.of(context).error,
-                                  width: 1.0,
+                                  width: 0.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),

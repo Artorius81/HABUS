@@ -75,9 +75,9 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                 ),
             colors: [
               FlutterFlowTheme.of(context).accent2,
-              FlutterFlowTheme.of(context).accent3
+              FlutterFlowTheme.of(context).accent1
             ],
-            gradientDirection: GradientDirection.ltr,
+            gradientDirection: GradientDirection.ttb,
             gradientType: GradientType.linear,
           ),
           actions: [
@@ -422,19 +422,19 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    color: FlutterFlowTheme.of(context).accent1,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Open Sans',
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 14.0,
+                          color: Colors.white,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
                     elevation: 0.0,
                     borderSide: BorderSide(
-                      color: Color(0xFF3F8DFD),
-                      width: 1.0,
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      width: 0.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),

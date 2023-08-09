@@ -1,9 +1,11 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -72,8 +74,11 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                         'gjtc6yst' /* ХАБУС */,
                       ),
                       style: FlutterFlowTheme.of(context).displayLarge,
-                      colors: [Color(0xFF0069B4), Color(0xFF67BFFF)],
-                      gradientDirection: GradientDirection.ltr,
+                      colors: [
+                        FlutterFlowTheme.of(context).accent2,
+                        FlutterFlowTheme.of(context).accent1
+                      ],
+                      gradientDirection: GradientDirection.ttb,
                       gradientType: GradientType.linear,
                     ),
                   ),
@@ -123,22 +128,35 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       'i4lxweb9' /* Email */,
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium,
-                                    enabledBorder: OutlineInputBorder(
+                                        .labelMedium
+                                        .override(
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
+                                        ),
+                                    enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    focusedBorder: OutlineInputBorder(
+                                    focusedBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent1,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    errorBorder: OutlineInputBorder(
+                                    errorBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -146,7 +164,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    focusedErrorBorder: OutlineInputBorder(
+                                    focusedErrorBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -154,6 +172,9 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 0.0, 0.0),
                                     suffixIcon: _model
                                             .emailController!.text.isNotEmpty
                                         ? InkWell(
@@ -173,7 +194,8 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   ),
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
-                                  cursorColor: Color(0xFF3F8DFD),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).accent1,
                                   validator: _model.emailControllerValidator
                                       .asValidator(context),
                                 ),
@@ -206,29 +228,23 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
-                                    enabledBorder: OutlineInputBorder(
+                                    enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    focusedBorder: OutlineInputBorder(
+                                    focusedBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent1,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    focusedErrorBorder: OutlineInputBorder(
+                                    errorBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -236,6 +252,17 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
+                                    focusedErrorBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 0.0, 0.0),
                                     suffixIcon: InkWell(
                                       onTap: () => setState(
                                         () => _model.passwordVisibility =
@@ -261,7 +288,8 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily),
                                       ),
-                                  cursorColor: Color(0xFF3F8DFD),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).accent1,
                                   validator: _model.passwordControllerValidator
                                       .asValidator(context),
                                 ),
@@ -320,29 +348,23 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMediumFamily),
                                         ),
-                                    enabledBorder: OutlineInputBorder(
+                                    enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    focusedBorder: OutlineInputBorder(
+                                    focusedBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0xFF3F8DFD),
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent1,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
-                                    errorBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    focusedErrorBorder: OutlineInputBorder(
+                                    errorBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -350,6 +372,17 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
+                                    focusedErrorBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    contentPadding:
+                                        EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 0.0, 0.0),
                                     suffixIcon: InkWell(
                                       onTap: () => setState(
                                         () => _model
@@ -379,7 +412,8 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMediumFamily),
                                       ),
-                                  cursorColor: Color(0xFF3F8DFD),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).accent1,
                                   validator: _model
                                       .passwordVerificationControllerValidator
                                       .asValidator(context),
@@ -443,14 +477,23 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle:
-                                FlutterFlowTheme.of(context).headlineLarge,
+                            color: Color(0xFF2CA3F4),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineLargeFamily,
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .headlineLargeFamily),
+                                ),
                             elevation: 0.0,
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).accent1,
-                              width: 1.0,
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              width: 0.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),

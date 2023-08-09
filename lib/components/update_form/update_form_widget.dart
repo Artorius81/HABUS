@@ -124,7 +124,12 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                     offset: Offset(0.0, 2.0),
                   )
                 ],
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
+                ),
                 border: Border.all(
                   width: 0.0,
                 ),
@@ -261,6 +266,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -291,8 +298,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -302,8 +309,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).warning,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -313,7 +320,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -323,7 +330,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -340,7 +347,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -358,6 +366,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                                   .bodyLargeFamily),
                                     ),
                                 maxLines: 2,
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).warning,
                                 validator: _model
                                     .descriptionController1Validator
                                     .asValidator(context),
@@ -373,6 +383,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -403,8 +415,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -414,8 +426,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).warning,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -425,7 +437,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -435,7 +447,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -452,7 +464,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -470,6 +483,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                                   .bodyLargeFamily),
                                     ),
                                 maxLines: 5,
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).warning,
                                 validator: _model
                                     .descriptionController2Validator
                                     .asValidator(context),
@@ -515,8 +530,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
-                                      width: 2.0,
+                                          .secondaryText,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -526,8 +541,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      width: 2.0,
+                                          FlutterFlowTheme.of(context).warning,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -537,7 +552,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   errorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -547,7 +562,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   focusedErrorBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
-                                      width: 2.0,
+                                      width: 1.0,
                                     ),
                                     borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(4.0),
@@ -564,7 +579,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                           },
                                           child: Icon(
                                             Icons.clear,
-                                            color: Color(0xFF757575),
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
                                             size: 22.0,
                                           ),
                                         )
@@ -581,6 +597,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                               FlutterFlowTheme.of(context)
                                                   .bodyLargeFamily),
                                     ),
+                                cursorColor:
+                                    FlutterFlowTheme.of(context).warning,
                                 validator: _model
                                     .descriptionController3Validator
                                     .asValidator(context),
@@ -626,14 +644,12 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                            .warning,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Open Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.white,
                                               fontSize: 14.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
@@ -645,8 +661,8 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                         elevation: 0.0,
                                         borderSide: BorderSide(
                                           color: FlutterFlowTheme.of(context)
-                                              .warning,
-                                          width: 1.0,
+                                              .primaryBackground,
+                                          width: 0.0,
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(8.0),

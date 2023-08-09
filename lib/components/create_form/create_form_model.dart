@@ -20,16 +20,49 @@ class CreateFormModel extends FlutterFlowModel {
   // State field(s) for description widget.
   TextEditingController? descriptionController1;
   String? Function(BuildContext, String?)? descriptionController1Validator;
+  String? _descriptionController1Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'ipc8vs1e' /* Это поле обязательно */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for description widget.
   TextEditingController? descriptionController2;
   String? Function(BuildContext, String?)? descriptionController2Validator;
+  String? _descriptionController2Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'ecs08e6r' /* Это поле обязательно */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for description widget.
   TextEditingController? descriptionController3;
   String? Function(BuildContext, String?)? descriptionController3Validator;
+  String? _descriptionController3Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '28095pc9' /* Это поле обязательно */,
+      );
+    }
+
+    return null;
+  }
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    descriptionController1Validator = _descriptionController1Validator;
+    descriptionController2Validator = _descriptionController2Validator;
+    descriptionController3Validator = _descriptionController3Validator;
+  }
 
   void dispose() {
     descriptionController1?.dispose();

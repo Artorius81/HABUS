@@ -3,8 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '/auth/auth_manager.dart';
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'email_auth.dart';
 import 'supabase_user_provider.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
 export '/auth/base_auth_user_provider.dart';
 
@@ -25,7 +27,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message}')),
+        SnackBar(content: Text('Error: ${e.message!}')),
       );
     }
   }
@@ -44,7 +46,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message}')),
+        SnackBar(content: Text('Error: ${e.message!}')),
       );
       return;
     }
@@ -63,7 +65,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message}')),
+        SnackBar(content: Text('Error: ${e.message!}')),
       );
       return null;
     }
@@ -115,7 +117,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message}')),
+        SnackBar(content: Text('Error: ${e.message!}')),
       );
       return null;
     }

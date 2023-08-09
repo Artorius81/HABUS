@@ -38,3 +38,5 @@ export '/home_page/h_a_b_u_s_form_web_view/h_a_b_u_s_form_web_view_widget.dart'
     show HABUSFormWebViewWidget;
 export '/home_page/form_web_view_page/form_web_view_page_widget.dart'
     show FormWebViewPageWidget;
+export '/profile_page/stranger_profile_page/stranger_profile_page_widget.dart'
+    show StrangerProfilePageWidget;

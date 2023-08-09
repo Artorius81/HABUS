@@ -99,9 +99,9 @@ class _ChangProfileInfoPageWidgetState
                   ),
               colors: [
                 FlutterFlowTheme.of(context).accent2,
-                FlutterFlowTheme.of(context).accent3
+                FlutterFlowTheme.of(context).accent1
               ],
-              gradientDirection: GradientDirection.ltr,
+              gradientDirection: GradientDirection.ttb,
               gradientType: GradientType.linear,
             ),
           ),
@@ -244,34 +244,37 @@ class _ChangProfileInfoPageWidgetState
                                     ),
                                 hintStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
-                                enabledBorder: OutlineInputBorder(
+                                enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0xFF3F8DFD),
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                focusedBorder: OutlineInputBorder(
+                                focusedBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0xFF3F8DFD),
+                                    color: FlutterFlowTheme.of(context).accent1,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context).error,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
+                                errorBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
+                                focusedErrorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 12.0, 0.0, 0.0),
                                 suffixIcon: _model
                                         .firstNameController!.text.isNotEmpty
                                     ? InkWell(
@@ -281,14 +284,15 @@ class _ChangProfileInfoPageWidgetState
                                         },
                                         child: Icon(
                                           Icons.clear,
-                                          color: Color(0xFF757575),
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
                                           size: 24.0,
                                         ),
                                       )
                                     : null,
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
-                              cursorColor: Color(0xFF3F8DFD),
+                              cursorColor: FlutterFlowTheme.of(context).accent1,
                               validator: _model.firstNameControllerValidator
                                   .asValidator(context),
                             );
@@ -369,34 +373,37 @@ class _ChangProfileInfoPageWidgetState
                                 hintText: lastNameProfileRow?.lastName,
                                 hintStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
-                                enabledBorder: OutlineInputBorder(
+                                enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0xFF3F8DFD),
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                focusedBorder: OutlineInputBorder(
+                                focusedBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0xFF3F8DFD),
+                                    color: FlutterFlowTheme.of(context).accent1,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context).error,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
+                                errorBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
+                                focusedErrorBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).error,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 12.0, 0.0, 0.0),
                                 suffixIcon: _model
                                         .lastNameController!.text.isNotEmpty
                                     ? InkWell(
@@ -406,14 +413,15 @@ class _ChangProfileInfoPageWidgetState
                                         },
                                         child: Icon(
                                           Icons.clear,
-                                          color: Color(0xFF757575),
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
                                           size: 24.0,
                                         ),
                                       )
                                     : null,
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
-                              cursorColor: Color(0xFF3F8DFD),
+                              cursorColor: FlutterFlowTheme.of(context).accent1,
                               validator: _model.lastNameControllerValidator
                                   .asValidator(context),
                             );
@@ -422,19 +430,23 @@ class _ChangProfileInfoPageWidgetState
                       ),
                       Align(
                         alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'qxpvdk8k' /* Кафедра */,
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 5.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'qxpvdk8k' /* Кафедра */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'PT Sans',
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
                         ),
                       ),
                       Padding(
@@ -575,8 +587,7 @@ class _ChangProfileInfoPageWidgetState
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
+                                    color: Colors.white,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -593,14 +604,14 @@ class _ChangProfileInfoPageWidgetState
                                   FlutterFlowTheme.of(context).accent1,
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
-                                color: Color(0xFF757575),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
-                              fillColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              fillColor: FlutterFlowTheme.of(context).accent1,
                               elevation: 2.0,
-                              borderColor: FlutterFlowTheme.of(context).accent1,
-                              borderWidth: 1.0,
+                              borderColor: Colors.transparent,
+                              borderWidth: 0.0,
                               borderRadius: 8.0,
                               margin: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 4.0),
@@ -612,19 +623,23 @@ class _ChangProfileInfoPageWidgetState
                       ),
                       Align(
                         alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'vkdo3dkg' /* Группа */,
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 5.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'vkdo3dkg' /* Группа */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'PT Sans',
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'PT Sans',
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
                         ),
                       ),
                       Padding(
@@ -991,8 +1006,17 @@ class _ChangProfileInfoPageWidgetState
                                             FlutterFlowTheme.of(context)
                                                 .labelMediumFamily),
                                   ),
-                              textStyle:
-                                  FlutterFlowTheme.of(context).bodyMedium,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
+                                    color: Colors.white,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
+                                  ),
                               hintText: FFLocalizations.of(context).getText(
                                 'u0j92vgf' /* Выберите группу */,
                               ),
@@ -1004,14 +1028,14 @@ class _ChangProfileInfoPageWidgetState
                                   FlutterFlowTheme.of(context).accent1,
                               icon: Icon(
                                 Icons.keyboard_arrow_down_rounded,
-                                color: Color(0xFF757575),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
-                              fillColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              fillColor: FlutterFlowTheme.of(context).accent1,
                               elevation: 2.0,
-                              borderColor: FlutterFlowTheme.of(context).accent1,
-                              borderWidth: 1.0,
+                              borderColor: Colors.transparent,
+                              borderWidth: 0.0,
                               borderRadius: 8.0,
                               margin: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 4.0),
@@ -1053,7 +1077,7 @@ class _ChangProfileInfoPageWidgetState
                                 ),
                           ),
                           duration: Duration(milliseconds: 2000),
-                          backgroundColor: Color(0xFF2FFF5F),
+                          backgroundColor: FlutterFlowTheme.of(context).success,
                         ),
                       );
                       await ProfileTable().update(
@@ -1080,21 +1104,21 @@ class _ChangProfileInfoPageWidgetState
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: FlutterFlowTheme.of(context).accent1,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
                             fontFamily: 'Open Sans',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 14.0,
+                            color: Colors.white,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w500,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
                       elevation: 0.0,
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).accent1,
-                        width: 1.0,
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        width: 0.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),

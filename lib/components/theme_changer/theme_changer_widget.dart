@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'theme_changer_model.dart';
@@ -445,37 +446,6 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                           Navigator.pop(context);
                         },
                         text: FFLocalizations.of(context).getText(
-                          '3ycu9xr4' /* Назад */,
-                        ),
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: 'Nunito',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .titleSmallFamily),
-                              ),
-                          elevation: 4.0,
-                          borderSide: BorderSide(
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                      FFButtonWidget(
-                        onPressed: () async {
-                          Navigator.pop(context);
-                        },
-                        text: FFLocalizations.of(context).getText(
                           'sa1yvmt5' /* Сохранить */,
                         ),
                         options: FFButtonOptions(
@@ -485,21 +455,22 @@ class _ThemeChangerWidgetState extends State<ThemeChangerWidget>
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryBackground,
+                          color: FlutterFlowTheme.of(context).accent1,
                           textStyle: FlutterFlowTheme.of(context)
                               .titleSmall
                               .override(
                                 fontFamily: 'Nunito',
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: Colors.white,
                                 fontWeight: FontWeight.w500,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .titleSmallFamily),
                               ),
-                          elevation: 4.0,
+                          elevation: 0.0,
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).accent1,
-                            width: 1.0,
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            width: 0.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),

@@ -115,7 +115,12 @@ class _DeleteFormWidgetState extends State<DeleteFormWidget>
                     offset: Offset(0.0, 2.0),
                   )
                 ],
-                borderRadius: BorderRadius.circular(16.0),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(0.0),
+                  bottomRight: Radius.circular(0.0),
+                  topLeft: Radius.circular(16.0),
+                  topRight: Radius.circular(16.0),
+                ),
                 border: Border.all(
                   width: 0.0,
                 ),
@@ -263,6 +268,25 @@ class _DeleteFormWidgetState extends State<DeleteFormWidget>
                                           ),
                                         );
                                         Navigator.pop(context);
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Опрос удалён!',
+                                              style: GoogleFonts.getFont(
+                                                'PT Sans',
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 16.0,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 3000),
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .error,
+                                          ),
+                                        );
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'q1498me3' /* Удалить */,
@@ -275,16 +299,14 @@ class _DeleteFormWidgetState extends State<DeleteFormWidget>
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Open Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 14.0,
+                                              color: Colors.white,
+                                              fontSize: 16.0,
                                               useGoogleFonts: GoogleFonts
                                                       .asMap()
                                                   .containsKey(
@@ -295,8 +317,8 @@ class _DeleteFormWidgetState extends State<DeleteFormWidget>
                                         elevation: 0.0,
                                         borderSide: BorderSide(
                                           color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 1.0,
+                                              .primaryBackground,
+                                          width: 0.0,
                                         ),
                                         borderRadius:
                                             BorderRadius.circular(8.0),

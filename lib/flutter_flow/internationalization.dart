@@ -413,39 +413,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HomePage
   {
-    'j5hehulf': {
+    'b6kzi7c0': {
       'ru': 'Личный кабинет ВВГУ',
       'en': 'VVGU personal account',
     },
-    'vbufudzh': {
+    'q7dzntc6': {
       'ru': 'Мой профиль',
       'en': 'My profile',
     },
-    'ntgiet22': {
+    'pomkktrs': {
       'ru': 'Главная',
       'en': 'home',
     },
-    'jeoqy9ab': {
-      'ru': 'Создать сообщество',
+    'rafktt0p': {
+      'ru': 'Сообщества',
       'en': 'Create a Community',
     },
-    '99r94c3x': {
-      'ru': 'Создать чат',
+    'mon3bz0b': {
+      'ru': 'Чаты',
       'en': 'Create a chat',
     },
-    'gz9zsgc7': {
+    'btw5wwlc': {
       'ru': 'Настройки',
       'en': 'Settings',
     },
-    'te3390pd': {
+    'ujftugj0': {
       'ru': 'Выйти',
       'en': 'Go out',
     },
-    'ylghcgu4': {
+    '691p0oj1': {
       'ru': '1.0beta_build',
       'en': 'Version 1.0beta_build',
     },
-    'yhgd92hs': {
+    'n5rtav6w': {
       'ru': 'habus.tech@yandex.ru',
       'en': 'habus.tech@yandex.ru',
     },
@@ -469,14 +469,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Найти...',
       'en': 'Find...',
     },
-    'yndbo3sr': {
-      'ru': 'Фильтр',
-      'en': 'Filter',
-    },
-    '21ires9t': {
-      'ru': 'Новые',
-      'en': 'New',
-    },
     'fw7z82d6': {
       'ru': 'Студентка ВВГУ стала участницей Летней школы журналистики-2023',
       'en':
@@ -485,10 +477,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'gqpm9gr1': {
       'ru': '4 августа 2023',
       'en': 'Fri, 28 Jul 2023 15:19:00 +1000',
-    },
-    'imae46rv': {
-      'ru': 'Читать',
-      'en': 'Read',
     },
     '1otryra8': {
       'ru': 'Сожалеем, но это все записи :(',
@@ -550,26 +538,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': ' ленте',
       'en': 'tape',
     },
-    'n4nms3fv': {
-      'ru': '[имя пользователя]',
-      'en': '',
-    },
-    '47ws0heh': {
-      'ru': '2h',
-      'en': '',
-    },
-    'wm9im3ah': {
-      'ru': '[текст]',
-      'en': '',
-    },
-    'go4s2tvr': {
-      'ru': '4',
-      'en': '',
-    },
-    'n66ewj7h': {
-      'ru': '4',
-      'en': '',
-    },
     '77xehwm5': {
       'ru': 'Сожалеем, но это все записи :(',
       'en': '',
@@ -593,14 +561,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sp2q14pn': {
       'ru': 'Найти...',
       'en': 'Find...',
-    },
-    'agxoyi6w': {
-      'ru': 'Фильтр',
-      'en': 'Filter',
-    },
-    'n8b2cup7': {
-      'ru': 'Новые',
-      'en': 'New',
     },
     'eflztpcn': {
       'ru': 'Проходи опросы - получай ',
@@ -628,32 +588,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Чтобы развиваться дальше и становиться лучше для пользователей, мне важно знать Ваше мнение по некоторым вопросам :)\nЭто не займёт много времени.',
       'en': '',
     },
-    'al1bbqdt': {
+    'is0z1ce8': {
       'ru': 'От ',
       'en': '',
     },
-    'hmn1dqr8': {
+    'xtudloko': {
       'ru': 'ХАБУС',
       'en': '',
     },
-    'f3mnkmpr': {
-      'ru': '0',
-      'en': '',
+    'o2dsk21k': {
+      'ru': '4',
+      'en': '4',
     },
-    'xqu4t7n5': {
-      'ru': '0',
-      'en': '',
+    'jhdgcmy8': {
+      'ru': '4',
+      'en': '4',
     },
-    '4ijtjvv2': {
+    'k606eilh': {
       'ru': 'От ',
-      'en': '',
-    },
-    '9fs1llul': {
-      'ru': '0',
-      'en': '',
-    },
-    '3r2f636t': {
-      'ru': '0',
       'en': '',
     },
     '5hncbuor': {
@@ -1648,11 +1600,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'home',
     },
     'g1x5fhqw': {
-      'ru': 'Создать сообщество',
+      'ru': 'Сообщества',
       'en': 'Create a Community',
     },
     '4yajvw0t': {
-      'ru': 'Создать чат',
+      'ru': 'Чаты',
       'en': 'Create a chat',
     },
     'fa9c8wrt': {
@@ -1813,17 +1765,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Мой профиль',
       'en': 'Report a bug',
     },
-    'ibqwonm0': {
-      'ru': '0 друзей',
+    'pvnr4otm': {
+      'ru': 'Комментатор',
       'en': '',
     },
-    'q1dxd720': {
-      'ru': '0 постов',
+    'obxk8y3w': {
+      'ru': 'Любитель',
       'en': '',
     },
-    'da7qiecv': {
-      'ru': '0 опросов',
+    'yt9x77qg': {
+      'ru': 'Великий',
       'en': '',
+    },
+    '4q3f0uw3': {
+      'ru': 'Изменить',
+      'en': 'Change',
     },
     'g9q1cucd': {
       'ru': 'Мои посты',
@@ -1841,26 +1797,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Создать запись',
       'en': 'Create a survey',
     },
-    'bma0dpy3': {
-      'ru': '[имя пользователя]',
-      'en': '',
-    },
-    'pmldhdac': {
-      'ru': '2h',
-      'en': '',
-    },
-    '6s58576r': {
-      'ru': '[текст]',
-      'en': '',
-    },
-    'qyaanbuf': {
-      'ru': '4',
-      'en': '',
-    },
-    'r90wrevj': {
-      'ru': '4',
-      'en': '',
-    },
     '9avud5zd': {
       'ru': 'Сожалеем, но это все Ваши записи :(',
       'en': '',
@@ -1875,10 +1811,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3bd4wn4r': {
       'ru':
-          'Создать опрос можно на главном экране в разделе \"Опросы\". После создания, все Ваши опросы будут отображаться здесь',
+          'Создать опрос можно на главном экране в разделе \"Опросы\". \nПосле создания, все Ваши опросы будут отображаться здесь',
       'en': '',
     },
-    '9c1at12i': {
+    'k7fnzjnj': {
       'ru': 'От ',
       'en': '',
     },
@@ -1982,11 +1918,115 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'закрыть сессию на 5',
       'en': '',
     },
-    'f4uyue9q': {
+    'rk8bq1l4': {
       'ru': 'Закрыто',
       'en': '',
     },
-    'tzw1f450': {
+    '6fjepdsr': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'vsuoqpib': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'alweoiqx': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '3k7eyi5w': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '8uvfazu6': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '290mjss2': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'by72no0k': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'vmbo40z0': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '4l4rtfyg': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'qf2vfcqz': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '03hu66hm': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'jxeti84y': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'k0b2vjnt': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'zq6hms7m': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '9jdqn0jl': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'eiaxgogq': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'jft5r6xj': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '4lobumul': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '01f547yw': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'qokn7i6x': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'nocq5tww': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '5imwembm': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'pz1q0x9k': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'acqah58a': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'o4ciqs5h': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '4gz3dwc6': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'q5ee57fx': {
       'ru': 'достижение закрыто',
       'en': '',
     },
@@ -2005,18 +2045,234 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'ХАБУС',
       'en': 'HABUS',
     },
-    'ojcxzf5n': {
+    '8i195dh0': {
       'ru': 'Home',
       'en': '',
     },
   },
   // FormWebViewPage
   {
+    'kx44mdpy': {
+      'ru': 'Ошибка :(',
+      'en': 'Error :(',
+    },
+    'p3myas89': {
+      'ru': 'Неправильная ссылка или ошибка в отображении',
+      'en':
+          'Unfortunately, this section is not yet available. But we\'ll fix it soon!',
+    },
+    'o4kbk7hb': {
+      'ru': 'Назад',
+      'en': 'Back',
+    },
     't0qwb7jj': {
       'ru': 'ХАБУС',
       'en': 'HABUS',
     },
-    'oa8l1gsf': {
+    'mywpynb9': {
+      'ru': 'Home',
+      'en': '',
+    },
+  },
+  // StrangerProfilePage
+  {
+    '5p36pg1b': {
+      'ru': 'Комментатор',
+      'en': '',
+    },
+    'cr415cwh': {
+      'ru': 'Любитель',
+      'en': '',
+    },
+    'p73cgjbl': {
+      'ru': 'Великий',
+      'en': '',
+    },
+    'glsbxodd': {
+      'ru': 'Изменить',
+      'en': 'Change',
+    },
+    'f1ijfqz5': {
+      'ru': 'Статистика',
+      'en': '',
+    },
+    'ltcr8fxd': {
+      'ru': '0 записей',
+      'en': '',
+    },
+    'ilkanhpr': {
+      'ru': 'вы создали за всё время',
+      'en': '',
+    },
+    'pqyu1grt': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    'jyr3amxo': {
+      'ru': 'вы создали за всё время',
+      'en': '',
+    },
+    '2oijix2m': {
+      'ru': '0 опросов',
+      'en': '',
+    },
+    'afrxlh8r': {
+      'ru': 'вы прошли за всё время',
+      'en': '',
+    },
+    'uaqptmdn': {
+      'ru': 'Достижения',
+      'en': '',
+    },
+    '1qoq1eax': {
+      'ru': 'Архивариус',
+      'en': '',
+    },
+    'icfbghe5': {
+      'ru': 'пройти 10 опросов',
+      'en': '',
+    },
+    '8kcaw1f3': {
+      'ru': 'Любитель',
+      'en': '',
+    },
+    '0j06jas3': {
+      'ru': 'оценить 50 записей',
+      'en': '',
+    },
+    'slp1liid': {
+      'ru': 'Комментатор',
+      'en': '',
+    },
+    'v47d52gz': {
+      'ru': 'оставить 100 комментариев',
+      'en': '',
+    },
+    'mfcvjqcm': {
+      'ru': 'Великий',
+      'en': '',
+    },
+    '8tfgqwuw': {
+      'ru': 'закрыть сессию на 5',
+      'en': '',
+    },
+    '6xfq49u5': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'tzk6f61l': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'vyk5fxz0': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'oygw2uno': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'rxy9krm9': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'oqqtigrs': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '1fh2ziu8': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'bed56elu': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '97eysxd3': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'tbobxa2i': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'sswc2w5s': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '5c1qilwi': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'zi4x7okz': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '9jhxa14u': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '9g202fjn': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'k4b43bov': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'rbvl6e1h': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'pl1m6w2n': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'd92c9oxo': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    '5zsmo86j': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '038o6nz8': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'elv3mxkh': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'fhtzli6i': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'c3lwf48s': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'v1nmsgzf': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'nvf5h75d': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    '9ywwsbh4': {
+      'ru': 'Закрыто',
+      'en': '',
+    },
+    'qn7wbtlz': {
+      'ru': 'достижение закрыто',
+      'en': '',
+    },
+    'cb6ythxr': {
+      'ru': 'ХАБУС',
+      'en': 'HABUS',
+    },
+    '7rd1xfgb': {
       'ru': 'Home',
       'en': '',
     },
@@ -2038,10 +2294,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xm5id7eu': {
       'ru': 'Сила света',
       'en': 'The power of light',
-    },
-    '3ycu9xr4': {
-      'ru': 'Назад',
-      'en': 'Back',
     },
     'sa1yvmt5': {
       'ru': 'Сохранить',
@@ -2067,10 +2319,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'English',
       'en': 'English.',
     },
-    'ws8twq2u': {
-      'ru': 'Назад',
-      'en': 'Back',
-    },
     'wtlf2o4j': {
       'ru': 'Сохранить',
       'en': 'Save',
@@ -2086,10 +2334,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Измените фото профиля, выбрав его из своей галереи',
       'en': 'Change your profile photo by selecting it from your gallery',
     },
-    'sd3b81u6': {
-      'ru': 'Назад',
-      'en': 'Back',
-    },
     'fhl6db3f': {
       'ru': 'Сохранить',
       'en': 'Save',
@@ -2097,8 +2341,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CreatePost
   {
-    '6jt0bgls': {
-      'ru': 'Создать запись',
+    '4soywsnd': {
+      'ru': 'Создать ',
+      'en': '',
+    },
+    '5auzrzcz': {
+      'ru': 'запись',
       'en': '',
     },
     'kl0fe62c': {
@@ -2121,43 +2369,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Создать',
       'en': '',
     },
-    'aeeth8sv': {
-      'ru': 'Field is required',
+    'b9wf3o7l': {
+      'ru': 'Это поле должно быть заполнено',
       'en': '',
     },
-    'vopnjdfk': {
-      'ru': 'Please enter a real name',
-      'en': '',
-    },
-    '4ma4i3i8': {
-      'ru': 'Please choose an option from the dropdown',
-      'en': '',
-    },
-    'scifrg5e': {
-      'ru': 'Please enter a short desription',
-      'en': '',
-    },
-    'mjjg6py9': {
-      'ru': 'Please choose an option from the dropdown',
-      'en': '',
-    },
-    '9urve5ng': {
-      'ru': 'We have to have a URL for the project.',
-      'en': '',
-    },
-    'ole2goz4': {
-      'ru': 'Please enter a valid URL...',
-      'en': '',
-    },
-    'o8wrolv7': {
-      'ru': 'Please choose an option from the dropdown',
-      'en': '',
-    },
-    'dsyw04nd': {
-      'ru': 'Field is required',
-      'en': '',
-    },
-    '1jlhjlv3': {
+    'cfwrz0lv': {
       'ru': 'Please choose an option from the dropdown',
       'en': '',
     },
@@ -2192,43 +2408,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': 'Создать',
       'en': '',
     },
-    '3kbrp9eq': {
-      'ru': 'Field is required',
+    'ipc8vs1e': {
+      'ru': 'Это поле обязательно',
       'en': '',
     },
-    'qqlkxqm9': {
-      'ru': 'Please enter a real name',
-      'en': '',
-    },
-    'z4r1p6w0': {
+    'qijhzt08': {
       'ru': 'Please choose an option from the dropdown',
       'en': '',
     },
-    'hgmdqi9r': {
-      'ru': 'Please enter a short desription',
+    'ecs08e6r': {
+      'ru': 'Это поле обязательно',
       'en': '',
     },
-    'n900f6i8': {
+    'nh7vmr44': {
       'ru': 'Please choose an option from the dropdown',
       'en': '',
     },
-    'bepsfxgl': {
-      'ru': 'We have to have a URL for the project.',
+    '28095pc9': {
+      'ru': 'Это поле обязательно',
       'en': '',
     },
-    'egwqx4cs': {
-      'ru': 'Please enter a valid URL...',
-      'en': '',
-    },
-    'f1pd2qgp': {
-      'ru': 'Please choose an option from the dropdown',
-      'en': '',
-    },
-    '15japa26': {
-      'ru': 'Field is required',
-      'en': '',
-    },
-    'gs7ajaip': {
+    'yn8lx3tp': {
       'ru': 'Please choose an option from the dropdown',
       'en': '',
     },
@@ -2363,14 +2563,146 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // Miscellaneous
+  // DeletePost
   {
-    'bhd2rhr6': {
+    'key69f4e': {
+      'ru': 'Удалить ',
+      'en': '',
+    },
+    'ibm5glcm': {
+      'ru': 'запись',
+      'en': '',
+    },
+    'u8sh2gpz': {
+      'ru': 'Вы действительно хотите удалить запись?',
+      'en': '',
+    },
+    'u4qflmr2': {
+      'ru': 'Удалить',
+      'en': '',
+    },
+    'kdvpnvnj': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'fs8xt846': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    '8usgo12w': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'wd71btfl': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'rzkel0r7': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'uenq492c': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'c3axuzly': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'gu8pd3sb': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    'zzt5j01k': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'tpw8qb7i': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+  },
+  // UpdatePost
+  {
+    'xyhsuqom': {
+      'ru': 'Изменить ',
+      'en': '',
+    },
+    'lbxzhpsk': {
+      'ru': 'запись',
+      'en': '',
+    },
+    'tqijosb2': {
+      'ru': 'Поделитесь с нами своими мыслями',
+      'en': '',
+    },
+    '8sh1mgrp': {
+      'ru': 'Добавьте фото',
+      'en': '',
+    },
+    'mnu3tpsv': {
+      'ru': 'Добавьте сюда фото записи или оставьте пустым',
+      'en': '',
+    },
+    'yv87r33d': {
       'ru': '',
       'en': '',
     },
+    '2k679wr8': {
+      'ru': 'Изменить',
+      'en': '',
+    },
+    'c6v6i4tm': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    'jw4yhf4a': {
+      'ru': 'Please enter a real name',
+      'en': '',
+    },
+    'f7h5c7qw': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '3rv68kph': {
+      'ru': 'Please enter a short desription',
+      'en': '',
+    },
+    'dajq7e3f': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '3sekpsmd': {
+      'ru': 'We have to have a URL for the project.',
+      'en': '',
+    },
+    'sziu9ea7': {
+      'ru': 'Please enter a valid URL...',
+      'en': '',
+    },
+    'g42pxvy5': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+    '074040nl': {
+      'ru': 'Field is required',
+      'en': '',
+    },
+    '7qbdd776': {
+      'ru': 'Please choose an option from the dropdown',
+      'en': '',
+    },
+  },
+  // Miscellaneous
+  {
+    'bhd2rhr6': {
+      'ru':
+          'Для продолжения нам нужно получить от Вас разрешение на использование камеры',
+      'en': '',
+    },
     '7l6hmvxk': {
-      'ru': '',
+      'ru':
+          'Для продолжения нам нужно получить от Вас разрешение на использование галереи',
       'en': '',
     },
     'jbmnbgem': {

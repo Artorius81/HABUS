@@ -75,9 +75,9 @@ class _HABUSFormWebViewWidgetState extends State<HABUSFormWebViewWidget> {
                 ),
             colors: [
               FlutterFlowTheme.of(context).accent2,
-              FlutterFlowTheme.of(context).accent3
+              FlutterFlowTheme.of(context).accent1
             ],
-            gradientDirection: GradientDirection.ltr,
+            gradientDirection: GradientDirection.ttb,
             gradientType: GradientType.linear,
           ),
           actions: [
@@ -109,7 +109,8 @@ class _HABUSFormWebViewWidgetState extends State<HABUSFormWebViewWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               FlutterFlowWebView(
-                content: 'https://flutter.dev',
+                content:
+                    'https://docs.google.com/forms/d/e/1FAIpQLSduP1lS_XKS41fbVGof6SfjJ_EkD_8UqvVTrtMafD6szRNJog/viewform?usp=sf_link',
                 bypass: false,
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 1.0,

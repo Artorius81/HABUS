@@ -5,7 +5,9 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'onboarding_page_model.dart';
@@ -480,7 +482,8 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                   dotHeight: 8.0,
                                   dotColor: FlutterFlowTheme.of(context)
                                       .secondaryText,
-                                  activeDotColor: Color(0xFF3F8DFD),
+                                  activeDotColor:
+                                      FlutterFlowTheme.of(context).accent1,
                                   paintStyle: PaintingStyle.fill,
                                 ),
                               ),
@@ -512,12 +515,21 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primaryBackground,
-                    textStyle: FlutterFlowTheme.of(context).headlineLarge,
+                    color: FlutterFlowTheme.of(context).accent1,
+                    textStyle: FlutterFlowTheme.of(context)
+                        .headlineLarge
+                        .override(
+                          fontFamily:
+                              FlutterFlowTheme.of(context).headlineLargeFamily,
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(
+                              FlutterFlowTheme.of(context).headlineLargeFamily),
+                        ),
                     elevation: 0.0,
                     borderSide: BorderSide(
-                      color: Color(0xFF3F8DFD),
-                      width: 1.0,
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      width: 0.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),
                   ),
