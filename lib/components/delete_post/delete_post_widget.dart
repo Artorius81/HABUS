@@ -275,8 +275,6 @@ class _DeletePostWidgetState extends State<DeletePostWidget>
                                         ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
                                       width: 0.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),

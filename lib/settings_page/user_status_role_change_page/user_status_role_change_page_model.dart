@@ -21,13 +21,31 @@ class UserStatusRoleChangePageModel extends FlutterFlowModel {
   // State field(s) for userStatus widget.
   TextEditingController? userStatusController;
   String? Function(BuildContext, String?)? userStatusControllerValidator;
+  String? _userStatusControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '2tbo5o2c' /* Field is required */,
+      );
+    }
+
+    if (val.length > 50) {
+      return FFLocalizations.of(context).getText(
+        'hhcz3389' /* Максимум 50 символов */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for roleChoice widget.
   String? roleChoiceValue;
   FormFieldController<String>? roleChoiceValueController;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    userStatusControllerValidator = _userStatusControllerValidator;
+  }
 
   void dispose() {
     unfocusNode.dispose();

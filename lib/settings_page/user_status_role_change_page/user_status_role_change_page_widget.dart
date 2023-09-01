@@ -156,7 +156,7 @@ class _UserStatusRoleChangePageWidgetState
                 ),
                 textAlign: TextAlign.start,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'PT Sans',
+                      fontFamily: 'Open Sans',
                       color: FlutterFlowTheme.of(context).secondaryText,
                       fontSize: 12.0,
                       useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -231,6 +231,7 @@ class _UserStatusRoleChangePageWidgetState
                                 () => setState(() {}),
                               ),
                               textCapitalization: TextCapitalization.sentences,
+                              textInputAction: TextInputAction.done,
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelStyle: FlutterFlowTheme.of(context)
@@ -360,7 +361,7 @@ class _UserStatusRoleChangePageWidgetState
                             .override(
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyMediumFamily,
-                              color: Colors.white,
+                              color: FlutterFlowTheme.of(context).primaryText,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context)
                                       .bodyMediumFamily),
@@ -373,15 +374,15 @@ class _UserStatusRoleChangePageWidgetState
                           color: FlutterFlowTheme.of(context).secondaryText,
                           size: 24.0,
                         ),
-                        fillColor: FlutterFlowTheme.of(context).accent1,
                         elevation: 2.0,
-                        borderColor: Colors.transparent,
+                        borderColor: FlutterFlowTheme.of(context).accent1,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
                         margin: EdgeInsetsDirectional.fromSTEB(
                             12.0, 4.0, 16.0, 4.0),
                         hidesUnderline: true,
                         isSearchable: false,
+                        isMultiSelect: false,
                       ),
                       Align(
                         alignment: AlignmentDirectional(-1.0, 0.0),

@@ -700,8 +700,6 @@ class _CreatePostWidgetState extends State<CreatePostWidget>
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
                                           width: 0.0,
                                         ),
                                         borderRadius:

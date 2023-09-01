@@ -112,6 +112,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
       // doesn't assign the currentUser in time.
       if (authUser != null) {
         currentUser = authUser;
+        AppStateNotifier.instance.update(authUser);
       }
       return authUser;
     } on AuthException catch (e) {

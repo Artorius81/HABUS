@@ -1,1 +1,2 @@
-
+NSCameraUsageDescription = "To continue, we need to get permission from you to use the camera.";
+NSPhotoLibraryUsageDescription = "To continue, we need to get your permission to use the gallery";

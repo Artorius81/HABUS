@@ -354,7 +354,7 @@ class _UpdatePostWidgetState extends State<UpdatePostWidget>
                                                   context: context,
                                                   storageFolderPath:
                                                       currentUserUid,
-                                                  imageQuality: 80,
+                                                  imageQuality: 60,
                                                   allowPhoto: true,
                                                   pickerFontFamily: 'PT Sans',
                                                 );
@@ -470,6 +470,7 @@ class _UpdatePostWidgetState extends State<UpdatePostWidget>
                               Duration(milliseconds: 2000),
                               () => setState(() {}),
                             ),
+                            textInputAction: TextInputAction.done,
                             obscureText: false,
                             decoration: InputDecoration(
                               labelStyle: FlutterFlowTheme.of(context)
@@ -630,8 +631,6 @@ class _UpdatePostWidgetState extends State<UpdatePostWidget>
                                         ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
                                       width: 0.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),

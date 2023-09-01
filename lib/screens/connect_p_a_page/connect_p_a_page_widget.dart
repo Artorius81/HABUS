@@ -114,19 +114,24 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'krz84k1o' /* Привязав личный кабинет ВВГУ, ... */,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'krz84k1o' /* Привязав личный кабинет ВВГУ, ... */,
+                        ),
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'PT Sans',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
                       ),
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'PT Sans',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyMediumFamily),
-                          ),
                     ),
                     Padding(
                       padding:
@@ -278,7 +283,7 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(6.0, 5.0, 0.0, 5.0),
+                          EdgeInsetsDirectional.fromSTEB(6.0, 5.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -313,19 +318,24 @@ class _ConnectPAPageWidgetState extends State<ConnectPAPageWidget> {
                         ],
                       ),
                     ),
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'd9x7t45n' /* Но... */,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'd9x7t45n' /* Но... */,
+                        ),
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'PT Sans',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
                       ),
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'PT Sans',
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w600,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyMediumFamily),
-                          ),
                     ),
                     Padding(
                       padding:

@@ -102,6 +102,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -118,7 +119,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                     .labelMediumFamily),
                                       ),
                                   hintText: FFLocalizations.of(context).getText(
-                                    's04rjuen' /* Email */,
+                                    's04rjuen' /* Введите почту */,
                                   ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
@@ -183,6 +184,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .displaySmallFamily),
                                     ),
+                                keyboardType: TextInputType.emailAddress,
                                 cursorColor:
                                     FlutterFlowTheme.of(context).accent1,
                                 validator: _model.emailControllerValidator
@@ -196,6 +198,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 controller: _model.passwordController,
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.done,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -211,7 +214,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                     .labelMediumFamily),
                                       ),
                                   hintText: FFLocalizations.of(context).getText(
-                                    'rfftsqwi' /* Пароль */,
+                                    'rfftsqwi' /* Введите пароль */,
                                   ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
@@ -370,11 +373,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'PT Sans',
+                                      fontFamily: 'Open Sans',
                                       color:
                                           FlutterFlowTheme.of(context).accent1,
                                       fontSize: 16.0,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)

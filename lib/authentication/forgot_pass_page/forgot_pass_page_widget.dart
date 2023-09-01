@@ -136,6 +136,7 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -152,7 +153,7 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                                     .labelMediumFamily),
                                       ),
                                   hintText: FFLocalizations.of(context).getText(
-                                    'ljee5b2d' /* Email */,
+                                    'ljee5b2d' /* Введите почту */,
                                   ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
@@ -217,6 +218,7 @@ class _ForgotPassPageWidgetState extends State<ForgotPassPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .bodyMediumFamily),
                                     ),
+                                keyboardType: TextInputType.emailAddress,
                                 cursorColor:
                                     FlutterFlowTheme.of(context).accent1,
                                 validator: _model.emailControllerValidator

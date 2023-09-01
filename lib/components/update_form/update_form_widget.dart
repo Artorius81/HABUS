@@ -268,6 +268,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -385,6 +386,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -500,6 +502,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -597,6 +600,7 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                               FlutterFlowTheme.of(context)
                                                   .bodyLargeFamily),
                                     ),
+                                keyboardType: TextInputType.url,
                                 cursorColor:
                                     FlutterFlowTheme.of(context).warning,
                                 validator: _model
@@ -660,8 +664,6 @@ class _UpdateFormWidgetState extends State<UpdateFormWidget>
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
                                           width: 0.0,
                                         ),
                                         borderRadius:

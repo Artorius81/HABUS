@@ -383,7 +383,8 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
                                                     .displaySmallFamily,
-                                            color: Colors.white,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
                                             fontSize: 14.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
@@ -392,19 +393,20 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                           ),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
-                                        color: Colors.white,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         size: 24.0,
                                       ),
-                                      fillColor:
-                                          FlutterFlowTheme.of(context).accent1,
                                       elevation: 2.0,
-                                      borderColor: Colors.transparent,
+                                      borderColor:
+                                          FlutterFlowTheme.of(context).accent1,
                                       borderWidth: 0.0,
                                       borderRadius: 8.0,
                                       margin: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isSearchable: false,
+                                      isMultiSelect: false,
                                     );
                                   },
                                 ),

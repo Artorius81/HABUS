@@ -139,16 +139,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Email',
     },
     'i4lxweb9': {
-      'ru': 'Email',
-      'en': 'Email',
+      'ru': 'Введите почту',
+      'en': 'Enter your mail',
     },
     '2lgtcmej': {
       'ru': '',
       'en': 'Password',
     },
     'xx065rme': {
-      'ru': 'Пароль',
-      'en': 'Password',
+      'ru': 'Введите пароль',
+      'en': 'enter password',
     },
     'q02zncbj': {
       'ru': '',
@@ -234,19 +234,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Share',
     },
     'ncktlp6m': {
-      'ru':
-          'Создавайте группы и сообщества, выкладывайте истории и размещайте посты',
-      'en': 'Create groups and communities, share stories and post',
+      'ru': 'Создавайте сообщества, опросы и размещайте посты',
+      'en': 'Create communities, polls and post',
     },
     '04nksib6': {
       'ru': 'Следите',
       'en': 'Follow',
     },
     '2gptrnlp': {
-      'ru':
-          'Смотрите расписание, баллы... в общем весь личный кабинет у Вас в кармане!',
-      'en':
-          'See the schedule, points ... in general, the entire personal account is in your pocket!',
+      'ru': 'Следите за обучением: расписание, баллы',
+      'en': 'Follow the training: schedule, scores',
     },
     '2rorad73': {
       'ru': 'Начать',
@@ -265,7 +262,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dqmava4q': {
       'ru': 'Осталось немного',
-      'en': 'Wonderful! Left a little',
+      'en': 'Left a little',
     },
     'j0sw6cig': {
       'ru':
@@ -293,16 +290,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Email',
     },
     's04rjuen': {
-      'ru': 'Email',
-      'en': '',
+      'ru': 'Введите почту',
+      'en': 'Enter your mail',
     },
     'ftjkdl9z': {
       'ru': '',
       'en': 'Password',
     },
     'rfftsqwi': {
-      'ru': 'Пароль',
-      'en': '',
+      'ru': 'Введите пароль',
+      'en': 'enter password',
     },
     'trhp94my': {
       'ru': 'Это поле обязательно',
@@ -364,8 +361,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Email',
     },
     'ljee5b2d': {
-      'ru': 'Email',
-      'en': '',
+      'ru': 'Введите почту',
+      'en': 'Enter your mail',
     },
     'l7lrfup9': {
       'ru': 'Это поле обязательно',
@@ -427,11 +424,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'rafktt0p': {
       'ru': 'Сообщества',
-      'en': 'Create a Community',
+      'en': 'Communities',
     },
     'mon3bz0b': {
       'ru': 'Чаты',
-      'en': 'Create a chat',
+      'en': 'Chats',
     },
     'btw5wwlc': {
       'ru': 'Настройки',
@@ -443,7 +440,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '691p0oj1': {
       'ru': '1.0beta_build',
-      'en': 'Version 1.0beta_build',
+      'en': '1.0beta_build',
     },
     'n5rtav6w': {
       'ru': 'habus.tech@yandex.ru',
@@ -451,7 +448,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     't19z9ie9': {
       'ru': 'Главная',
-      'en': 'Main',
+      'en': 'home',
     },
     'c9hiaj7l': {
       'ru': 'Новости',
@@ -472,15 +469,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fw7z82d6': {
       'ru': 'Студентка ВВГУ стала участницей Летней школы журналистики-2023',
       'en':
-          'VVGU students became finalists of the All-Russian Championship \"Professionals\" in the \"Industrial Design\" competency',
+          'A student of VVGU became a participant of the Summer School of Journalism-2023',
     },
     'gqpm9gr1': {
       'ru': '4 августа 2023',
-      'en': 'Fri, 28 Jul 2023 15:19:00 +1000',
+      'en': 'August 4, 2023',
     },
     '1otryra8': {
       'ru': 'Сожалеем, но это все записи :(',
-      'en': '',
+      'en': 'We\'re sorry, but these are all entries :(',
     },
     'jblf7y87': {
       'ru': 'Сообщества',
@@ -488,7 +485,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pjoxivuf': {
       'ru': '[название сообщества]',
-      'en': 'community name',
+      'en': '[community name]',
     },
     'u2ktxn8o': {
       'ru': '@id',
@@ -500,11 +497,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'yzsvu7dj': {
       'ru': '[время публикации]',
-      'en': '4 minutes ago',
+      'en': '[post time]',
     },
     'hvj121zj': {
       'ru': '[текст]',
-      'en': 'Text',
+      'en': '[text]',
     },
     'ofputsr8': {
       'ru': '4',
@@ -516,7 +513,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '5rg71dka': {
       'ru': 'Сожалеем, но это все записи :(',
-      'en': '',
+      'en': 'We\'re sorry, but these are all entries :(',
     },
     'x5b0dz1u': {
       'ru': 'Новое в',
@@ -540,7 +537,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '77xehwm5': {
       'ru': 'Сожалеем, но это все записи :(',
-      'en': '',
+      'en': 'We\'re sorry, but these are all entries :(',
     },
     'ysuwpepa': {
       'ru': 'Опросы',
@@ -564,16 +561,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'eflztpcn': {
       'ru': 'Проходи опросы - получай ',
-      'en': '',
+      'en': 'Take surveys - get',
     },
     '021487zf': {
       'ru': 'достижения',
-      'en': '',
+      'en': 'achievements',
     },
     '6xie4ptp': {
       'ru':
           'Проходя опросы, ты не только помогаешь нуждающимся, но и зарабатываешь уникальные достижения!',
-      'en': '',
+      'en':
+          'By completing surveys, you not only help those in need, but also earn unique achievements!',
     },
     'hlj3253b': {
       'ru': 'Создать опрос',
@@ -581,36 +579,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'inrls6hp': {
       'ru': 'Помоги мне развиваться дальше',
-      'en': '',
+      'en': 'Help me develop further',
     },
     'mzd99u3h': {
       'ru':
           'Чтобы развиваться дальше и становиться лучше для пользователей, мне важно знать Ваше мнение по некоторым вопросам :)\nЭто не займёт много времени.',
-      'en': '',
+      'en':
+          'In order to develop further and become better for users, it is important for me to know your opinion on some issues :)\nIt does not take a lot of time.',
     },
     'is0z1ce8': {
       'ru': 'От ',
-      'en': '',
+      'en': 'From',
     },
     'xtudloko': {
       'ru': 'ХАБУС',
-      'en': '',
-    },
-    'o2dsk21k': {
-      'ru': '4',
-      'en': '4',
-    },
-    'jhdgcmy8': {
-      'ru': '4',
-      'en': '4',
+      'en': 'HABUS',
     },
     'k606eilh': {
       'ru': 'От ',
-      'en': '',
+      'en': 'From',
     },
     '5hncbuor': {
       'ru': 'Сожалеем, но это все записи :(',
-      'en': '',
+      'en': 'We\'re sorry, but these are all entries :(',
     },
     'dyw7os9m': {
       'ru': 'ХАБУС',
@@ -704,7 +695,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '820pn8ar': {
       'ru': 'Студент',
-      'en': '',
+      'en': 'Student',
     },
     'nscpox4g': {
       'ru': 'Абитуриент',
@@ -936,7 +927,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1nkb87z7': {
       'ru': 'IT-СОИП-22-В1 ',
-      'en': 'IT-SOIP-22-V1',
+      'en': 'IT-SOIP-22-B1',
     },
     'goe0rvhx': {
       'ru': 'IT-СОИП-22-П1 ',
@@ -1429,11 +1420,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6qr19p6q': {
       'ru': 'Верность выбранной Вами роли будет проверена',
-      'en': 'Your role will be verified',
+      'en': 'The correctness of the role you have chosen will be checked',
     },
     '2tbo5o2c': {
       'ru': 'Field is required',
       'en': 'Field is required',
+    },
+    'hhcz3389': {
+      'ru': 'Максимум 50 символов',
+      'en': 'Maximum 50 characters',
     },
     'egn9bihi': {
       'ru': 'Please choose an option from the dropdown',
@@ -1503,9 +1498,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '440yl1j2': {
       'ru':
-          'Сообщите нам об ошибке, с которой Вы столкнулись и в новых обновлениях она будет исправлена... по крайней мере мы постараемся',
+          'Сообщите нам об ошибке, с которой Вы столкнулись и в новых обновлениях она будет исправлена',
       'en':
-          'Let us know about the bug you encountered and it will be fixed in new updates... at least we will try',
+          'Let us know about the error you are facing and it will be fixed in the next update.',
     },
     '2d4aqzpj': {
       'ru': 'Опишите ошибку',
@@ -1601,11 +1596,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g1x5fhqw': {
       'ru': 'Сообщества',
-      'en': 'Create a Community',
+      'en': 'Communities',
     },
     '4yajvw0t': {
       'ru': 'Чаты',
-      'en': 'Create a chat',
+      'en': 'Chats',
     },
     'fa9c8wrt': {
       'ru': 'Настройки',
@@ -1617,7 +1612,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'vlqwp1jl': {
       'ru': '1.0beta_build',
-      'en': 'Version 1.0beta_build',
+      'en': '1.0beta_build',
     },
     'zkqjefdj': {
       'ru': 'habus.tech@yandex.ru',
@@ -1625,7 +1620,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'l0pj0ouz': {
       'ru': 'Настройки',
-      'en': 'Report a bug',
+      'en': 'Settings',
     },
     'zgufdj5e': {
       'ru': 'Информация о профиле',
@@ -1697,7 +1692,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bksk4t6i': {
       'ru': '1.0beta_build',
-      'en': 'Version 1.0beta_build',
+      'en': '1.0beta_build',
     },
     'ggk3m7ae': {
       'ru': 'ХАБУС',
@@ -1712,43 +1707,44 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'krz84k1o': {
       'ru': 'Привязав личный кабинет ВВГУ, Вы сможете:',
-      'en': 'Error :(',
+      'en': 'By linking your personal account of VVGU, you will be able to:',
     },
     '4byu4jzp': {
       'ru': 'Смотреть расписание и баллы',
-      'en': '',
+      'en': 'View schedule and scores',
     },
     'fet4ngya': {
       'ru': 'Привязать свой пропуск через NFC',
-      'en': '',
+      'en': 'Link your pass via NFC',
     },
     'bapshvru': {
       'ru': 'Оплачивать расходы в одно нажатие',
-      'en': '',
+      'en': 'Pay expenses with one click',
     },
     'a9v4riq7': {
       'ru': 'Следить за своей учебной активностью',
-      'en': '',
+      'en': 'Keep track of your learning activity',
     },
     'dopbemda': {
       'ru': 'И многое другое',
-      'en': '',
+      'en': 'And much more',
     },
     'd9x7t45n': {
       'ru': 'Но...',
-      'en': 'Error :(',
+      'en': 'But...',
     },
     'z2melx0r': {
       'ru': 'Смена кафедры и группы станет недоступна',
-      'en': '',
+      'en': 'Change of department and group will become unavailable',
     },
     'bb4nj7vm': {
       'ru': 'Вход в приложение будет осуществляться через логин и пароль от ЛК',
-      'en': '',
+      'en':
+          'Login to the application will be carried out through the login and password from the LC',
     },
     'cfr5ehtp': {
       'ru': 'Привязать',
-      'en': 'Back',
+      'en': 'bind',
     },
     'gc49o3zd': {
       'ru': 'ХАБУС',
@@ -1761,21 +1757,45 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // UserProfilePage
   {
+    '5gixqojn': {
+      'ru': 'Личный кабинет ВВГУ',
+      'en': 'VVGU personal account',
+    },
+    'qw6y8e9d': {
+      'ru': 'Мой профиль',
+      'en': 'My profile',
+    },
+    '93ghbdvn': {
+      'ru': 'Главная',
+      'en': 'home',
+    },
+    'pyghw99t': {
+      'ru': 'Сообщества',
+      'en': 'Communities',
+    },
+    'k6t2igw7': {
+      'ru': 'Чаты',
+      'en': 'Chats',
+    },
+    'qph4h1u6': {
+      'ru': 'Настройки',
+      'en': 'Settings',
+    },
+    'rzzio40x': {
+      'ru': 'Выйти',
+      'en': 'Go out',
+    },
+    '2bpsc06c': {
+      'ru': '1.0beta_build',
+      'en': '1.0beta_build',
+    },
+    'wrgqrvs7': {
+      'ru': 'habus.tech@yandex.ru',
+      'en': 'habus.tech@yandex.ru',
+    },
     'bpx96zxo': {
       'ru': 'Мой профиль',
-      'en': 'Report a bug',
-    },
-    'pvnr4otm': {
-      'ru': 'Комментатор',
-      'en': '',
-    },
-    'obxk8y3w': {
-      'ru': 'Любитель',
-      'en': '',
-    },
-    'yt9x77qg': {
-      'ru': 'Великий',
-      'en': '',
+      'en': 'My profile',
     },
     '4q3f0uw3': {
       'ru': 'Изменить',
@@ -1783,252 +1803,253 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g9q1cucd': {
       'ru': 'Мои посты',
-      'en': '',
+      'en': 'My posts',
     },
     'if4mgc3q': {
       'ru': 'Делись с нами своими мыслями',
-      'en': '',
+      'en': 'Share with us your thoughts',
     },
     'q6yw1dky': {
       'ru': 'Делись с нами моментами и историями из своей студенческой жизни',
-      'en': '',
+      'en': 'Share with us moments and stories from your student life',
     },
     'w32l3ovl': {
       'ru': 'Создать запись',
-      'en': 'Create a survey',
+      'en': 'Create entry',
     },
     '9avud5zd': {
       'ru': 'Сожалеем, но это все Ваши записи :(',
-      'en': '',
+      'en': 'Sorry, but these are all your posts :(',
     },
     'plc1i58r': {
       'ru': 'Мои опросы',
-      'en': '',
+      'en': 'My Polls',
     },
     'b3sykfub': {
       'ru': 'Здесь храняться Ваши опросы',
-      'en': '',
+      'en': 'This is where your polls are stored.',
     },
     '3bd4wn4r': {
       'ru':
           'Создать опрос можно на главном экране в разделе \"Опросы\". \nПосле создания, все Ваши опросы будут отображаться здесь',
-      'en': '',
+      'en':
+          'You can create a survey from the main screen in the \"Polls\" section.\nOnce created, all your polls will be displayed here',
     },
     'k7fnzjnj': {
       'ru': 'От ',
-      'en': '',
+      'en': 'From',
     },
     'p2abc5sm': {
       'ru': '0',
-      'en': '',
+      'en': '0',
     },
     '6gnrm7s4': {
       'ru': '0',
-      'en': '',
+      'en': '0',
     },
     'eqa6u60l': {
       'ru': 'Сожалеем, но это все записи :(',
-      'en': '',
+      'en': 'We\'re sorry, but these are all entries :(',
     },
     'k77mfbgd': {
       'ru': 'Статистика',
-      'en': '',
+      'en': 'Statistics',
     },
     'gotctnen': {
       'ru': '0 опросов',
-      'en': '',
+      'en': '0 polls',
     },
     'zf9zi86j': {
       'ru': 'вы прошли за всё время',
-      'en': '',
+      'en': 'you\'ve been through all the time',
     },
     '4nnz1xly': {
       'ru': '0 лайков',
-      'en': '',
+      'en': '0 likes',
     },
     'xav71vl8': {
       'ru': 'вы поставили за всё время',
-      'en': '',
+      'en': 'you bet all the time',
     },
     '7g3bo4rp': {
       'ru': '0 коммент.',
-      'en': '',
+      'en': '0 comments',
     },
     'turk31nc': {
       'ru': 'вы оставили за всё время',
-      'en': '',
+      'en': 'you left behind all the time',
     },
     'yuerpguh': {
       'ru': '0 записей',
-      'en': '',
+      'en': '0 entries',
     },
     'mrfd3y4l': {
       'ru': 'вы создали за всё время',
-      'en': '',
+      'en': 'you have created for all time',
     },
     'a13v2ds0': {
       'ru': '0 опросов',
-      'en': '',
+      'en': '0 polls',
     },
     'tunopj80': {
       'ru': 'вы создали за всё время',
-      'en': '',
+      'en': 'you have created for all time',
     },
     'qrl4teic': {
       'ru': '0 опросов',
-      'en': '',
+      'en': '0 polls',
     },
     '7toow67l': {
       'ru': 'вы прошли за всё время',
-      'en': '',
+      'en': 'you\'ve been through all the time',
     },
     'gxfyaoy7': {
       'ru': 'Достижения',
-      'en': '',
+      'en': 'Achievements',
     },
     'ndrourgs': {
       'ru': 'Архивариус',
-      'en': '',
+      'en': 'Archivist',
     },
     '8mxsafyo': {
       'ru': 'пройти 10 опросов',
-      'en': '',
+      'en': 'complete 10 surveys',
     },
     'ctw2kl2y': {
       'ru': 'Любитель',
-      'en': '',
+      'en': 'amateur',
     },
     'wf7v835z': {
       'ru': 'оценить 50 записей',
-      'en': '',
+      'en': 'rate 50 entries',
     },
     'ptchk0dp': {
       'ru': 'Комментатор',
-      'en': '',
+      'en': 'Commentator',
     },
     'ccsvouzy': {
       'ru': 'оставить 100 комментариев',
-      'en': '',
+      'en': 'leave 100 comments',
     },
     '0k9g6r6o': {
       'ru': 'Великий',
-      'en': '',
+      'en': 'Great',
     },
     '4gtaqr2k': {
       'ru': 'закрыть сессию на 5',
-      'en': '',
+      'en': 'close the session for 5',
     },
     'rk8bq1l4': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '6fjepdsr': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'vsuoqpib': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'alweoiqx': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '3k7eyi5w': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '8uvfazu6': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '290mjss2': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'by72no0k': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'vmbo40z0': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '4l4rtfyg': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'qf2vfcqz': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '03hu66hm': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'jxeti84y': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'k0b2vjnt': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'zq6hms7m': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '9jdqn0jl': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'eiaxgogq': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'jft5r6xj': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '4lobumul': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '01f547yw': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'qokn7i6x': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'nocq5tww': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '5imwembm': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'pz1q0x9k': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'acqah58a': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'o4ciqs5h': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '4gz3dwc6': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'q5ee57fx': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'w8nutfuh': {
       'ru': 'ХАБУС',
@@ -2036,7 +2057,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bvuw1y7k': {
       'ru': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // HABUSFormWebView
@@ -2047,7 +2068,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8i195dh0': {
       'ru': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // FormWebViewPage
@@ -2058,8 +2079,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p3myas89': {
       'ru': 'Неправильная ссылка или ошибка в отображении',
-      'en':
-          'Unfortunately, this section is not yet available. But we\'ll fix it soon!',
+      'en': 'Incorrect link or display error',
     },
     'o4kbk7hb': {
       'ru': 'Назад',
@@ -2071,22 +2091,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mywpynb9': {
       'ru': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // StrangerProfilePage
   {
     '5p36pg1b': {
       'ru': 'Комментатор',
-      'en': '',
+      'en': 'Commentator',
     },
     'cr415cwh': {
       'ru': 'Любитель',
-      'en': '',
+      'en': 'amateur',
     },
     'p73cgjbl': {
       'ru': 'Великий',
-      'en': '',
+      'en': 'Great',
     },
     'glsbxodd': {
       'ru': 'Изменить',
@@ -2094,179 +2114,179 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'f1ijfqz5': {
       'ru': 'Статистика',
-      'en': '',
+      'en': 'Statistics',
     },
     'ltcr8fxd': {
       'ru': '0 записей',
-      'en': '',
+      'en': '0 entries',
     },
     'ilkanhpr': {
       'ru': 'вы создали за всё время',
-      'en': '',
+      'en': 'you have created for all time',
     },
     'pqyu1grt': {
       'ru': '0 опросов',
-      'en': '',
+      'en': '0 polls',
     },
     'jyr3amxo': {
       'ru': 'вы создали за всё время',
-      'en': '',
+      'en': 'you have created for all time',
     },
     '2oijix2m': {
       'ru': '0 опросов',
-      'en': '',
+      'en': '0 polls',
     },
     'afrxlh8r': {
       'ru': 'вы прошли за всё время',
-      'en': '',
+      'en': 'you\'ve been through all the time',
     },
     'uaqptmdn': {
       'ru': 'Достижения',
-      'en': '',
+      'en': 'Achievements',
     },
     '1qoq1eax': {
       'ru': 'Архивариус',
-      'en': '',
+      'en': 'Archivist',
     },
     'icfbghe5': {
       'ru': 'пройти 10 опросов',
-      'en': '',
+      'en': 'complete 10 surveys',
     },
     '8kcaw1f3': {
       'ru': 'Любитель',
-      'en': '',
+      'en': 'amateur',
     },
     '0j06jas3': {
       'ru': 'оценить 50 записей',
-      'en': '',
+      'en': 'rate 50 entries',
     },
     'slp1liid': {
       'ru': 'Комментатор',
-      'en': '',
+      'en': 'Commentator',
     },
     'v47d52gz': {
       'ru': 'оставить 100 комментариев',
-      'en': '',
+      'en': 'leave 100 comments',
     },
     'mfcvjqcm': {
       'ru': 'Великий',
-      'en': '',
+      'en': 'Great',
     },
     '8tfgqwuw': {
       'ru': 'закрыть сессию на 5',
-      'en': '',
+      'en': 'close the session for 5',
     },
     '6xfq49u5': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'tzk6f61l': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'vyk5fxz0': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'oygw2uno': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'rxy9krm9': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'oqqtigrs': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '1fh2ziu8': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'bed56elu': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '97eysxd3': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'tbobxa2i': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'sswc2w5s': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '5c1qilwi': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'zi4x7okz': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '9jhxa14u': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '9g202fjn': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'k4b43bov': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'rbvl6e1h': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'pl1m6w2n': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'd92c9oxo': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     '5zsmo86j': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '038o6nz8': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'elv3mxkh': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'fhtzli6i': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'c3lwf48s': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'v1nmsgzf': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'nvf5h75d': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     '9ywwsbh4': {
       'ru': 'Закрыто',
-      'en': '',
+      'en': 'Closed',
     },
     'qn7wbtlz': {
       'ru': 'достижение закрыто',
-      'en': '',
+      'en': 'achievement closed',
     },
     'cb6ythxr': {
       'ru': 'ХАБУС',
@@ -2274,7 +2294,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7rd1xfgb': {
       'ru': 'Home',
-      'en': '',
+      'en': 'Home',
     },
   },
   // ThemeChanger
@@ -2317,7 +2337,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4b7isyzi': {
       'ru': 'English',
-      'en': 'English.',
+      'en': 'English',
     },
     'wtlf2o4j': {
       'ru': 'Сохранить',
@@ -2343,306 +2363,298 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '4soywsnd': {
       'ru': 'Создать ',
-      'en': '',
+      'en': 'Create',
     },
     '5auzrzcz': {
       'ru': 'запись',
-      'en': '',
+      'en': 'record',
     },
     'kl0fe62c': {
       'ru': 'Поделитесь с нами своими мыслями',
-      'en': '',
+      'en': 'Share with us your thoughts',
     },
     'qjumqekm': {
       'ru': 'Добавьте фото',
-      'en': '',
+      'en': 'Add a photo',
     },
     'e50avtrc': {
       'ru': 'Добавьте сюда фото записи или оставьте пустым',
-      'en': '',
+      'en': 'Add an entry photo here or leave it blank',
     },
     '1i4sntn3': {
       'ru': 'Что у Вас нового?',
-      'en': '',
+      'en': 'Anything new?',
     },
     '16w62cqp': {
       'ru': 'Создать',
-      'en': '',
+      'en': 'Create',
     },
     'b9wf3o7l': {
       'ru': 'Это поле должно быть заполнено',
-      'en': '',
+      'en': 'This field must be filled',
     },
     'cfwrz0lv': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // CreateForm
   {
     'glcoyvnk': {
       'ru': 'Создать ',
-      'en': '',
+      'en': 'Create',
     },
     'whs7pe14': {
       'ru': 'опрос',
-      'en': '',
+      'en': 'survey',
     },
     'do3m14v7': {
       'ru': 'Озаглавьте, опишите, вставьте ссылку - а люди будут проходить!',
-      'en': '',
+      'en': 'Title, describe, insert a link - and people will pass!',
     },
     'eo536b6w': {
       'ru': 'Введите заголовок',
-      'en': '',
+      'en': 'Enter title',
     },
     'frpazeqi': {
       'ru': 'Введите описание',
-      'en': '',
+      'en': 'Enter a description',
     },
     'fv6tfosl': {
       'ru': 'Вставьте ссылку на опрос',
-      'en': '',
+      'en': 'Paste the survey link',
     },
     'y2qmgkge': {
       'ru': 'Создать',
-      'en': '',
+      'en': 'Create',
     },
     'ipc8vs1e': {
       'ru': 'Это поле обязательно',
-      'en': '',
+      'en': 'This field is required',
     },
     'qijhzt08': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'ecs08e6r': {
       'ru': 'Это поле обязательно',
-      'en': '',
+      'en': 'This field is required',
     },
     'nh7vmr44': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '28095pc9': {
       'ru': 'Это поле обязательно',
-      'en': '',
+      'en': 'This field is required',
+    },
+    '9gxc6ada': {
+      'ru': 'Не похоже на ссылку',
+      'en': 'Doesn\'t look like a link',
     },
     'yn8lx3tp': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // UpdateForm
   {
     'z4tslexu': {
       'ru': 'Изменить ',
-      'en': '',
+      'en': 'Change',
     },
     'l8tcx5vu': {
       'ru': 'опрос',
-      'en': '',
+      'en': 'survey',
     },
     'kz60s0n9': {
       'ru': 'Измените свой уже созданный опрос',
-      'en': '',
+      'en': 'Edit your already created survey',
     },
     '6vv2mh77': {
       'ru': 'Введите заголовок',
-      'en': '',
+      'en': 'Enter title',
     },
     'g1uy6vqg': {
       'ru': 'Введите описание',
-      'en': '',
+      'en': 'Enter a description',
     },
     'fwhl1xgu': {
       'ru': 'Вставьте ссылку на опрос',
-      'en': '',
+      'en': 'Paste the survey link',
     },
     'thfe6a39': {
       'ru': 'Изменить',
-      'en': '',
+      'en': 'Change',
     },
-    'pw2mmgyu': {
-      'ru': 'Field is required',
-      'en': '',
+    '8f7109da': {
+      'ru': 'Это поле обязательно',
+      'en': 'This field is required',
     },
-    'osz70xn7': {
-      'ru': 'Please enter a real name',
-      'en': '',
-    },
-    'fkd7ge5w': {
+    'z0glmgxm': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
-    '0y8qmixk': {
-      'ru': 'Please enter a short desription',
-      'en': '',
+    'cjiohhkp': {
+      'ru': 'Это поле обязательно',
+      'en': 'This field is required',
     },
-    'fp8st0jg': {
+    'wjnwsbe7': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
-    'yh16u5ou': {
-      'ru': 'We have to have a URL for the project.',
-      'en': '',
+    'j5xzt9wl': {
+      'ru': 'Это поле обязательно',
+      'en': 'This field is required',
     },
-    'xqryf7v2': {
-      'ru': 'Please enter a valid URL...',
-      'en': '',
+    '3q4v33m3': {
+      'ru': 'Не похоже на ссылку',
+      'en': 'Doesn\'t look like a link',
     },
-    'n95jj5sj': {
+    '7u272y3w': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
-    },
-    '1uriyxgr': {
-      'ru': 'Field is required',
-      'en': '',
-    },
-    'f25vuwqe': {
-      'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // DeleteForm
   {
     '88onsgbs': {
       'ru': 'Удалить ',
-      'en': '',
+      'en': 'Delete',
     },
     'po1buiw5': {
       'ru': 'опрос',
-      'en': '',
+      'en': 'survey',
     },
     'yc6bwj4i': {
       'ru': 'Вы действительно хотите удалить опрос?',
-      'en': '',
+      'en': 'Are you sure you want to delete the survey?',
     },
     'q1498me3': {
       'ru': 'Удалить',
-      'en': '',
+      'en': 'Delete',
     },
     'rygt4uwz': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'kwetvr2l': {
       'ru': 'Please enter a real name',
-      'en': '',
+      'en': 'Please enter a real name',
     },
     'onb43aq0': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'novpzq6w': {
       'ru': 'Please enter a short desription',
-      'en': '',
+      'en': 'Please enter a short description',
     },
     'qnve749m': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'xjnje1wd': {
       'ru': 'We have to have a URL for the project.',
-      'en': '',
+      'en': 'We have to have a URL for the project.',
     },
     'ugph96qp': {
       'ru': 'Please enter a valid URL...',
-      'en': '',
+      'en': 'Please enter a valid URL...',
     },
     'uke8ikki': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'ych1nhx5': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'c6kdpgqo': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // DeletePost
   {
     'key69f4e': {
       'ru': 'Удалить ',
-      'en': '',
+      'en': 'Delete',
     },
     'ibm5glcm': {
       'ru': 'запись',
-      'en': '',
+      'en': 'record',
     },
     'u8sh2gpz': {
       'ru': 'Вы действительно хотите удалить запись?',
-      'en': '',
+      'en': 'Are you sure you want to delete the entry?',
     },
     'u4qflmr2': {
       'ru': 'Удалить',
-      'en': '',
+      'en': 'Delete',
     },
     'kdvpnvnj': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'fs8xt846': {
       'ru': 'Please enter a real name',
-      'en': '',
+      'en': 'Please enter a real name',
     },
     '8usgo12w': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'wd71btfl': {
       'ru': 'Please enter a short desription',
-      'en': '',
+      'en': 'Please enter a short description',
     },
     'rzkel0r7': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'uenq492c': {
       'ru': 'We have to have a URL for the project.',
-      'en': '',
+      'en': 'We have to have a URL for the project.',
     },
     'c3axuzly': {
       'ru': 'Please enter a valid URL...',
-      'en': '',
+      'en': 'Please enter a valid URL...',
     },
     'gu8pd3sb': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     'zzt5j01k': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'tpw8qb7i': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // UpdatePost
   {
     'xyhsuqom': {
       'ru': 'Изменить ',
-      'en': '',
+      'en': 'Change',
     },
     'lbxzhpsk': {
       'ru': 'запись',
-      'en': '',
+      'en': 'record',
     },
     'tqijosb2': {
       'ru': 'Поделитесь с нами своими мыслями',
-      'en': '',
+      'en': 'Share with us your thoughts',
     },
     '8sh1mgrp': {
       'ru': 'Добавьте фото',
-      'en': '',
+      'en': 'Add a photo',
     },
     'mnu3tpsv': {
       'ru': 'Добавьте сюда фото записи или оставьте пустым',
-      'en': '',
+      'en': 'Add an entry photo here or leave it blank',
     },
     'yv87r33d': {
       'ru': '',
@@ -2650,47 +2662,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2k679wr8': {
       'ru': 'Изменить',
-      'en': '',
+      'en': 'Change',
     },
     'c6v6i4tm': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     'jw4yhf4a': {
       'ru': 'Please enter a real name',
-      'en': '',
+      'en': 'Please enter a real name',
     },
     'f7h5c7qw': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '3rv68kph': {
       'ru': 'Please enter a short desription',
-      'en': '',
+      'en': 'Please enter a short description',
     },
     'dajq7e3f': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '3sekpsmd': {
       'ru': 'We have to have a URL for the project.',
-      'en': '',
+      'en': 'We have to have a URL for the project.',
     },
     'sziu9ea7': {
       'ru': 'Please enter a valid URL...',
-      'en': '',
+      'en': 'Please enter a valid URL...',
     },
     'g42pxvy5': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
     '074040nl': {
       'ru': 'Field is required',
-      'en': '',
+      'en': 'Field is required',
     },
     '7qbdd776': {
       'ru': 'Please choose an option from the dropdown',
-      'en': '',
+      'en': 'Please choose an option from the dropdown',
     },
   },
   // Miscellaneous
@@ -2698,12 +2710,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bhd2rhr6': {
       'ru':
           'Для продолжения нам нужно получить от Вас разрешение на использование камеры',
-      'en': '',
+      'en':
+          'To continue, we need to get permission from you to use the camera.',
     },
     '7l6hmvxk': {
       'ru':
           'Для продолжения нам нужно получить от Вас разрешение на использование галереи',
-      'en': '',
+      'en': 'To continue, we need to get your permission to use the gallery',
     },
     'jbmnbgem': {
       'ru': '',

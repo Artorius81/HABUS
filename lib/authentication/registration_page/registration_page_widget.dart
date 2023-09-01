@@ -107,6 +107,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   ),
                                   textCapitalization:
                                       TextCapitalization.sentences,
+                                  textInputAction: TextInputAction.next,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
@@ -125,7 +126,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                         ),
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'i4lxweb9' /* Email */,
+                                      'i4lxweb9' /* Введите почту */,
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -194,6 +195,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   ),
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
+                                  keyboardType: TextInputType.emailAddress,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).accent1,
                                   validator: _model.emailControllerValidator
@@ -207,6 +209,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   controller: _model.passwordController,
                                   textCapitalization:
                                       TextCapitalization.sentences,
+                                  textInputAction: TextInputAction.next,
                                   obscureText: !_model.passwordVisibility,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
@@ -224,7 +227,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                         ),
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'xx065rme' /* Пароль */,
+                                      'xx065rme' /* Введите пароль */,
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -302,6 +305,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                       _model.passwordVerificationController,
                                   textCapitalization:
                                       TextCapitalization.sentences,
+                                  textInputAction: TextInputAction.done,
                                   obscureText:
                                       !_model.passwordVerificationVisibility,
                                   decoration: InputDecoration(

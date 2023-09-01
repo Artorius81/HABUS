@@ -193,7 +193,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                             final textProfileRow = textProfileRowList.isNotEmpty
                                 ? textProfileRowList.first
                                 : null;
-                            return GradientText(
+                            return Text(
                               valueOrDefault<String>(
                                 textProfileRow?.role,
                                 'Не указано',
@@ -203,7 +203,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                   .override(
                                     fontFamily: 'Open Sans',
                                     color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                        .primaryText,
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
                                     useGoogleFonts: GoogleFonts.asMap()
@@ -211,12 +211,6 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .bodyMediumFamily),
                                   ),
-                              colors: [
-                                FlutterFlowTheme.of(context).accent2,
-                                FlutterFlowTheme.of(context).accent1
-                              ],
-                              gradientDirection: GradientDirection.ltr,
-                              gradientType: GradientType.linear,
                             );
                           },
                         ),
@@ -993,8 +987,8 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'PT Sans',
-                                                        fontSize: 18.0,
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: GoogleFonts
@@ -2629,6 +2623,8 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                     ),
                                 elevation: 0.0,
                                 borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   width: 0.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),

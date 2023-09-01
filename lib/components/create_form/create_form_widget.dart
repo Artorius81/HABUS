@@ -259,6 +259,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -376,6 +377,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.next,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -491,6 +493,9 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                   Duration(milliseconds: 2000),
                                   () => setState(() {}),
                                 ),
+                                textCapitalization:
+                                    TextCapitalization.sentences,
+                                textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -588,6 +593,7 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                               FlutterFlowTheme.of(context)
                                                   .bodyLargeFamily),
                                     ),
+                                keyboardType: TextInputType.url,
                                 cursorColor:
                                     FlutterFlowTheme.of(context).success,
                                 validator: _model
@@ -677,8 +683,6 @@ class _CreateFormWidgetState extends State<CreateFormWidget>
                                             ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
                                           width: 0.0,
                                         ),
                                         borderRadius:

@@ -389,7 +389,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'ncktlp6m' /* Создавайте группы и сообщества... */,
+                                            'ncktlp6m' /* Создавайте сообщества, опросы ... */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
@@ -441,7 +441,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            '2gptrnlp' /* Смотрите расписание, баллы... ... */,
+                                            '2gptrnlp' /* Следите за обучением: расписан... */,
                                           ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)

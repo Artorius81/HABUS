@@ -19,16 +19,54 @@ class UpdateFormModel extends FlutterFlowModel {
   // State field(s) for description widget.
   TextEditingController? descriptionController1;
   String? Function(BuildContext, String?)? descriptionController1Validator;
+  String? _descriptionController1Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '8f7109da' /* Это поле обязательно */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for description widget.
   TextEditingController? descriptionController2;
   String? Function(BuildContext, String?)? descriptionController2Validator;
+  String? _descriptionController2Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'cjiohhkp' /* Это поле обязательно */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for description widget.
   TextEditingController? descriptionController3;
   String? Function(BuildContext, String?)? descriptionController3Validator;
+  String? _descriptionController3Validator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'j5xzt9wl' /* Это поле обязательно */,
+      );
+    }
+
+    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        '3q4v33m3' /* Не похоже на ссылку */,
+      );
+    }
+    return null;
+  }
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    descriptionController1Validator = _descriptionController1Validator;
+    descriptionController2Validator = _descriptionController2Validator;
+    descriptionController3Validator = _descriptionController3Validator;
+  }
 
   void dispose() {
     descriptionController1?.dispose();

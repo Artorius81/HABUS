@@ -576,7 +576,8 @@ class _ChangProfileInfoPageWidgetState
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .labelMediumFamily,
-                                    color: FlutterFlowTheme.of(context).accent1,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -587,7 +588,8 @@ class _ChangProfileInfoPageWidgetState
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
-                                    color: Colors.white,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -608,15 +610,15 @@ class _ChangProfileInfoPageWidgetState
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
-                              fillColor: FlutterFlowTheme.of(context).accent1,
                               elevation: 2.0,
-                              borderColor: Colors.transparent,
+                              borderColor: FlutterFlowTheme.of(context).accent1,
                               borderWidth: 0.0,
                               borderRadius: 8.0,
                               margin: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 4.0),
                               hidesUnderline: true,
                               isSearchable: true,
+                              isMultiSelect: false,
                             );
                           },
                         ),
@@ -1011,7 +1013,8 @@ class _ChangProfileInfoPageWidgetState
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .bodyMediumFamily,
-                                    color: Colors.white,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
@@ -1032,15 +1035,15 @@ class _ChangProfileInfoPageWidgetState
                                     FlutterFlowTheme.of(context).secondaryText,
                                 size: 24.0,
                               ),
-                              fillColor: FlutterFlowTheme.of(context).accent1,
                               elevation: 2.0,
-                              borderColor: Colors.transparent,
+                              borderColor: FlutterFlowTheme.of(context).accent1,
                               borderWidth: 0.0,
                               borderRadius: 8.0,
                               margin: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 4.0),
                               hidesUnderline: true,
                               isSearchable: true,
+                              isMultiSelect: false,
                             );
                           },
                         ),

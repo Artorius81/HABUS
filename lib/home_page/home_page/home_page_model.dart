@@ -20,6 +20,11 @@ class HomePageModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for TabBar widget.
+  TabController? tabBarController;
+  int get tabBarCurrentIndex =>
+      tabBarController != null ? tabBarController!.index : 0;
+
   // State field(s) for searchField widget.
   TextEditingController? searchFieldController1;
   String? Function(BuildContext, String?)? searchFieldController1Validator;
@@ -33,6 +38,7 @@ class HomePageModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
+    tabBarController?.dispose();
     searchFieldController1?.dispose();
     searchFieldController2?.dispose();
   }

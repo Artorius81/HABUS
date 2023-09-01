@@ -27,6 +27,11 @@ class UserProfilePageModel extends FlutterFlowModel {
   final unfocusNode = FocusNode();
   bool requestCompleted1 = false;
   String? requestLastUniqueKey1;
+  // State field(s) for TabBar widget.
+  TabController? tabBarController;
+  int get tabBarCurrentIndex =>
+      tabBarController != null ? tabBarController!.index : 0;
+
   Completer<List<UserPostsRow>>? requestCompleter3;
   Completer<List<FormsRow>>? requestCompleter2;
 
@@ -36,6 +41,7 @@ class UserProfilePageModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
+    tabBarController?.dispose();
   }
 
   /// Action blocks are added here.

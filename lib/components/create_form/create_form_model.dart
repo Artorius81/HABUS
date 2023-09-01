@@ -53,6 +53,11 @@ class CreateFormModel extends FlutterFlowModel {
       );
     }
 
+    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        '9gxc6ada' /* Не похоже на ссылку */,
+      );
+    }
     return null;
   }
 

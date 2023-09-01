@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import '/flutter_flow/permissions_util.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -176,12 +177,13 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
+                                  await requestPermission(
+                                      photoLibraryPermission);
+                                  await requestPermission(cameraPermission);
                                   final selectedMedia =
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     storageFolderPath: currentUserUid,
-                                    maxWidth: 512.00,
-                                    maxHeight: 512.00,
                                     imageQuality: 80,
                                     allowPhoto: true,
                                     pickerFontFamily: 'PT Sans',
@@ -335,8 +337,6 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                   ),
                               elevation: 0.0,
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
                                 width: 0.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
