@@ -113,6 +113,7 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                   ),
                                   textCapitalization:
                                       TextCapitalization.sentences,
+                                  textInputAction: TextInputAction.next,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     hintText:
@@ -214,6 +215,7 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                 ),
                                 textCapitalization:
                                     TextCapitalization.sentences,
+                                textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   hintText: FFLocalizations.of(context).getText(
@@ -344,12 +346,7 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                     return FlutterFlowDropDown<String>(
                                       controller:
                                           _model.roleChoiceValueController ??=
-                                              FormFieldController<String>(
-                                        _model.roleChoiceValue ??=
-                                            FFLocalizations.of(context).getText(
-                                          '820pn8ar' /* Студент */,
-                                        ),
-                                      ),
+                                              FormFieldController<String>(null),
                                       options: [
                                         FFLocalizations.of(context).getText(
                                           'nscpox4g' /* Абитуриент */,
@@ -391,6 +388,10 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .displaySmallFamily),
                                           ),
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'kins1x33' /* Выберите роль */,
+                                      ),
                                       icon: Icon(
                                         Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -469,6 +470,20 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                               !_model.formKey.currentState!.validate()) {
                             return;
                           }
+                          setState(() {
+                            FFAppState().updateUserStruct(
+                              (e) => e..isRegistration = false,
+                            );
+                            FFAppState().firstName =
+                                _model.firstUserNameController.text;
+                            FFAppState().lastName =
+                                _model.lastUserNameController.text;
+                            FFAppState().role = _model.roleChoiceValue!;
+                            FFAppState().email = currentUserEmail;
+                          });
+
+                          context.goNamed('OnboardingPage');
+
                           await ProfileTable().update(
                             data: {
                               'first_name': _model.firstUserNameController.text,
@@ -480,22 +495,6 @@ class _InitialUserInfoPageWidgetState extends State<InitialUserInfoPageWidget> {
                               currentUserUid,
                             ),
                           );
-
-                          context.goNamed(
-                            'OnboardingPage',
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.rightToLeft,
-                              ),
-                            },
-                          );
-
-                          setState(() {
-                            FFAppState().updateUserStruct(
-                              (e) => e..isRegistration = false,
-                            );
-                          });
                         },
                         text: FFLocalizations.of(context).getText(
                           'qjb0p5xz' /* Продолжить */,

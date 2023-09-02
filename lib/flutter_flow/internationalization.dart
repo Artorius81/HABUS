@@ -694,7 +694,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Please use your real first and last name to make it easier for other users to find you.',
     },
     '820pn8ar': {
-      'ru': 'Студент',
+      'ru': '',
       'en': 'Student',
     },
     'nscpox4g': {
@@ -726,7 +726,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'laboratory assistant',
     },
     'kins1x33': {
-      'ru': '',
+      'ru': 'Выберите роль',
       'en': 'Choose a role',
     },
     'kup43co3': {
@@ -1427,7 +1427,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
     },
     'hhcz3389': {
-      'ru': 'Максимум 50 символов',
+      'ru': 'Максимум 80 символов',
       'en': 'Maximum 50 characters',
     },
     'egn9bihi': {
@@ -1806,7 +1806,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My posts',
     },
     'if4mgc3q': {
-      'ru': 'Делись с нами своими мыслями',
+      'ru': 'Поделись с нами своими мыслями',
       'en': 'Share with us your thoughts',
     },
     'q6yw1dky': {

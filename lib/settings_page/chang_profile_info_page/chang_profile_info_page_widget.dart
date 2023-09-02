@@ -33,6 +33,11 @@ class _ChangProfileInfoPageWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => ChangProfileInfoPageModel());
+
+    _model.firstNameController ??=
+        TextEditingController(text: FFAppState().firstName);
+    _model.lastNameController ??=
+        TextEditingController(text: FFAppState().lastName);
   }
 
   @override
@@ -217,10 +222,7 @@ class _ChangProfileInfoPageWidgetState
                                     ? firstNameProfileRowList.first
                                     : null;
                             return TextFormField(
-                              controller: _model.firstNameController ??=
-                                  TextEditingController(
-                                text: firstNameProfileRow?.firstName,
-                              ),
+                              controller: _model.firstNameController,
                               onChanged: (_) => EasyDebounce.debounce(
                                 '_model.firstNameController',
                                 Duration(milliseconds: 2000),
@@ -345,10 +347,7 @@ class _ChangProfileInfoPageWidgetState
                                     ? lastNameProfileRowList.first
                                     : null;
                             return TextFormField(
-                              controller: _model.lastNameController ??=
-                                  TextEditingController(
-                                text: lastNameProfileRow?.lastName,
-                              ),
+                              controller: _model.lastNameController,
                               onChanged: (_) => EasyDebounce.debounce(
                                 '_model.lastNameController',
                                 Duration(milliseconds: 2000),
@@ -483,7 +482,7 @@ class _ChangProfileInfoPageWidgetState
                                       FormFieldController<String>(
                                 _model.departmentChoiceValue ??=
                                     valueOrDefault<String>(
-                                  departmentChoiceProfileRow?.department,
+                                  FFAppState().department,
                                   'Не указано',
                                 ),
                               ),
@@ -677,7 +676,7 @@ class _ChangProfileInfoPageWidgetState
                                   FormFieldController<String>(
                                 _model.groupChoiceValue ??=
                                     valueOrDefault<String>(
-                                  groupChoiceProfileRow?.group,
+                                  FFAppState().group,
                                   'Не указано',
                                 ),
                               ),
@@ -1071,8 +1070,7 @@ class _ChangProfileInfoPageWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .bodyMediumFamily,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                  color: Colors.white,
                                   fontSize: 16.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -1083,6 +1081,14 @@ class _ChangProfileInfoPageWidgetState
                           backgroundColor: FlutterFlowTheme.of(context).success,
                         ),
                       );
+                      setState(() {
+                        FFAppState().firstName =
+                            _model.firstNameController.text;
+                        FFAppState().lastName = _model.lastNameController.text;
+                        FFAppState().department = _model.departmentChoiceValue!;
+                        FFAppState().group = _model.groupChoiceValue!;
+                      });
+                      context.safePop();
                       await ProfileTable().update(
                         data: {
                           'group': _model.groupChoiceValue,
@@ -1095,7 +1101,6 @@ class _ChangProfileInfoPageWidgetState
                           currentUserUid,
                         ),
                       );
-                      context.safePop();
                     },
                     text: FFLocalizations.of(context).getText(
                       'zzfra36q' /* Сохранить */,

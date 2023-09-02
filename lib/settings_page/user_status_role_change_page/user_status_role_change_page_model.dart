@@ -28,9 +28,9 @@ class UserStatusRoleChangePageModel extends FlutterFlowModel {
       );
     }
 
-    if (val.length > 50) {
+    if (val.length > 80) {
       return FFLocalizations.of(context).getText(
-        'hhcz3389' /* Максимум 50 символов */,
+        'hhcz3389' /* Максимум 80 символов */,
       );
     }
 

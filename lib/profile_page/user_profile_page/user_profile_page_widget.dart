@@ -128,7 +128,10 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
-                                circleImageProfileRow!.userImage!,
+                                valueOrDefault<String>(
+                                  FFAppState().profilePhoto,
+                                  'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                ),
                                 fit: BoxFit.cover,
                               ),
                             );
@@ -164,7 +167,13 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                       : null;
                               return Text(
                                 valueOrDefault<String>(
-                                  '${textProfileRow?.firstName} ${textProfileRow?.lastName}',
+                                  '${valueOrDefault<String>(
+                                    FFAppState().firstName,
+                                    'Не',
+                                  )} ${valueOrDefault<String>(
+                                    FFAppState().lastName,
+                                    'указано',
+                                  )}',
                                   'Не указано',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -208,7 +217,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                 : null;
                             return Text(
                               valueOrDefault<String>(
-                                textProfileRow?.role,
+                                FFAppState().role,
                                 'Не указано',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -244,15 +253,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'OoopsPage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.rightToLeft,
-                          ),
-                        },
-                      );
+                      context.pushNamed('OoopsPage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -323,17 +324,6 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                         scaffoldKey.currentState!.isEndDrawerOpen) {
                       Navigator.pop(context);
                     }
-
-                    context.pushNamed(
-                      'UserProfilePage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
                   },
                   child: Container(
                     width: double.infinity,
@@ -404,6 +394,8 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                         scaffoldKey.currentState!.isEndDrawerOpen) {
                       Navigator.pop(context);
                     }
+
+                    context.pushNamed('HomePage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -473,16 +465,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'InDevelopPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('InDevelopPage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -553,16 +536,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'InDevelopPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('InDevelopPage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -632,15 +606,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'SettingsPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.rightToLeft,
-                        ),
-                      },
-                    );
+                    context.pushNamed('SettingsPage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -1004,8 +970,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                 children: [
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
@@ -1017,8 +982,8 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 12.0, 0.0, 0.0),
                                           child: Container(
-                                            width: 60.0,
-                                            height: 60.0,
+                                            width: 50.0,
+                                            height: 50.0,
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
@@ -1037,22 +1002,30 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                     child:
                                                         FlutterFlowExpandedImageView(
                                                       image: Image.network(
-                                                        flippableCardProfileRow!
-                                                            .userImage!,
+                                                        valueOrDefault<String>(
+                                                          FFAppState()
+                                                              .profilePhoto,
+                                                          'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                                        ),
                                                         fit: BoxFit.contain,
                                                       ),
                                                       allowRotation: false,
-                                                      tag:
-                                                          flippableCardProfileRow!
-                                                              .userImage!,
+                                                      tag: valueOrDefault<
+                                                          String>(
+                                                        FFAppState()
+                                                            .profilePhoto,
+                                                        'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                                      ),
                                                       useHeroAnimation: true,
                                                     ),
                                                   ),
                                                 );
                                               },
                                               child: Hero(
-                                                tag: flippableCardProfileRow!
-                                                    .userImage!,
+                                                tag: valueOrDefault<String>(
+                                                  FFAppState().profilePhoto,
+                                                  'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                                ),
                                                 transitionOnUserGestures: true,
                                                 child: Container(
                                                   width: 50.0,
@@ -1062,8 +1035,10 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.network(
-                                                    flippableCardProfileRow!
-                                                        .userImage!,
+                                                    valueOrDefault<String>(
+                                                      FFAppState().profilePhoto,
+                                                      'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                                    ),
                                                     fit: BoxFit.cover,
                                                   ),
                                                 ),
@@ -1076,7 +1051,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  5.0, 8.0, 12.0, 8.0),
+                                                  8.0, 8.0, 16.0, 8.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -1086,7 +1061,13 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                             children: [
                                               Text(
                                                 valueOrDefault<String>(
-                                                  '${flippableCardProfileRow?.firstName} ${flippableCardProfileRow?.lastName}',
+                                                  '${valueOrDefault<String>(
+                                                    FFAppState().firstName,
+                                                    'Не',
+                                                  )} ${valueOrDefault<String>(
+                                                    FFAppState().lastName,
+                                                    'указано',
+                                                  )}',
                                                   'Не указано',
                                                 ),
                                                 style:
@@ -1108,7 +1089,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                               ),
                                               Text(
                                                 valueOrDefault<String>(
-                                                  flippableCardProfileRow?.role,
+                                                  FFAppState().role,
                                                   'Не указано',
                                                 ),
                                                 style:
@@ -1135,11 +1116,10 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                         0.0, 8.0, 0.0, 0.0),
                                                 child: Text(
                                                   valueOrDefault<String>(
-                                                    flippableCardProfileRow
-                                                        ?.status,
-                                                    'Статус не указан',
+                                                    FFAppState().status,
+                                                    'Статус не указан :(',
                                                   ).maybeHandleOverflow(
-                                                    maxChars: 50,
+                                                    maxChars: 120,
                                                     replacement: '…',
                                                   ),
                                                   textAlign: TextAlign.start,
@@ -1164,31 +1144,6 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                 ),
                                               ),
                                             ],
-                                          ),
-                                        ),
-                                      ),
-                                      Flexible(
-                                        child: Align(
-                                          alignment:
-                                              AlignmentDirectional(1.0, 0.0),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 16.0, 0.0),
-                                            child: Container(
-                                              width: 50.0,
-                                              height: 180.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                border: Border.all(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBackground,
-                                                ),
-                                              ),
-                                            ),
                                           ),
                                         ),
                                       ),
@@ -1221,8 +1176,8 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                     Color(0xFF865ECD)
                                   ],
                                   stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(0.0, -1.0),
-                                  end: AlignmentDirectional(0, 1.0),
+                                  begin: AlignmentDirectional(1.0, 0.87),
+                                  end: AlignmentDirectional(-1.0, -0.87),
                                 ),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
@@ -1265,11 +1220,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                               ),
                                               Flexible(
                                                 child: Text(
-                                                  valueOrDefault<String>(
-                                                    flippableCardProfileRow
-                                                        ?.email,
-                                                    'Не указано',
-                                                  ),
+                                                  FFAppState().email,
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -1330,8 +1281,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     valueOrDefault<String>(
-                                                      flippableCardProfileRow
-                                                          ?.department,
+                                                      FFAppState().department,
                                                       'Не указано',
                                                     ),
                                                     textAlign: TextAlign.start,
@@ -1390,8 +1340,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                               Flexible(
                                                 child: Text(
                                                   valueOrDefault<String>(
-                                                    flippableCardProfileRow
-                                                        ?.group,
+                                                    FFAppState().group,
                                                     'Не указано',
                                                   ),
                                                   textAlign: TextAlign.start,
@@ -1431,17 +1380,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                               FFButtonWidget(
                                                 onPressed: () async {
                                                   context.pushNamed(
-                                                    'ChangProfileInfoPage',
-                                                    extra: <String, dynamic>{
-                                                      kTransitionInfoKey:
-                                                          TransitionInfo(
-                                                        hasTransition: true,
-                                                        transitionType:
-                                                            PageTransitionType
-                                                                .rightToLeft,
-                                                      ),
-                                                    },
-                                                  );
+                                                      'ChangProfileInfoPage');
                                                 },
                                                 text:
                                                     FFLocalizations.of(context)
@@ -1520,7 +1459,16 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .titleMediumFamily),
                                 ),
-                            unselectedLabelStyle: TextStyle(),
+                            unselectedLabelStyle: FlutterFlowTheme.of(context)
+                                .titleMedium
+                                .override(
+                                  fontFamily: 'Open Sans',
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .titleMediumFamily),
+                                ),
                             indicatorColor:
                                 FlutterFlowTheme.of(context).accent1,
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -1591,7 +1539,7 @@ class _UserProfilePageWidgetState extends State<UserProfilePageWidget>
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'if4mgc3q' /* Делись с нами своими мыслями */,
+                                                        'if4mgc3q' /* Поделись с нами своими мыслями */,
                                                       ),
                                                       textAlign:
                                                           TextAlign.start,

@@ -355,16 +355,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed(
-                                  'ForgotPassPage',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.rightToLeft,
-                                    ),
-                                  },
-                                );
+                                context.pushNamed('ForgotPassPage');
                               },
                               child: Text(
                                 FFLocalizations.of(context).getText(

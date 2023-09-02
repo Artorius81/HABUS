@@ -496,15 +496,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                 ),
                 FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed(
-                      'HomePage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.rightToLeft,
-                        ),
-                      },
-                    );
+                    context.goNamed('HomePage');
                   },
                   text: FFLocalizations.of(context).getText(
                     '2rorad73' /* Начать */,

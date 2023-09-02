@@ -1,6 +1,5 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
-import '/components/changer_photo/changer_photo_widget.dart';
 import '/components/language_changer/language_changer_widget.dart';
 import '/components/theme_changer/theme_changer_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -115,7 +114,10 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 shape: BoxShape.circle,
                               ),
                               child: Image.network(
-                                circleImageProfileRow!.userImage!,
+                                valueOrDefault<String>(
+                                  FFAppState().profilePhoto,
+                                  'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                ),
                                 fit: BoxFit.cover,
                               ),
                             );
@@ -151,7 +153,13 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       : null;
                               return Text(
                                 valueOrDefault<String>(
-                                  '${textProfileRow?.firstName} ${textProfileRow?.lastName}',
+                                  '${valueOrDefault<String>(
+                                    FFAppState().firstName,
+                                    'Не',
+                                  )} ${valueOrDefault<String>(
+                                    FFAppState().lastName,
+                                    'указано',
+                                  )}',
                                   'Не указано',
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -195,7 +203,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                 : null;
                             return Text(
                               valueOrDefault<String>(
-                                textProfileRow?.role,
+                                FFAppState().role,
                                 'Не указано',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -231,15 +239,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'OoopsPage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.rightToLeft,
-                          ),
-                        },
-                      );
+                      context.pushNamed('OoopsPage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -311,16 +311,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'UserProfilePage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('UserProfilePage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -391,6 +382,8 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         scaffoldKey.currentState!.isEndDrawerOpen) {
                       Navigator.pop(context);
                     }
+
+                    context.pushNamed('HomePage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -460,16 +453,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'InDevelopPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('InDevelopPage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -540,16 +524,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                       Navigator.pop(context);
                     }
 
-                    context.pushNamed(
-                      'InDevelopPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                          duration: Duration(milliseconds: 0),
-                        ),
-                      },
-                    );
+                    context.pushNamed('InDevelopPage');
                   },
                   child: Container(
                     width: double.infinity,
@@ -618,16 +593,6 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                         scaffoldKey.currentState!.isEndDrawerOpen) {
                       Navigator.pop(context);
                     }
-
-                    context.pushNamed(
-                      'SettingsPage',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.rightToLeft,
-                        ),
-                      },
-                    );
                   },
                   child: Container(
                     width: double.infinity,
@@ -1030,10 +995,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             ),
                                             Flexible(
                                               child: Text(
-                                                valueOrDefault<String>(
-                                                  containerProfileRow?.email,
-                                                  'Не указано',
-                                                ),
+                                                FFAppState().email,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -1091,8 +1053,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                                     -1.0, 0.0),
                                                 child: Text(
                                                   valueOrDefault<String>(
-                                                    containerProfileRow
-                                                        ?.department,
+                                                    FFAppState().department,
                                                     'Не указано',
                                                   ),
                                                   textAlign: TextAlign.start,
@@ -1149,7 +1110,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                             Flexible(
                                               child: Text(
                                                 valueOrDefault<String>(
-                                                  containerProfileRow?.group,
+                                                  FFAppState().group,
                                                   'Не указано',
                                                 ),
                                                 textAlign: TextAlign.start,
@@ -1178,17 +1139,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                         FFButtonWidget(
                                           onPressed: () async {
                                             context.pushNamed(
-                                              'ChangProfileInfoPage',
-                                              extra: <String, dynamic>{
-                                                kTransitionInfoKey:
-                                                    TransitionInfo(
-                                                  hasTransition: true,
-                                                  transitionType:
-                                                      PageTransitionType
-                                                          .rightToLeft,
-                                                ),
-                                              },
-                                            );
+                                                'ChangProfileInfoPage');
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(
@@ -1586,29 +1537,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       focusColor: Colors.transparent,
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        await showModalBottomSheet(
-                                          isScrollControlled: true,
-                                          backgroundColor: Colors.transparent,
-                                          isDismissible: false,
-                                          useSafeArea: true,
-                                          context: context,
-                                          builder: (context) {
-                                            return GestureDetector(
-                                              onTap: () =>
-                                                  FocusScope.of(context)
-                                                      .requestFocus(
-                                                          _model.unfocusNode),
-                                              child: Padding(
-                                                padding:
-                                                    MediaQuery.viewInsetsOf(
-                                                        context),
-                                                child: ChangerPhotoWidget(),
-                                              ),
-                                            );
-                                          },
-                                        ).then((value) => setState(() {}));
-                                      },
+                                      onTap: () async {},
                                       child: Container(
                                         width: double.infinity,
                                         height: 50.0,
@@ -1710,15 +1639,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         context.pushNamed(
-                                          'UserStatusRoleChangePage',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType: PageTransitionType
-                                                  .rightToLeft,
-                                            ),
-                                          },
-                                        );
+                                            'UserStatusRoleChangePage');
                                       },
                                       child: Container(
                                         width: double.infinity,
@@ -2089,16 +2010,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed(
-                                          'GetHelpPage',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType: PageTransitionType
-                                                  .rightToLeft,
-                                            ),
-                                          },
-                                        );
+                                        context.pushNamed('GetHelpPage');
                                       },
                                       child: Container(
                                         width: double.infinity,
@@ -2202,16 +2114,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       hoverColor: Colors.transparent,
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
-                                        context.pushNamed(
-                                          'SendErrorPage',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType: PageTransitionType
-                                                  .rightToLeft,
-                                            ),
-                                          },
-                                        );
+                                        context.pushNamed('SendErrorPage');
                                       },
                                       child: Container(
                                         width: double.infinity,
@@ -2314,15 +2217,7 @@ class _SettingsPageWidgetState extends State<SettingsPageWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         context.pushNamed(
-                                          'SuggestImprovementPage',
-                                          extra: <String, dynamic>{
-                                            kTransitionInfoKey: TransitionInfo(
-                                              hasTransition: true,
-                                              transitionType: PageTransitionType
-                                                  .rightToLeft,
-                                            ),
-                                          },
-                                        );
+                                            'SuggestImprovementPage');
                                       },
                                       child: Container(
                                         width: double.infinity,

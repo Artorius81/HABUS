@@ -131,7 +131,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.network(
-                                  circleImageProfileRow!.userImage!,
+                                  valueOrDefault<String>(
+                                    FFAppState().profilePhoto,
+                                    'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
+                                  ),
                                   fit: BoxFit.cover,
                                 ),
                               );
@@ -167,7 +170,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         : null;
                                 return Text(
                                   valueOrDefault<String>(
-                                    '${textProfileRow?.firstName} ${textProfileRow?.lastName}',
+                                    '${valueOrDefault<String>(
+                                      FFAppState().firstName,
+                                      'Не',
+                                    )} ${valueOrDefault<String>(
+                                      FFAppState().lastName,
+                                      'указано',
+                                    )}',
                                     'Не указано',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -212,8 +221,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       : null;
                               return Text(
                                 valueOrDefault<String>(
-                                  textProfileRow?.role,
-                                  'Не указано',
+                                  FFAppState().role,
+                                  'роль не указана',
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -249,15 +258,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           Navigator.pop(context);
                         }
 
-                        context.pushNamed(
-                          'OoopsPage',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.rightToLeft,
-                            ),
-                          },
-                        );
+                        context.pushNamed('OoopsPage');
                       },
                       child: Container(
                         width: double.infinity,
@@ -329,16 +330,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'UserProfilePage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
+                      context.pushNamed('UserProfilePage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -480,16 +472,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'InDevelopPage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
+                      context.pushNamed('InDevelopPage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -561,16 +544,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'InDevelopPage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
+                      context.pushNamed('InDevelopPage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -641,15 +615,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Navigator.pop(context);
                       }
 
-                      context.pushNamed(
-                        'SettingsPage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.rightToLeft,
-                          ),
-                        },
-                      );
+                      context.pushNamed('SettingsPage');
                     },
                     child: Container(
                       width: double.infinity,
@@ -918,7 +884,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
-                      unselectedLabelStyle: TextStyle(),
+                      unselectedLabelStyle: FlutterFlowTheme.of(context)
+                          .bodyMedium
+                          .override(
+                            fontFamily: 'Open Sans',
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
+                          ),
                       indicatorColor: FlutterFlowTheme.of(context).accent1,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
@@ -1504,8 +1478,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
-                                                        child: Image.network(
-                                                          'https://images.unsplash.com/photo-1654701473955-9aacc05202d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60',
+                                                        child: Image.asset(
+                                                          'assets/images/qNAJA8Kneoo.jpg',
                                                           fit: BoxFit.cover,
                                                         ),
                                                       ),

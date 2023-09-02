@@ -33,6 +33,9 @@ class _UserStatusRoleChangePageWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => UserStatusRoleChangePageModel());
+
+    _model.userStatusController ??=
+        TextEditingController(text: FFAppState().status);
   }
 
   @override
@@ -221,10 +224,7 @@ class _UserStatusRoleChangePageWidgetState
                                     ? userStatusProfileRowList.first
                                     : null;
                             return TextFormField(
-                              controller: _model.userStatusController ??=
-                                  TextEditingController(
-                                text: userStatusProfileRow?.status,
-                              ),
+                              controller: _model.userStatusController,
                               onChanged: (_) => EasyDebounce.debounce(
                                 '_model.userStatusController',
                                 Duration(milliseconds: 2000),
@@ -328,7 +328,9 @@ class _UserStatusRoleChangePageWidgetState
                       ),
                       FlutterFlowDropDown<String>(
                         controller: _model.roleChoiceValueController ??=
-                            FormFieldController<String>(null),
+                            FormFieldController<String>(
+                          _model.roleChoiceValue ??= FFAppState().role,
+                        ),
                         options: [
                           FFLocalizations.of(context).getText(
                             '6yv7is4l' /* Абитуриент */,
@@ -427,8 +429,7 @@ class _UserStatusRoleChangePageWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .bodyMediumFamily,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                  color: Colors.white,
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
@@ -437,9 +438,14 @@ class _UserStatusRoleChangePageWidgetState
                                 ),
                           ),
                           duration: Duration(milliseconds: 2000),
-                          backgroundColor: Color(0xFF2FFF5F),
+                          backgroundColor: FlutterFlowTheme.of(context).success,
                         ),
                       );
+                      setState(() {
+                        FFAppState().role = _model.roleChoiceValue!;
+                        FFAppState().status = _model.userStatusController.text;
+                      });
+                      context.safePop();
                       await ProfileTable().update(
                         data: {
                           'status': _model.userStatusController.text,
@@ -450,7 +456,6 @@ class _UserStatusRoleChangePageWidgetState
                           currentUserUid,
                         ),
                       );
-                      context.safePop();
                     },
                     text: FFLocalizations.of(context).getText(
                       'j56t6vx4' /* Сохранить */,

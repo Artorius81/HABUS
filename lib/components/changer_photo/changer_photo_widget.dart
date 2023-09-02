@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import '/flutter_flow/permissions_util.dart';
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -144,12 +143,9 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                       Stack(
                         children: [
                           FutureBuilder<List<ProfileRow>>(
-                            future: (_model.requestCompleter ??=
-                                    Completer<List<ProfileRow>>()
-                                      ..complete(ProfileTable().querySingleRow(
-                                        queryFn: (q) => q,
-                                      )))
-                                .future,
+                            future: ProfileTable().querySingleRow(
+                              queryFn: (q) => q,
+                            ),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
@@ -183,9 +179,9 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                   final selectedMedia =
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
-                                    storageFolderPath: currentUserUid,
                                     imageQuality: 80,
                                     allowPhoto: true,
+                                    includeBlurHash: true,
                                     pickerFontFamily: 'PT Sans',
                                   );
                                   if (selectedMedia != null &&
@@ -193,17 +189,11 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                           validateFileFormat(
                                               m.storagePath, context))) {
                                     setState(
-                                        () => _model.isDataUploading = true);
+                                        () => _model.isDataUploading1 = true);
                                     var selectedUploadedFiles =
                                         <FFUploadedFile>[];
 
-                                    var downloadUrls = <String>[];
                                     try {
-                                      showUploadMessage(
-                                        context,
-                                        'Uploading file...',
-                                        showLoading: true,
-                                      );
                                       selectedUploadedFiles = selectedMedia
                                           .map((m) => FFUploadedFile(
                                                 name: m.storagePath
@@ -215,39 +205,25 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                                 blurHash: m.blurHash,
                                               ))
                                           .toList();
-
-                                      downloadUrls =
-                                          await uploadSupabaseStorageFiles(
-                                        bucketName: 'profile_images',
-                                        selectedFiles: selectedMedia,
-                                      );
                                     } finally {
-                                      ScaffoldMessenger.of(context)
-                                          .hideCurrentSnackBar();
-                                      _model.isDataUploading = false;
+                                      _model.isDataUploading1 = false;
                                     }
                                     if (selectedUploadedFiles.length ==
-                                            selectedMedia.length &&
-                                        downloadUrls.length ==
-                                            selectedMedia.length) {
+                                        selectedMedia.length) {
                                       setState(() {
-                                        _model.uploadedLocalFile =
+                                        _model.uploadedLocalFile1 =
                                             selectedUploadedFiles.first;
-                                        _model.uploadedFileUrl =
-                                            downloadUrls.first;
                                       });
-                                      showUploadMessage(context, 'Success!');
                                     } else {
                                       setState(() {});
-                                      showUploadMessage(
-                                          context, 'Failed to upload data');
                                       return;
                                     }
                                   }
 
-                                  setState(
-                                      () => _model.requestCompleter = null);
-                                  await _model.waitForRequestCompleted();
+                                  setState(() {
+                                    FFAppState().profilePhoto =
+                                        _model.uploadedFileUrl2;
+                                  });
                                 },
                                 child: Container(
                                   width: 110.0,
@@ -258,8 +234,8 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                   ),
                                   child: Image.network(
                                     valueOrDefault<String>(
-                                      circleImageProfileRow?.userImage,
-                                      'https://ob-kassa.ru/content/front/buhoskol_tmp1/images/reviews-icon.jpg',
+                                      FFAppState().profilePhoto,
+                                      'https://www.pngkit.com/png/full/202-2022289_web-reconceptualization-and-redesign-of-carnet-jove-android.png',
                                     ),
                                     fit: BoxFit.cover,
                                   ),
@@ -302,9 +278,63 @@ class _ChangerPhotoWidgetState extends State<ChangerPhotoWidget> {
                                   : null;
                           return FFButtonWidget(
                             onPressed: () async {
+                              setState(() {
+                                FFAppState().profilePhoto =
+                                    _model.uploadedFileUrl2;
+                              });
+                              final selectedMedia =
+                                  await selectMediaWithSourceBottomSheet(
+                                context: context,
+                                storageFolderPath: currentUserUid,
+                                imageQuality: 80,
+                                allowPhoto: true,
+                                pickerFontFamily: 'PT Sans',
+                              );
+                              if (selectedMedia != null &&
+                                  selectedMedia.every((m) => validateFileFormat(
+                                      m.storagePath, context))) {
+                                setState(() => _model.isDataUploading2 = true);
+                                var selectedUploadedFiles = <FFUploadedFile>[];
+
+                                var downloadUrls = <String>[];
+                                try {
+                                  selectedUploadedFiles = selectedMedia
+                                      .map((m) => FFUploadedFile(
+                                            name: m.storagePath.split('/').last,
+                                            bytes: m.bytes,
+                                            height: m.dimensions?.height,
+                                            width: m.dimensions?.width,
+                                            blurHash: m.blurHash,
+                                          ))
+                                      .toList();
+
+                                  downloadUrls =
+                                      await uploadSupabaseStorageFiles(
+                                    bucketName: 'profile_images',
+                                    selectedFiles: selectedMedia,
+                                  );
+                                } finally {
+                                  _model.isDataUploading2 = false;
+                                }
+                                if (selectedUploadedFiles.length ==
+                                        selectedMedia.length &&
+                                    downloadUrls.length ==
+                                        selectedMedia.length) {
+                                  setState(() {
+                                    _model.uploadedLocalFile2 =
+                                        selectedUploadedFiles.first;
+                                    _model.uploadedFileUrl2 =
+                                        downloadUrls.first;
+                                  });
+                                } else {
+                                  setState(() {});
+                                  return;
+                                }
+                              }
+
                               await ProfileTable().update(
                                 data: {
-                                  'user_image': _model.uploadedFileUrl,
+                                  'user_image': FFAppState().profilePhoto,
                                 },
                                 matchingRows: (rows) => rows.eq(
                                   'id',

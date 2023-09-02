@@ -297,8 +297,7 @@ class _SendErrorPageWidgetState extends State<SendErrorPageWidget> {
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .bodyMediumFamily,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                  color: Colors.white,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w500,
                                   useGoogleFonts: GoogleFonts.asMap()
@@ -307,7 +306,7 @@ class _SendErrorPageWidgetState extends State<SendErrorPageWidget> {
                                 ),
                           ),
                           duration: Duration(milliseconds: 2000),
-                          backgroundColor: Color(0xFF2FFF5F),
+                          backgroundColor: FlutterFlowTheme.of(context).success,
                         ),
                       );
                       context.safePop();

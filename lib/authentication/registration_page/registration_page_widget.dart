@@ -518,7 +518,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Open Sans',
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
@@ -534,16 +534,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(
-                                      'LoginPage',
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.rightToLeft,
-                                        ),
-                                      },
-                                    );
+                                    context.pushNamed('LoginPage');
                                   },
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -555,7 +546,7 @@ class _RegistrationPageWidgetState extends State<RegistrationPageWidget> {
                                           fontFamily: 'Open Sans',
                                           color: FlutterFlowTheme.of(context)
                                               .accent1,
-                                          fontSize: 14.0,
+                                          fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(

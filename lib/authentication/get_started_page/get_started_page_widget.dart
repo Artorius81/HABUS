@@ -103,15 +103,7 @@ class _GetStartedPageWidgetState extends State<GetStartedPageWidget> {
                     alignment: AlignmentDirectional(0.0, 1.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed(
-                          'RegistrationPage',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.rightToLeft,
-                            ),
-                          },
-                        );
+                        context.goNamed('RegistrationPage');
                       },
                       text: FFLocalizations.of(context).getText(
                         'ptbg07k3' /* Продолжить */,
